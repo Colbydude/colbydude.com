@@ -10,7 +10,6 @@ html, body, .offset {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  font-weight: 300;
   line-height: 1.42857;
   -webkit-transition: background-color 0.6s ease, color 0.6s ease;
           transition: background-color 0.6s ease, color 0.6s ease; }
@@ -61,6 +60,33 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     width: 100%; }
 
+.style-chooser {
+  position: absolute;
+  right: 10px;
+  top: 10px; }
+  .style-chooser a {
+    -webkit-border-radius: 35px;
+            border-radius: 35px;
+    display: inline-block;
+    height: 24px;
+    margin: 0 3px;
+    opacity: 0.5;
+    width: 24px;
+    -webkit-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+         box-sizing: initial; }
+    .style-chooser a:hover, .style-chooser a:focus {
+      outline: none;
+      opacity: 1; }
+  .style-chooser .choose-dark {
+    background: #282828;
+    border: 1px solid #e4e4e4; }
+  .style-chooser .choose-light {
+    background: #e4e4e4;
+    border: 1px solid #282828; }
+
 .modal {
   color: #333; }
 
@@ -73,9 +99,9 @@ h1, h2, h3, h4, h5, h6 {
   .default h2 {
     font-size: 36px; }
 
-.links {
+.buttons {
   margin-top: 30px; }
-  .links a {
+  .buttons a {
     border: 1px solid #111;
     border-color: rgba(17, 17, 17, 0.7);
     -webkit-border-radius: 35px;
@@ -90,20 +116,20 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transition: background 0.6s ease;
             transition: background 0.6s ease;
     width: 26px; }
-    .links a:hover, .links a:focus {
+    .buttons a:hover, .buttons a:focus {
       background: #e54c72 !important;
       outline: none; }
-    .links a.github:hover, .links a.github:focus {
+    .buttons a.github:hover, .buttons a.github:focus {
       background: #52386d !important; }
-    .links a.not-ready:hover, .links a.not-ready:focus {
+    .buttons a.not-ready:hover, .buttons a.not-ready:focus {
       background: #FF1919 !important; }
-    .links a.skype:hover, .links a.skype:focus {
+    .buttons a.skype:hover, .buttons a.skype:focus {
       background: #0078ca !important; }
-    .links a.steam:hover, .links a.steam:focus {
+    .buttons a.steam:hover, .buttons a.steam:focus {
       background: #4c6b22 !important; }
-    .links a.twitter:hover, .links a.twitter:focus {
+    .buttons a.twitter:hover, .buttons a.twitter:focus {
       background: #00aced !important; }
-    .links a.youtube:hover, .links a.youtube:focus {
+    .buttons a.youtube:hover, .buttons a.youtube:focus {
       background: #cc181e !important; }
 
 /* --- Page Layout --- */
@@ -121,6 +147,26 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px; }
 
 /* --- Footer --- */
+footer {
+  margin-top: -70px;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+  footer p {
+    display: inline-block; }
+    footer p.icomoon {
+      margin-left: 20px;
+      text-align: left;
+      width: 30%; }
+    footer p.links {
+      text-align: center;
+      width: 30%; }
+    footer p.copyright {
+      margin-right: 20px;
+      text-align: right;
+      width: 30%; }
+
 /* --- Bootstrap Override --- */
 h1, h2, h3 {
   margin-top: 20px;

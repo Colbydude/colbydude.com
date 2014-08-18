@@ -1,3 +1,10 @@
+<?php
+	// Because Windows renders icon fonts badly.
+	if (strpos($_SERVER["HTTP_USER_AGENT"], "Windows") !== false)
+		$windows = "windows";
+	else
+		$windows = "not-windows";
+?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -23,18 +30,46 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body class="text-center dark not-windows">
+	<body class="text-center dark {{ $windows }}">
+		<div class="style-chooser">
+			<a class="choose-dark" href="#" data-style="style.css"></a>
+			<a class="choose-light" href="#" data-style="style-inverse.css"></a>
+		</div>
+
 		<div class="offset"></div>
 		<div class="container default">
-			@yield("content")
+			@yield('content')
 		</div>
+
+		@include('layouts.partials.footer')
 
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script>
         		$(document).ready(function()
         		{
-        			$(".links a").tooltip();
+        			// Global tooltips.
+        			$(".buttons a").tooltip();
+
+        			var style = "dark";
+					// Switch to dark color scheme.
+					$(".choose-dark").click(function (e)
+					{
+						e.preventDefault();
+						//$.post("../includes/change-style.php", { "STYLE": "STYLE", "VALUE": "style.css" });
+						$("body").removeClass("light");
+						$("body").addClass("dark");
+						style = "dark";
+					});
+					// Switch to light color scheme.
+					$(".choose-light").click(function (e)
+					{
+						e.preventDefault();
+						//$.post("../includes/change-style.php", { "STYLE": "STYLE", "VALUE": "style-inverse.css" });
+						$("body").removeClass("dark");
+                   		$("body").addClass("light");
+						style = "light";
+					});
         		});
 		</script>
 	</body>
