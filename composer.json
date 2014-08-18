@@ -1,0 +1,7 @@
+{
+	"name": "colbydude/colbydude.com",
+	"description": "Colby Terry's personal website.",
+	"require": {
+		"philo/laravel-blade": "dev-master"
+	}
+}
