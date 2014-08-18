@@ -17,9 +17,17 @@ body {
   body.dark {
     background-color: #282828;
     color: #e4e4e4; }
+    body.dark .links a {
+      background: #282828; }
+    body.dark .tooltip-inner {
+      color: #e4e4e4; }
   body.light {
     background-color: #e4e4e4;
     color: #282828; }
+    body.light .links a {
+      background: #e4e4e4; }
+    body.light .tooltip-inner {
+      color: #282828; }
 
 ::-moz-selection {
   background: #e54c72;
@@ -68,7 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 .links {
   margin-top: 30px; }
   .links a {
-    background: #282828;
     border: 1px solid #111;
     border-color: rgba(17, 17, 17, 0.7);
     -webkit-border-radius: 35px;
@@ -84,20 +91,20 @@ h1, h2, h3, h4, h5, h6 {
             transition: background 0.6s ease;
     width: 26px; }
     .links a:hover, .links a:focus {
-      background: #e54c72;
+      background: #e54c72 !important;
       outline: none; }
     .links a.github:hover, .links a.github:focus {
-      background: #52386d; }
+      background: #52386d !important; }
     .links a.not-ready:hover, .links a.not-ready:focus {
-      background: #FF1919; }
+      background: #FF1919 !important; }
     .links a.skype:hover, .links a.skype:focus {
-      background: #0078ca; }
+      background: #0078ca !important; }
     .links a.steam:hover, .links a.steam:focus {
-      background: #4c6b22; }
+      background: #4c6b22 !important; }
     .links a.twitter:hover, .links a.twitter:focus {
-      background: #00aced; }
+      background: #00aced !important; }
     .links a.youtube:hover, .links a.youtube:focus {
-      background: #cc181e; }
+      background: #cc181e !important; }
 
 /* --- Page Layout --- */
 .page {
@@ -143,5 +150,4 @@ a .img-thumbnail {
     display: none; }
 
 .tooltip-inner {
-  background-color: transparent;
-  color: #e4e4e4; }
+  background-color: transparent; }

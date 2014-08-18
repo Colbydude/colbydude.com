@@ -5,6 +5,7 @@
 		<title>Colby Terry | Web Developer | Musician | Game Developer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/icons.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,7 +23,7 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body class="text-center dark">
+	<body class="text-center dark not-windows">
 		<div class="offset"></div>
 		<div class="container default">
 			@yield("content")

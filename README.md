@@ -1,6 +1,6 @@
 colbydude.com
 =============
 
-My personal website.
+My personal [website](http://colbydude.com).
 
 Currently undergoing a bit of an overhaul.

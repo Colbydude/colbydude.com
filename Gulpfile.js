@@ -4,6 +4,11 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('css', function()
 {
+	gulp.src('app/assets/sass/icons.scss')
+		.pipe(sass())
+		.pipe(autoprefixer('last 10 version'))
+		.pipe(gulp.dest('css'));
+
 	gulp.src('app/assets/sass/style.scss')
 		.pipe(sass())
 		.pipe(autoprefixer('last 10 version'))
