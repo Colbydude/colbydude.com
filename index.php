@@ -1,30 +1,54 @@
 <?php
+/* --- Paths --- */
 
-/*
-|--------------------------------------------------------------------------
-| Register The Auto Loader
-|--------------------------------------------------------------------------
-|
-| Composer provides a convenient, automatically generated class loader
-| for our application. We just need to utilize it! We'll require it
-| into the script here so that we do not have to worry about the
-| loading of any our classes "manually". Feels great to relax.
-|
-*/
+$paths = array(
+	'app' => __DIR__ . '/app',
+	'base' => '/authoring',
+	'cache' => __DIR__ . '/app/cache',
+	'views' => __DIR__ . '/app/views',
+	'url' => "//colbydude.com"
+);
 
+/* --- Setup Illuminate --- */
 require 'vendor/autoload.php';
 
+/* --- Setup Blade Templating --- */
 use Philo\Blade\Blade;
 
-$views = __DIR__ . '/app/views';
-$cache = __DIR__ . '/app/cache';
+$blade = new Blade($paths['views'], $paths['cache']);
 
-$blade = new Blade($views, $cache);
+/* --- Get the correct view --- */
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-if (isset($_GET['action']))
-	$action = $_GET['action'];
+$uri = str_replace("authoring/", "", urldecode($uri));
+
+// This allows us to emulate Apache's "mod_rewrite" functionality from the
+// built-in PHP web server. This provides a convenient way to test the
+// application without having installed a "real" web server software here.
+if ($uri !== '/' and file_exists($requested))
+{
+	// We're requesting a file or directory that exists, so let's go to that instead.
+	return false;
+}
+
+/* --- Display the view --- */
+// We're in our root directory.
+if ($uri == '/')
+{
+	// Display the home page.
+	echo $blade->view()->make("pages/home", ['paths' => $paths]);
+}
 else
-	$action = 'home';
-
-//echo "pages/$action";
-echo $blade->view()->make("pages/$action");
+{
+	// Try and make the view.
+	try
+	{
+		// Display it if we make it!
+		$test = $blade->view()->make("pages$uri", ['paths' => $paths]);
+	}
+	catch (Exception $e)
+	{
+		// Otherwise we failed to make it, so let's "404."
+		echo $blade->view()->make("pages/404", ['paths' => $paths]);
+	}
+}

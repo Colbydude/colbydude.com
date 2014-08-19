@@ -1,5 +1,12 @@
 @extends('layouts.default')
 
+@section('meta')
+	<title>Colby Terry | Web Developer | Musician | Game Developer</title>
+	<meta name="description" content="Hey, I'm Colby. I program websites and games. I also play guitar. I may or may not also go by Punk Programmer.">
+	<meta name="keywords" content="Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, website, web, games, music, portfolio">
+	<link href="{{ $paths['url'].$paths['base'] }}" rel="canonical">
+@stop
+
 @section('content')
 	<h1>Hey, I'm Colby</h1>
 	<h2>I program websites and games.<br>I also play guitar.</h2>
