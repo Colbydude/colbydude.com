@@ -44,7 +44,7 @@ else
 	try
 	{
 		// Display it if we make it!
-		$test = $blade->view()->make("pages$uri", ['paths' => $paths]);
+		echo $blade->view()->make("pages$uri", ['paths' => $paths]);
 	}
 	catch (Exception $e)
 	{

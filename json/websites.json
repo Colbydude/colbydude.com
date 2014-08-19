@@ -1,0 +1,149 @@
+{
+	"completed": [
+		{
+			"name": "American Rustic Builders",
+			"url": "http://americanrusticbuilders.com",
+			"img": "americanrusticbuilders.jpg",
+			"designed-by": "Ashley Bender"
+		},
+		{
+			"name": "Angie Klink - Author and Copywriter",
+			"url": "http://angieklink.com",
+			"img": "angieklink.jpg",
+			"designed-by": "Jack Klink"
+		},
+		{
+			"name": "Back2Earth Organic Recycling",
+			"url": "http://b2eorganicrecycling.com",
+			"img": "back2earth.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "BioTownAg",
+			"url": "http://biotownag.com",
+			"img": "biotownag.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "DelMar Software Development",
+			"url": "http://delmarit.com",
+			"img": "delmarit.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "Dr. Kochert Pain & Health",
+			"url": "http://drkochert.com",
+			"img": "kochert.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "Dr. Kochert Weight-Loss",
+			"url": "http://drkweightloss.com",
+			"img": "kochertweightloss.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "IDC Marketing",
+			"url": "http://idc-marketing.com",
+			"img": "idc-marketing.jpg",
+			"designed-by": "Myself, Ashley Bender, Patrick Nycz"
+		},
+		{
+			"name": "Indiana Kitchen",
+			"url": "http://indianakitchen.com",
+			"img": "indianakitchen.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "Indiana Kitchen Bacon",
+			"url": "http://indianakitchenbacon.com",
+			"img": "indianakitchenbacon.jpg",
+			"designed-by": "Kristy Blair, Ashley Bender"
+		},
+		{
+			"name": "Indiana Packers Corporation",
+			"url": "http://indianapackerscorp.com",
+			"img": "indianapackerscorporation.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "Is It MAGFest Yet?",
+			"url": "http://isitmagfestyet.com",
+			"img": "isitmagfestyet.jpg",
+			"designed-by": "Myself"
+		},
+		{
+			"name": "King of Puzzles (Offline)",
+			"url": "",
+			"img": "kingofpuzzles.jpg",
+			"designed-by": "Ashley Bender"
+		},
+		{
+			"name": "Long Center for Performing Arts",
+			"url": "http://longpac.org",
+			"img": "longpac.jpg",
+			"designed-by": "Patrick Nycz"
+		},
+		{
+			"name": "Rise Above The Mark",
+			"url": "http://riseabovethemark.com",
+			"img": "riseabovethemark.jpg",
+			"designed-by": "Jack Klink"
+		},
+		{
+			"name": "SMARxT Cap",
+			"url": "http://smartmedreminder.com",
+			"img": "smartmedreminder.jpg",
+			"designed-by": "Kristy Blair, Jack Klink"
+		},
+		{
+			"name": "Steve Connors Builder",
+			"url": "http://steveconnorsbuilder.com",
+			"img": "steveconnorsbuilder.jpg",
+			"designed-by": "Jack Klink"
+		},
+		{
+			"name": "The End Gallery",
+			"url": "http://theendgallery.com",
+			"img": "theendgallery.jpg",
+			"designed-by": "Myself"
+		},
+		{
+			"name": "The Targe",
+			"url": "http://thetarge.co.uk",
+			"img": "thetarge.jpg",
+			"designed-by": "Connor Beaton"
+		},
+		{
+			"name": "Timberstone Homes",
+			"url": "http://timberstone-homes.com",
+			"img": "timberstone.jpg",
+			"designed-by": "Kristy Blair"
+		},
+		{
+			"name": "VoidTeam Network",
+			"url": "http://voidteam.net",
+			"img": "voidteam.jpg",
+			"designed-by": "Myself, Jack Klink"
+		},
+		{
+			"name": "Walts Other Pub",
+			"url": "http://waltsotherpub.com",
+			"img": "waltsotherpub.jpg",
+			"designed-by": "Jack Klink"
+		},
+		{
+			"name": "zConnection International",
+			"url": "http://zcint.co.uk",
+			"img": "zconnection.jpg",
+			"designed-by": "Connor Beaton"
+		}
+	],
+	"wip": [
+		{
+		"name": "Alternative Ag",
+		"img": "alternativeag.jpg",
+		"designed-by": "Ashley Bender"
+		}
+	]
+}
