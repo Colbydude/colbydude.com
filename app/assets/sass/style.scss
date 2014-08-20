@@ -36,11 +36,6 @@ body
 		background-color: #282828;
 		color: #e4e4e4;
 
-		.links a
-		{
-			background: #282828;
-		}
-
 		.tooltip-inner
 		{
 			color: #e4e4e4;
@@ -51,11 +46,6 @@ body
 	{
 		background-color: #e4e4e4;
 		color: #282828;
-
-		.links a
-		{
-			background: #e4e4e4;
-		}
 
 		.tooltip-inner
 		{
@@ -192,6 +182,7 @@ h1, h2, h3, h4, h5, h6
 	margin-top: 30px;
 	a
 	{
+		background: transparent;
 		border: 1px solid #111;
 		border-color: rgba(17,17,17,0.7);
 		border-radius: 35px;
@@ -205,38 +196,38 @@ h1, h2, h3, h4, h5, h6
 
 		&:hover, &:focus
 		{
-			background: #e54c72 !important;
+			background: #e54c72;
 			outline: none;
 		}
 
 		&.github:hover, &.github:focus
 		{
-			background: #52386d !important;
+			background: #52386d;
 		}
 
 		&.not-ready:hover, &.not-ready:focus
 		{
-			background: #FF1919 !important;
+			background: #FF1919;
 		}
 
 		&.skype:hover, &.skype:focus
 		{
-			background: #0078ca !important;
+			background: #0078ca;
 		}
 
 		&.steam:hover, &.steam:focus
 		{
-			background: #4c6b22 !important;
+			background: #4c6b22;
 		}
 
 		&.twitter:hover, &.twitter:focus
 		{
-			background: #00aced !important;
+			background: #00aced;
 		}
 
 		&.youtube:hover, &.youtube:focus
 		{
-			background: #cc181e !important;
+			background: #cc181e;
 		}
 	}
 }
@@ -269,11 +260,17 @@ h1, h2, h3, h4, h5, h6
 
 footer
 {
-	margin-top: -70px;
 	padding: 20px 0;
 	position: relative;
 	width: 100%;
 	z-index: 1;
+
+	&.static
+	{
+		margin-top: -70px;
+
+		@media (max-width: $medium) { margin-top: 0; }
+	}
 
 	p
 	{

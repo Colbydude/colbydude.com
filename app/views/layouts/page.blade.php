@@ -14,11 +14,11 @@
 		@include('layouts.partials.style-chooser')
 
 		<div class="offset"></div>
-		<div class="container default">
+		<div class="container page">
 			@yield('content')
 		</div>
 
-		@include('layouts.partials.footer', array('class' => 'static'))
+		@include('layouts.partials.footer', array('class' => ''))
 
 		@include('layouts.partials.scripts')
 	</body>

@@ -13,8 +13,8 @@
 	<div class="buttons">
 		<a href="/web" data-toggle="tooltip" data-placement="bottom" title="Websites"><span class="icon-globe"></span></a>
 		<a href="/games" data-toggle="tooltip" data-placement="bottom" title="Games"><span class="icon-gamepad"></span></a>
-    	<a href="/music" data-toggle="tooltip" data-placement="bottom" title="Music"><span class="icon-guitar"></span></a>
-    </div>
+		<a href="/music" data-toggle="tooltip" data-placement="bottom" title="Music"><span class="icon-guitar"></span></a>
+	</div>
 	<div class="buttons">
 		<a class="twitter" href="https://twitter.com/Colbydude" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter"><span class="icon-twitter"></span></a>
 		<a class="skype" href="skype:colbydude001?chat" data-toggle="tooltip" data-placement="bottom" title="Skype"><span class="icon-skype"></span></a>
