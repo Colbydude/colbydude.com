@@ -25,4 +25,62 @@
 		<a href="#" id="contact-button" data-target="#contact-modal" data-toggle="tooltip modal" data-placement="bottom" title="Contact"><span class="icon-envelope"></span></a>
 		<a class="paypal" href="http://goo.gl/zCfbmn" data-toggle="tooltip" data-placement="bottom" title="Donations and Payment"><span class="icon-paypal"></span></a>
 	</div>
+	@if (isset($_POST['submit']))
+		<div class="row" style="margin-top: 20px;">
+			<div class="col-sm-offset-3 col-sm-6">
+				<div class="alert alert-danger alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<strong>Error:</strong> This form is under construction at the moment. Please feel free to email me directly at <a href="mailto:colbydude@voidteam.net">colbydude@voidteam.net</a>.
+				</div>
+			</div>
+		</div>
+	@endif
+	<div class="modal fade" id="contact-modal">
+    	<div class="modal-dialog">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button type="button" class="close" data-dismiss="modal">
+    					<span aria-hidden="true">&times;</span>
+    					<span class="sr-only">Close</span>
+    				</button>
+    				<h4 class="modal-title">Drop me a line</h4>
+    			</div>
+    			<form id="contact-form" method="POST">
+    				<div class="modal-body">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<div class="form-group">
+    								<label for="name">Name</label>
+    								<input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required="required">
+    							</div>
+    							<div class="form-group">
+    								<label for="email">Email Address</label>
+    								<input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required="required">
+    							</div>
+    							<div class="form-group">
+    								<label for="subject">Subject</label>
+    								<select id="subject" name="subject" class="form-control" required="required">
+    									<option value="na" selected>Choose One:</option>
+    									<option value="General">General</option>
+    									<option value="Support">Support</option>
+    									<option value="HTML5 Licensing">HTML5 Licensing</option>
+    								</select>
+    							</div>
+    						</div>
+    						<div class="col-md-6">
+    							<div class="form-group">
+    								<label for="name">Message</label>
+    								<textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message..."></textarea>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<div class="modal-footer">
+    					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    					<button type="submit" id="sumbit" name="submit" class="btn btn-primary">Send Message</button>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    </div>
 @stop

@@ -3,7 +3,7 @@
 
 $paths = array(
 	'app' => __DIR__ . '/app',
-	'base' => '/authoring',
+	'base' => '/',
 	'cache' => __DIR__ . '/app/cache',
 	'views' => __DIR__ . '/app/views',
 	'url' => "//colbydude.com"

@@ -22,4 +22,12 @@ $(document).ready(function()
 		$("body").addClass("light");
 		style = "light";
 	});
+
+	// Handle contact modal.
+	$("#contact-button").click(function(e)
+	{
+		e.preventDefault();
+
+		$("#contact-modal").modal();
+	});
 });
