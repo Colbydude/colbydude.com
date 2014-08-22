@@ -1,4 +1,9 @@
 <?php
+/* --- Session and Output Buffer --- */
+
+ob_start();
+session_start();
+
 /* --- Paths --- */
 
 $paths = array(
@@ -31,24 +36,51 @@ if ($uri !== '/' and file_exists($requested))
 	return false;
 }
 
+/* --- Page Style (Dark/Light) --- */
+// Get style from the session, if it's set.
+if (isset($_SESSION["STYLE"]))
+{
+	$style = $_SESSION["STYLE"];
+}
+else
+{
+	// Otherwise pick a random style.
+	$rand = rand(0, 1);
+	if ($rand == 0)
+	{
+		$style = "dark";
+		$_SESSION["STYLE"] = $style;
+	}
+	else
+	{
+		$style = "light";
+		$_SESSION["STYLE"] = $style;
+	}
+}
+
 /* --- Display the view --- */
 // We're in our root directory.
 if ($uri == '/')
 {
 	// Display the home page.
-	echo $blade->view()->make("pages/home", ['paths' => $paths]);
+	echo $blade->view()->make("pages/home", ['paths' => $paths, 'style' => $style]);
 }
 else
 {
 	// Try and make the view.
 	try
 	{
+		// Redirect if uri is /payment
+		if ($uri == "/payment")
+		{
+			header("Location: http://goo.gl/zCfbmn");
+		}
 		// Display it if we make it!
-		echo $blade->view()->make("pages$uri", ['paths' => $paths]);
+		echo $blade->view()->make("pages$uri", ['paths' => $paths, 'style' => $style]);
 	}
 	catch (Exception $e)
 	{
 		// Otherwise we failed to make it, so let's "404."
-		echo $blade->view()->make("pages/404", ['paths' => $paths]);
+		echo $blade->view()->make("pages/404", ['paths' => $paths, 'style' => $style]);
 	}
 }

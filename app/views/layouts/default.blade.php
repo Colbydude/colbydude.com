@@ -10,7 +10,7 @@
 	<head>
 		@include('layouts.partials.head')
 	</head>
-	<body class="text-center dark {{ $windows }}">
+	<body class="text-center {{ $style." ".$windows }}">
 		@include('layouts.partials.style-chooser')
 
 		<div class="offset"></div>

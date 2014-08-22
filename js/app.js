@@ -3,12 +3,11 @@ $(document).ready(function()
 	// Global tooltips.
 	$(".buttons a").tooltip();
 
-	var style = "dark";
 	// Switch to dark color scheme.
 	$(".choose-dark").click(function (e)
 	{
 		e.preventDefault();
-		//$.post("../includes/change-style.php", { "STYLE": "STYLE", "VALUE": "style.css" });
+		$.post("app/scripts/change-style.php", { "STYLE": "STYLE", "VALUE": "dark" });
 		$("body").removeClass("light");
 		$("body").addClass("dark");
 		style = "dark";
@@ -17,7 +16,7 @@ $(document).ready(function()
 	$(".choose-light").click(function (e)
 	{
 		e.preventDefault();
-		//$.post("../includes/change-style.php", { "STYLE": "STYLE", "VALUE": "style-inverse.css" });
+		$.post("app/scripts/change-style.php", { "STYLE": "STYLE", "VALUE": "light" });
 		$("body").removeClass("dark");
 		$("body").addClass("light");
 		style = "light";
