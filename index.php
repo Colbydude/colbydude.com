@@ -16,6 +16,7 @@ $paths = array(
 
 /* --- Setup Illuminate --- */
 require 'vendor/autoload.php';
+require 'app/email/class.phpmailer.php';
 
 /* --- Setup Blade Templating --- */
 use Philo\Blade\Blade;

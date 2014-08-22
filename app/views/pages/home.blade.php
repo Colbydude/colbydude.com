@@ -25,16 +25,61 @@
 		<a href="#" id="contact-button" data-target="#contact-modal" data-toggle="tooltip modal" data-placement="bottom" title="Contact"><span class="icon-envelope"></span></a>
 		<a class="paypal" href="http://goo.gl/zCfbmn" data-toggle="tooltip" data-placement="bottom" title="Donations and Payment"><span class="icon-paypal"></span></a>
 	</div>
-	@if (isset($_POST['submit']))
-		<div class="row" style="margin-top: 20px;">
-			<div class="col-sm-offset-3 col-sm-6">
-				<div class="alert alert-danger alert-dismissible" role="alert">
-					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-					<strong>Error:</strong> This form is under construction at the moment. Please feel free to email me directly at <a href="mailto:colbydude@voidteam.net">colbydude@voidteam.net</a>.
-				</div>
-			</div>
-		</div>
-	@endif
+	<?php
+		if (isset($_POST['submit']))
+		{
+			$mail = new PHPMailer(true);
+
+			try
+			{
+				$mail->AddReplyTo($_POST['email'], $_POST['name']);
+				$mail->SetFrom($_POST['email'], $_POST['email']);
+
+				$mail->AddAddress('colbydude@voidteam.net', 'Colby Terry');
+				$mail->Subject = $_POST['subject']." Message from ".$_POST['name'];
+				$mail->MsgHTML(htmlentities(stripslashes($_POST['message'])));
+
+				$mail->Send();
+
+				echo'
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-offset-3 col-sm-6">
+							<div class="alert alert-success alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<strong>Success:</strong> Your message was sent. I\'ll get back to you as soon as possible.
+							</div>
+						</div>
+					</div>
+				';
+			}
+			catch (phpmailerException $e)
+			{
+				echo'
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-offset-3 col-sm-6">
+							<div class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<strong>Mailing Error:</strong> '.$e->getMessage().'
+							</div>
+						</div>
+					</div>
+				';
+			}
+			catch (Exception $e)
+			{
+				echo'
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-offset-3 col-sm-6">
+							<div class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<strong>Error:</strong> '.$e->getMessage().'
+							</div>
+						</div>
+					</div>
+				';
+			}
+		}
+	?>
 	<div class="modal fade" id="contact-modal">
     	<div class="modal-dialog">
     		<div class="modal-content">
