@@ -242,7 +242,11 @@ h1, h2, h3, h4, h5, h6
 	{
 		font-size: 96px;
 
-		@media (max-width: $medium) { text-align: center; }
+		@media (max-width: $medium)
+		{
+			font-size: 64px;
+			text-align: center;
+		}
 	}
 	h2 { font-size: 38.5px; }
 	h3 { font-size: 17.5px; }

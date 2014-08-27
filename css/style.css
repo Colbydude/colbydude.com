@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6{font-weight:300;line-height:1.1}
 .buttons a.youtube:focus,.buttons a.youtube:hover{background:#cc181e}
 .page{text-align:left}
 .page h1{font-size:96px}
-@media (max-width:660px){.page h1{text-align:center}}
+@media (max-width:660px){.page h1{font-size:64px;text-align:center}}
 .page h2{font-size:38.5px}
 .page h3{font-size:17.5px}
 @media (max-width:660px){.page{text-align:center}}

@@ -18,7 +18,7 @@
 	<h2>Currently in Development</h2>
 	<div class="row">
 		@foreach ($websites['wip'] as $website)
-			<div class="col-md-4 col-sm-6 col-xs-12">
+			<div class="col-sm-6 col-md-4">
 				<p><img class="img-thumbnail img-responsive" src="{{ $paths['url'].$paths['base'] }}/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}"></p>
 				<h3>{{ $website['name'] }}</h3>
 				<p>Designed by: {{ $website['designed-by'] }}</p>
@@ -28,7 +28,7 @@
 	<h2>Completed Projects</h2>
 	<div class="row">
 		@foreach ($websites['completed'] as $website)
-			<div class="col-md-4 col-sm-6 col-xs-12">
+			<div class="col-sm-6 col-md-4">
 				@if ($website['url'])
 					<p><a href="{{ $website['url'] }}" target="_blank"><img class="img-thumbnail img-responsive" src="{{ $paths['url'].$paths['base'] }}/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}"></a></p>
 				@else

@@ -15,7 +15,7 @@
 	<h2>Guitar Covers</h2>
 	<div class="row">
 		@foreach ($music['guitar-covers'] as $song)
-			<div class="col-md-4 col-sm-6 col-xs-12">
+			<div class="col-sm-6 col-md-4">
 				<div class="video-container"><iframe width="635" height="353" src="{{ $song['video'] }}?wmode=transparent"></iframe></div>
 				<h3>{{ $song['song'] }}</h3>
 				<p>By: {{ $song['by'] }}</p>
@@ -25,7 +25,7 @@
 	<h2>We'd Be <small>(my band)</small></h2>
 	<div class="row">
 		@foreach ($music['wed-be'] as $song)
-			<div class="col-md-4 col-sm-6 col-xs-12">
+			<div class="col-sm-6 col-md-4">
 				<div class="video-container"><iframe width="635" height="353" src="{{ $song['video'] }}?wmode=transparent"></iframe></div>
 				<h3>{{ $song['song'] }}</h3>
 				<p>{{ $song['subtitle'] }}</p>
