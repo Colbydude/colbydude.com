@@ -14,7 +14,7 @@ gulp.task('css', function()
 	gulp.src('app/assets/sass/style.scss')
 		.pipe(sass())
 		.pipe(autoprefixer('last 10 version'))
-		.pipe(minifyCss({keepBreaks:true}))
+		.pipe(minifyCss({keepBreaks:false}))
 		.pipe(gulp.dest('css'));
 });
 

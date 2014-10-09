@@ -37,15 +37,20 @@
 		}
 	],
 	"wed-be": [
-		{
-			"song": "Rum Gun Salute",
-			"subtitle": "Live at Centerstage 01/17/2014",
-			"video": "http://www.youtube.com/embed/zSqSLp7BeXU"
+	  	{
+		  	"song": "We'd Be: Live and Raw",
+		  	"subtitle": "Hideaway Bar & Grill 10/04/2014",
+			"video": "http://www.youtube.com/embed/e27jmD9ZtLc"
 		},
 		{
 			"song": "Mirrorbox",
 			"subtitle": "Live at Centerstage 01/24/2014",
 			"video": "http://www.youtube.com/embed/GHe_OftLVoY"
+		},
+		{
+			"song": "Rum Gun Salute",
+			"subtitle": "Live at Centerstage 01/17/2014",
+			"video": "http://www.youtube.com/embed/zSqSLp7BeXU"
 		}
 	]
 }
