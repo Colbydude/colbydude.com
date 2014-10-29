@@ -1,6 +1,8 @@
 /.idea
+/app/cache
 /bootstrap/compiled.php
 /img/web
+/json
 /node_modules
 /vendor
 composer.phar

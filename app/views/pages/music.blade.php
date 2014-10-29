@@ -4,7 +4,7 @@
 	<title>Music by Colby Terry</title>
 	<meta name="description" content="Music produced or performed by Colby Terry or We'd Be.">
 	<meta name="keywords" content="Colby Terry, Colbydude, VoidTeam, Punk Programmer, We'd Be, Punk, Metal, Rock, Guitar, Cover">
-	<link href="{{ $paths['url'].$paths['base'] }}/music" rel="canonical">
+	<link href="http://colbydude.com/music" rel="canonical">
 @stop
 
 @section('content')

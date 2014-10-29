@@ -4,7 +4,7 @@
 	<title>Websites by Colby Terry</title>
 	<meta name="description" content="Websites or webapps developed by Colby Terry.">
 	<meta name="keywords" content="Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, website, web, webapp, portfolio">
-	<link href="{{ $paths['url'].$paths['base'] }}/web" rel="canonical">
+	<link href="http://colbydude.com/web" rel="canonical">
 @stop
 
 @section('content')

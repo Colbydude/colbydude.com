@@ -31,7 +31,7 @@ $uri = str_replace("authoring/", "", urldecode($uri));
 // This allows us to emulate Apache's "mod_rewrite" functionality from the
 // built-in PHP web server. This provides a convenient way to test the
 // application without having installed a "real" web server software here.
-if ($uri !== '/' and file_exists($requested))
+if ($uri !== '/' and file_exists($uri))
 {
 	// We're requesting a file or directory that exists, so let's go to that instead.
 	return false;

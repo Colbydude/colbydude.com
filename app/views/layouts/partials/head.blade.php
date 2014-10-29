@@ -3,9 +3,7 @@
 
 @yield('meta')
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="/css/icons.css" rel="stylesheet">
-<link href="/css/style.css" rel="stylesheet">
+<link href="/css/app.min.css" rel="stylesheet">
 
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -4,7 +4,7 @@
 	<title>Games from Colby Terry</title>
 	<meta name="description" content="Games developed by Colby Terry and VoidTeam Studios.">
 	<meta name="keywords" content="Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, HTML5, games, Game Maker, portfolio">
-	<link href="{{ $paths['url'].$paths['base'] }}/games" rel="canonical">
+	<link href="http://colbydude.com/games" rel="canonical">
 @stop
 
 @section('content')
