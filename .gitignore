@@ -1,6 +1,7 @@
 /.idea
 /app/cache
 /bootstrap/compiled.php
+/bower_components
 /img/web
 /json
 /node_modules
