@@ -29,6 +29,7 @@
 		if (isset($_POST['submit']))
 		{
 			$mail = new PHPMailer(true);
+			$mail->isSMTP();
 
 			try
 			{
@@ -37,6 +38,7 @@
 				$mail->SMTPAuth = true;
 				$mail->Username = getenv('MAIL_USERNAME'); // smtp username
 				$mail->Password = getenv('MAIL_PASSWORD'); // smtp pass
+				$mail->SMTPSecure = 'tls';
 
 				$mail->AddReplyTo($_POST['email'], $_POST['name']);
 				$mail->SetFrom($_POST['email'], $_POST['email']);
