@@ -32,6 +32,12 @@
 
 			try
 			{
+				$mail->Host = getenv('MAIL_HOST');
+				$mail->Port = getenv('MAIL_PORT'); // smtp server
+				$mail->SMTPAuth = true;
+				$mail->Username = getenv('MAIL_USERNAME'); // smtp username
+				$mail->Password = getenv('MAIL_PASSWORD'); // smtp pass
+
 				$mail->AddReplyTo($_POST['email'], $_POST['name']);
 				$mail->SetFrom($_POST['email'], $_POST['email']);
 
