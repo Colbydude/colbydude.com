@@ -82,6 +82,7 @@ else
 	catch (Exception $e)
 	{
 		// Otherwise we failed to make it, so let's "404."
+		http_response_code(404);
 		echo $blade->view()->make("pages/404", ['paths' => $paths, 'style' => $style]);
 	}
 }
