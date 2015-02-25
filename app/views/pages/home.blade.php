@@ -113,7 +113,7 @@
     							<div class="form-group">
     								<label for="subject">Subject</label>
     								<select id="subject" name="subject" class="form-control" required="required">
-    									<option value="na" selected>Choose One:</option>
+    									<option value="" selected>Choose One:</option>
     									<option value="General">General</option>
     									<option value="Support">Support</option>
     									<option value="HTML5 Licensing">HTML5 Licensing</option>
