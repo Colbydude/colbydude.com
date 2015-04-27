@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/',                     ['as' => 'home',                'uses' => 'PagesController@home']);
+Route::post('/contact',             ['as' => 'contact',             'uses' => 'PagesController@postContact']);
+Route::get('/games',                ['as' => 'games',               'uses' => 'PagesController@games']);
+Route::get('/payment',              ['as' => 'payment',             'uses' => 'PagesController@payment']);
+Route::get('/payment/success',      ['as' => 'payment.success',     'uses' => 'PagesController@paymentSuccess']);
+Route::get('/music',                ['as' => 'music',               'uses' => 'PagesController@music']);
+Route::get('/web',                  ['as' => 'web',                 'uses' => 'PagesController@web']);
 
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::post('/update_style', function()
+{
+    Session::put('style', Input::get('style'));
+    return response()->json(['style' => Input::get('style')]);
+});

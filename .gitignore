@@ -1,3 +1,13 @@
-/vendor
+/bower_components
 /node_modules
+/public/build
+/public/css
+/public/fonts
+/public/img
+/public/json
+/public/js
+/vendor
 .env
+.DS_Store
+composer.lock
+Thumbs.db

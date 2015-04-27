@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Indianapolis',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -145,6 +145,8 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		'Illuminate\Html\HtmlServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider',
 	],
 
 	/*
@@ -193,6 +195,9 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 
+		'Flash'		=> 'Laracasts\Flash\Flash',
+		'Form'     	=> 'Illuminate\Html\FormFacade',
+        'Html'      => 'Illuminate\Html\HtmlFacade'
 	],
 
 ];

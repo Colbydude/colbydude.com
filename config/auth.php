@@ -64,4 +64,8 @@ return [
 		'expire' => 60,
 	],
 
+	'no_csrf' => [
+		'update_style',
+	],
+
 ];
