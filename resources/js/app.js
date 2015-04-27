@@ -7,10 +7,7 @@ $(document).ready(function()
 	$('.choose-dark').click(function (e)
 	{
 		e.preventDefault();
-		$.post('update_style', { style: 'dark' }, function(data)
-		{
-			console.log(data);
-		});
+		$.post('update_style', { style: 'dark' });
 		$('body').removeClass('light');
 		$('body').addClass('dark');
 	});
@@ -19,10 +16,7 @@ $(document).ready(function()
 	$('.choose-light').click(function (e)
 	{
 		e.preventDefault();
-		$.post('update_style', { style: 'light' }, function(data)
-		{
-			console.log(data);
-		});
+		$.post('update_style', { style: 'light' });
 		$('body').removeClass('dark');
 		$('body').addClass('light');
 	});
