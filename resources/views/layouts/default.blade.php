@@ -16,7 +16,7 @@
 
         @yield('additional_css')
 
-        <!-- Google Analytics -->
+        {{-- Google Analytics --}}
         <script>
         	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,11 +28,11 @@
 
         @yield('header_scripts')
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        {{-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --}}
+        {{-- WARNING: Respond.js doesn't work if you view the page via file:// --}}
         <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
     <body class="text-center {{ $style.' '.$windows}}">

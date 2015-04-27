@@ -2,6 +2,7 @@
 
 use Flash;
 use Input;
+use Log;
 use Mail;
 
 class PagesController extends Controller
@@ -62,6 +63,8 @@ class PagesController extends Controller
             $message->from(Input::get('email'), Input::get('name'));
             $message->subject(Input::get('subject').' Message from '.Input::get('name'));
         });
+
+        Log::info(Input::get('subject').' Message from '.Input::get('name').'. IP: '.$_SERVER['REMOTE_ADDR']);
 
         Flash::message('Your message was sent. I\'ll get back to you as soon as possible!');
         return redirect('/');
