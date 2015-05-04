@@ -4,7 +4,7 @@
 @section('meta_description', 'Websites or webapps developed by Colby Terry.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, website, web, webapp, portfolio')
 @section('meta_canonical', 'http://colbydude.com/web')
-@section('footer_class', 'page')
+@section('footer_class', 'footer')
 
 @section('content')
 	<?php

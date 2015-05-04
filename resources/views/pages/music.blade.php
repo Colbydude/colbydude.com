@@ -4,7 +4,7 @@
 @section('meta_description', 'Music produced or performed by Colby Terry or We\'d Be.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, We\'d Be, Punk, Metal, Rock, Guitar, Cover')
 @section('meta_canonical', 'http://colbydude.com/music')
-@section('footer_class', 'page')
+@section('footer_class', 'footer')
 
 @section('content')
     <?php

@@ -4,7 +4,7 @@
 @section('meta_description', 'Games developed by Colby Terry and VoidTeam Studios.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, HTML5, games, Game Maker, portfolio')
 @section('meta_canonical', 'http://colbydude.com/games')
-@section('footer_class', 'page')
+@section('footer_class', 'footer')
 
 @section('content')
     <?php
