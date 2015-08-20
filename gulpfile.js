@@ -11,14 +11,14 @@ var elixir = require('laravel-elixir');
  |
  */
 
- var paths =
- {
-     'bower_components': './bower_components/',
-     'resources_vendor': './resources/vendor/'
- }
+var paths =
+{
+    'bower_components': './bower_components/',
+    'resources_vendor': './resources/vendor/'
+}
 
- elixir(function(mix)
- {
+elixir(function(mix)
+{
      mix.sass('app.scss')
         .scripts([paths.bower_components + 'jquery/dist/jquery.js', paths.bower_components + 'bootstrap-sass-official/assets/javascripts/bootstrap.js'], 'public/js/vendor.js', './')
         .scripts(['app.js'], 'public/js/app.js')
@@ -27,4 +27,4 @@ var elixir = require('laravel-elixir');
         .copy(paths.resources_vendor + 'icomoon/fonts/**', 'public/fonts/icomoon')
         .copy(paths.resources_vendor + 'icomoon/img/**', 'public/img')
         .version(['css/app.css', 'js/vendor.js', 'js/app.js']);
- });
+});

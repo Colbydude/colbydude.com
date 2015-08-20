@@ -1,241 +1,241 @@
 /* --- Font Face --- */
 @font-face
 {
-	font-family: 'IcoMoon';
-	src:url('#{$icomoon-font-path}/icomoon.eot');
-	src:url('#{$icomoon-font-path}/icomoon.eot?#iefix') format('embedded-opentype'),
-	url('#{$icomoon-font-path}/icomoon.ttf') format('truetype'),
-	url('#{$icomoon-font-path}/icomoon.woff') format('woff'),
-	url('#{$icomoon-font-path}/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'IcoMoon';
+    src:url('#{$icomoon-font-path}/icomoon.eot');
+    src:url('#{$icomoon-font-path}/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* --- Vector Icons (Not Windows) --- */
 
 .not-windows [class*="icon-"]
 {
-	font-family: 'IcoMoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+    font-family: 'IcoMoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .not-windows [class*="icon-"]
 {
-	border: 0;
-	/*color: #e4e4e4;*/
-	display: inline-block;
-	font-size: 26px;
-	height: 26px;
-	line-height: 26px;
-	margin: 0;
-	padding: 0;
-	width: 26px;
-	transition: color .6s ease;
+    border: 0;
+    /*color: #e4e4e4;*/
+    display: inline-block;
+    font-size: 26px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    width: 26px;
+    transition: color .6s ease;
 }
 
 .not-windows .icon-home:before {
-	content: "\e002";
+    content: "\e002";
 }
 .not-windows .icon-newspaper:before {
-	content: "\e00c";
+    content: "\e00c";
 }
 .not-windows .icon-guitar:before {
-	content: "\e03f";
+    content: "\e03f";
 }
 .not-windows .icon-gamepad:before {
-	content: "\e053";
+    content: "\e053";
 }
 .not-windows .icon-envelope:before {
-	content: "\e0ec";
+    content: "\e0ec";
 }
 .not-windows .icon-screen:before {
-	content: "\e123";
+    content: "\e123";
 }
 .not-windows .icon-mobile:before {
-	content: "\e126";
+    content: "\e126";
 }
 .not-windows .icon-tablet:before {
-	content: "\e127";
+    content: "\e127";
 }
 .not-windows .icon-spinner:before {
-	content: "\e1aa";
+    content: "\e1aa";
 }
 .not-windows .icon-twitter:before {
-	content: "\e49d";
+    content: "\e49d";
 }
 .not-windows .icon-youtube:before {
-	content: "\e4a3";
+    content: "\e4a3";
 }
 .not-windows .icon-steam:before {
-	content: "\e4b7";
+    content: "\e4b7";
 }
 .not-windows .icon-github:before {
-	content: "\e4ba";
+    content: "\e4ba";
 }
 .not-windows .icon-skype:before {
-	content: "\e4cd";
+    content: "\e4cd";
 }
 .not-windows .icon-paypal:before {
-	content: "\e4dd";
+    content: "\e4dd";
 }
 .not-windows .icon-globe:before {
-	content: "\e2c4";
+    content: "\e2c4";
 }
 .not-windows .icon-tumblr:before {
-	content: "\e4c3";
+    content: "\e4c3";
 }
 .not-windows .icon-apple:before {
-	content: "\e4c6";
+    content: "\e4c6";
 }
 .not-windows .icon-android:before {
-	content: "\e4c8";
+    content: "\e4c8";
 }
 .not-windows .icon-windows:before {
-	content: "\e4c9";
+    content: "\e4c9";
 }
 .not-windows .icon-finder:before {
-	content: "\e4c7";
+    content: "\e4c7";
 }
 .not-windows .icon-windows8:before {
-	content: "\e4ca";
+    content: "\e4ca";
 }
 .not-windows .icon-tux:before {
-	content: "\e4c5";
+    content: "\e4c5";
 }
 
 /* --- Image Icons (Windows) --- */
 
 .windows [class*="icon-"] {
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	/*background-image: url(../img/sprites.png);*/
-	background-repeat: no-repeat;
-	transition: background-image .6s ease;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    /*background-image: url(../img/sprites.png);*/
+    background-repeat: no-repeat;
+    transition: background-image .6s ease;
 }
 
 .windows .icon-home {
-	background-position: 0 0;
-	width: 26px;
+    background-position: 0 0;
+    width: 26px;
 }
 .windows .icon-newspaper {
-	background-position: -42px 0;
-	width: 26px;
+    background-position: -42px 0;
+    width: 26px;
 }
 .windows .icon-guitar {
-	background-position: -84px 0;
-	width: 26px;
+    background-position: -84px 0;
+    width: 26px;
 }
 .windows .icon-gamepad {
-	background-position: -126px 0;
-	width: 26px;
+    background-position: -126px 0;
+    width: 26px;
 }
 .windows .icon-envelope {
-	background-position: -168px 0;
-	width: 26px;
+    background-position: -168px 0;
+    width: 26px;
 }
 .windows .icon-screen {
-	background-position: -210px 0;
-	width: 26px;
+    background-position: -210px 0;
+    width: 26px;
 }
 .windows .icon-mobile {
-	background-position: -252px 0;
-	width: 26px;
+    background-position: -252px 0;
+    width: 26px;
 }
 .windows .icon-tablet {
-	background-position: -294px 0;
-	width: 26px;
+    background-position: -294px 0;
+    width: 26px;
 }
 .windows .icon-spinner {
-	background-position: -336px 0;
-	width: 26px;
+    background-position: -336px 0;
+    width: 26px;
 }
 .windows .icon-twitter {
-	background-position: -378px 0;
-	width: 26px;
+    background-position: -378px 0;
+    width: 26px;
 }
 .windows .icon-youtube {
-	background-position: -420px 0;
-	width: 26px;
+    background-position: -420px 0;
+    width: 26px;
 }
 .windows .icon-steam {
-	background-position: -462px 0;
-	width: 26px;
+    background-position: -462px 0;
+    width: 26px;
 }
 .windows .icon-github {
-	background-position: -504px 0;
-	width: 26px;
+    background-position: -504px 0;
+    width: 26px;
 }
 .windows .icon-skype {
-	background-position: -546px 0;
-	width: 26px;
+    background-position: -546px 0;
+    width: 26px;
 }
 .windows .icon-paypal {
-	background-position: -588px 0;
-	width: 26px;
+    background-position: -588px 0;
+    width: 26px;
 }
 .windows .icon-globe {
-	background-position: -630px 0;
-	width: 26px;
+    background-position: -630px 0;
+    width: 26px;
 }
 .windows .icon-tumblr {
-	background-position: 0 -42px;
+    background-position: 0 -42px;
 }
 .windows .icon-apple {
-	background-position: -42px -42px;
+    background-position: -42px -42px;
 }
 .windows .icon-android {
-	background-position: -84px -42px;
+    background-position: -84px -42px;
 }
 .windows .icon-windows {
-	background-position: -126px -42px;
+    background-position: -126px -42px;
 }
 .windows .icon-finder {
-	background-position: -168px -42px;
+    background-position: -168px -42px;
 }
 .windows .icon-windows8 {
-	background-position: -210px -42px;
+    background-position: -210px -42px;
 }
 .windows .icon-tux {
-	background-position: -252px -42px;
+    background-position: -252px -42px;
 }
 
 /* --- Colored Styles --- */
 
 body
 {
-	&.dark
-	{
-		&.not-windows [class*="icon-"]
-		{
-			color: #e4e4e4;
-		}
+    &.dark
+    {
+        &.not-windows [class*="icon-"]
+        {
+            color: #e4e4e4;
+        }
 
-		&.windows [class*="icon-"]
-		{
-			background-image: url('../../img/sprites.png');
-		}
-	}
+        &.windows [class*="icon-"]
+        {
+            background-image: url('../../img/sprites.png');
+        }
+    }
 
-	&.light
-	{
-		&.not-windows [class*="icon-"]
-		{
-			color: #282828;
-		}
+    &.light
+    {
+        &.not-windows [class*="icon-"]
+        {
+            color: #282828;
+        }
 
-		&.windows [class*="icon-"]
-		{
-			background-image: url('../../img/sprites-inverse.png');
-		}
-	}
+        &.windows [class*="icon-"]
+        {
+            background-image: url('../../img/sprites-inverse.png');
+        }
+    }
 }

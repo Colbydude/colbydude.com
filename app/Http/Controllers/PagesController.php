@@ -1,4 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
 
 use Flash;
 use Input;
@@ -14,17 +16,17 @@ class PagesController extends Controller
         if (!session()->has('style'))
         {
             $rand = rand(0, 1);
-        	if ($rand == 0)
+            if ($rand == 0)
                 session(['style' => 'dark']);
             else
                 session(['style' => 'light']);
         }
 
         // Because Windows renders icon fonts badly.
-    	if (strpos($_SERVER["HTTP_USER_AGENT"], "Windows") !== false)
-    		$windows = "windows";
-    	else
-    		$windows = "not-windows";
+        if (strpos($_SERVER["HTTP_USER_AGENT"], "Windows") !== false)
+            $windows = "windows";
+        else
+            $windows = "not-windows";
 
         view()->share('style', session('style'));
         view()->share('windows', $windows);
