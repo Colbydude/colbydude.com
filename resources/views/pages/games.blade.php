@@ -31,7 +31,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="http://cdn.voidte.am/games/{{ $game['url'] }}" class="btn btn-primary" style="display: block;" target="_blank">Play</a>
+                                    <a href="http://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary" style="display: block;" target="_blank">Play</a>
                                 </div>
                             </div>
                         </div>
