@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('meta_title', 'Music by Colby Terry')
+@section('meta_title', 'Music | Colby Terry')
 @section('meta_description', 'Punk Rocker with a hint of metal tendencies.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, We\'d Be, Punk, Metal, Rock, Guitar, Cover')
 @section('meta_canonical', 'http://colbydude.com/music')

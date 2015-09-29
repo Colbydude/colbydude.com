@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
-@section('meta_title', 'Web Projects by Colby Terry')
+@section('meta_title', 'Web | Colby Terry')
 @section('meta_description', 'Websites, Web Apps, APIs, Content Management Systems? You dream it. I build it.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, website, web, webapp, portfolio')
 @section('meta_canonical', 'http://colbydude.com/web')
 
 @section('content')
-    <div class="container page">
+    <div class="container">
         <div class="page-header">
             <h1>Web</h1>
             <h2>Websites, Web Apps, APIs, Content Management Systems?<br>You dream it. I build it.</h2>
