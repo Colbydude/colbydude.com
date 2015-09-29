@@ -10,7 +10,7 @@
             @if (isset($featured))
                 <div class="col-sm-7">
                     <h3 class="line-header"><span>Featured Project</span></h3>
-                    <a href="{{ $featured['link'] }}"><img class="img-responsive img-thumbnail" src="{{ $featured['image'] }}" alt="{{ $featured['name'] }}"></a>
+                    <a href="{{ $featured['link'] }}"><img class="img-responsive img-thumbnail" src="{{ $featured['image'] }}" alt="{{ $featured['name'] }}" width="1920" height="1080"></a>
                 </div>
             @endif
             @if (isset($activities))
@@ -26,7 +26,7 @@
                                 </div>
                             </li>
                         @endforeach
-                    <ul>
+                    </ul>
                 </div>
             @endif
         </div>

@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-sm-5 col-sm-push-7">
                 <ul class="social-list">
-                    <li><a class="link-primary" href="#" data-target="#contact-modal" data-toggle="modal"><span class="fa fa-envelope"></span></a></li>
-                    <li><a class="link-github" href="https://github.com/Colbydude" target="_blank"><span class="fa fa-github"></span></a></li>
-                    <li><a class="link-skype" href="#" target="_blank"><span class="fa fa-skype"></span></a></li>
-                    <li><a class="link-steam" href="#" target="_blank"><span class="fa fa-steam"></span></a></li>
-                    <li><a class="link-twitch" href="http://twitch.tv/Colbydude" target="_blank"><span class="fa fa-twitch"></span></a></li>
-                    <li><a class="link-twitter" href="https://twitter.com/Colbydude" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                    <li><a class="link-primary" href="#" data-target="#contact-modal" data-toggle="modal" title="Contact"><span class="fa fa-envelope"></span></a></li>
+                    <li><a class="link-github" href="https://github.com/Colbydude" target="_blank" title="GitHub"><span class="fa fa-github"></span></a></li>
+                    <li><a class="link-skype" href="skype:colbydude001?chat" title="Skype"><span class="fa fa-skype"></span></a></li>
+                    <li><a class="link-steam" href="http://steamcommunity.com/id/colbydude/" target="_blank" title="Steam"><span class="fa fa-steam"></span></a></li>
+                    <li><a class="link-twitch" href="http://twitch.tv/Colbydude" target="_blank" title="Twitch"><span class="fa fa-twitch"></span></a></li>
+                    <li><a class="link-twitter" href="https://twitter.com/Colbydude" target="_blank" title="Twitter"><span class="fa fa-twitter"></span></a></li>
                 </ul>
             </div>
             <div class="col-sm-7 col-sm-pull-5">

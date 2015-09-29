@@ -21,9 +21,9 @@
                     <div class="col-sm-6 col-md-4">
                         <div class="web-project">
                             @if ($website['url'])
-                                <a href="{{ $website['url'] }}" target="_blank"><img class="img-thumbnail img-responsive" src="/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}"></a>
+                                <a href="{{ $website['url'] }}" target="_blank"><img class="img-thumbnail img-responsive" src="/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}" width="1920" height="1080"></a>
                             @else
-                                <img class="img-thumbnail img-responsive" src="/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}">
+                                <img class="img-thumbnail img-responsive" src="/img/web/{{ $website['img'] }}" alt="{{ $website['name'] }}" width="1920" height="1080">
                             @endif
 
                             <h4>{{ $website['name'] }}</h4>

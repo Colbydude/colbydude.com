@@ -17,7 +17,7 @@
                 @foreach ($games['html5'] as $game)
                     <div class="col-sm-4 col-md-4 col-lg-3">
                         <div class="game-project">
-                            <img class="img-responsive" src="http://voidteam.net/img/game-thumbnails/{{ $game['url'] }}.png" alt="{{ $game['name'] }}">
+                            <img class="img-responsive" src="http://voidteam.net/img/game-thumbnails/{{ $game['url'] }}.png" alt="{{ $game['name'] }}" width="640" height="360">
                             <h4>{{ $game['name'] }}</h4>
                             <div class="description">
                                 {{ $game['headline'] }}

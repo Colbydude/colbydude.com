@@ -14,11 +14,11 @@
         <h3 class="line-header"><span>Axes</span></h3>
         <div class="row">
             <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/guitars/ibanez-s5ex1-tg.jpg" alt="Ibanez S5EX1 Tiger Gray">
+                <img class="img-responsive img-thumbnail" src="/img/guitars/ibanez-s5ex1-tg.jpg" alt="Ibanez S5EX1 Tiger Gray" width="600" height="202">
                 <h4>Ibanez S5EX1 Tiger Gray</h4>
             </div>
             <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-ec-1000-ob.jpg" alt="ESP LTD EC-1000 Ocean Blue">
+                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-ec-1000-ob.jpg" alt="ESP LTD EC-1000 Ocean Blue" width="600" height="202">
                 <h4>ESP LTD EC-1000 Ocean Blue</h4>
             </div>
         </div>
