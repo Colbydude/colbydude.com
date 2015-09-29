@@ -14,7 +14,7 @@
         <meta property="og:title" content="@yield('meta_title', 'Colby Terry | Developer &amp; Musician')">
         <meta property="og:type" content="website">
         <meta property="og:url" content="@yield('meta_canonical', 'https://colbydude.com')">
-        <meta property="og:image" rel="image_src" type="image/jpeg" content="/img/avatar.jpg">
+        <meta property="og:image" content="/img/avatar.jpg">
         <meta property="og:description" content="@yield('meta_description', 'Hey, I\'m Colby. I program websites and games.')">
         <meta property="og:site_name" content="Colby Terry | Developer &amp; Musician">
         <meta property="og:locale" content="en_US">
