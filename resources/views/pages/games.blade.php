@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('meta_title', 'Games |Colby Terry')
+@section('meta_title', 'Games | Colby Terry')
 @section('meta_description', 'Nintendo-inspired retro games enthusiast. Mobile sellout.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, HTML5, games, Game Maker, portfolio')
 @section('meta_canonical', 'http://colbydude.com/games')
