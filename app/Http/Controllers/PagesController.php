@@ -13,20 +13,21 @@ class PagesController extends Controller
     {
         // If the style isn't set, we'll set it here, and share across all views.
         //session()->regenerate();
-        if (!session()->has('style'))
-        {
+        if (!session()->has('style')) {
             $rand = rand(0, 1);
-            if ($rand == 0)
+            if ($rand == 0) {
                 session(['style' => 'dark']);
-            else
+            } else {
                 session(['style' => 'light']);
+            }
         }
 
         // Because Windows renders icon fonts badly.
-        if (strpos($_SERVER["HTTP_USER_AGENT"], "Windows") !== false)
+        if (strpos($_SERVER["HTTP_USER_AGENT"], "Windows") !== false) {
             $windows = "windows";
-        else
+        } else {
             $windows = "not-windows";
+        }
 
         view()->share('style', session('style'));
         view()->share('windows', $windows);
@@ -34,17 +35,40 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('pages.home');
+        $activities = null;
+        $featured = null;
+
+        if (file_exists('json/activities.json')) {
+            $activities = json_decode(file_get_contents('json/activities.json'), true);
+        }
+
+        if (file_exists('json/featured.json')) {
+            $featured = json_decode(file_get_contents('json/featured.json'), true);
+        }
+
+        return view('pages.home')->with(compact('activities', 'featured'));
     }
 
     public function games()
     {
-        return view('pages.games');
+        $games = null;
+
+        if (file_exists('json/games.json')) {
+            $games = json_decode(file_get_contents('json/games.json'), true);
+        }
+
+        return view('pages.games')->with(compact('games'));
     }
 
     public function music()
     {
-        return view('pages.music');
+        $music = null;
+
+        if (file_exists('json/music.json')) {
+            $music = json_decode(file_get_contents('json/music.json'), true);
+        }
+
+        return view('pages.music')->with(compact('music'));
     }
 
     public function payment()
@@ -59,8 +83,7 @@ class PagesController extends Controller
 
     public function postContact()
     {
-        Mail::send('emails.contact', ['input' => Input::all()], function($message)
-        {
+        Mail::send('emails.contact', ['input' => Input::all()], function ($message) {
             $message->to('colbydude@voidteam.net', 'Colby Terry');
             $message->from(Input::get('email'), Input::get('name'));
             $message->subject(Input::get('subject').' Message from '.Input::get('name'));
@@ -74,6 +97,12 @@ class PagesController extends Controller
 
     public function web()
     {
-        return view('pages.web');
+        $websites = null;
+
+        if (file_exists('json/websites.json')) {
+            $websites = json_decode(file_get_contents('json/websites.json'), true);
+        }
+
+        return view('pages.web')->with(compact('websites'));
     }
 }

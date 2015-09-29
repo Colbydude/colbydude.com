@@ -10,6 +10,10 @@ $(document).ready(function()
         $.post('update_style', { style: 'dark' });
         $('body').removeClass('light');
         $('body').addClass('dark');
+        $('.lastname').fadeOut(300, function()
+        {
+            $('.username').fadeIn(300);
+        });
     });
 
     // Switch to light color scheme.
@@ -19,13 +23,9 @@ $(document).ready(function()
         $.post('update_style', { style: 'light' });
         $('body').removeClass('dark');
         $('body').addClass('light');
-    });
-
-    // Handle contact modal.
-    $('#contact-button').click(function(e)
-    {
-        e.preventDefault();
-
-        $('#contact-modal').modal();
+        $('.username').fadeOut(300, function()
+        {
+            $('.lastname').fadeIn(300);
+        });
     });
 });

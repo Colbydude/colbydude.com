@@ -1,0 +1,113 @@
+header
+{
+    padding: 12px 0;
+
+    .logo-sortof
+    {
+        display: block;
+        font-size: 26px;
+        line-height: 1;
+        text-decoration: none;
+        transition: color .6s ease;
+    }
+}
+
+nav
+{
+    .header-nav
+    {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+
+        & > li
+        {
+            border-bottom: 4px solid;
+            float: left;
+            text-align: center;
+            transition: border-color .6s ease;
+            width: 33.33%;
+
+            & > a
+            {
+                display: block;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1;
+                padding: 14px 10px 11px 10px;
+                text-decoration: none;
+
+                &:hover,
+                &:focus
+                {
+                    color: $app-primary;
+                }
+
+                .fa
+                {
+                    display: inline-block;
+                    margin-right: 10px;
+                    width: 16px;
+
+                    @media screen and (max-width: $screen-xs-max)
+                    {
+                        display: inline;
+                        margin: 0;
+                    }
+                }
+
+                .nav-text
+                {
+                    display: inline-block;
+
+                    @media screen and (max-width: $screen-xs-max)
+                    {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: $screen-xs-max)
+                {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+
+.style-chooser
+{
+    height: 26px;
+    text-align: right;
+
+    a
+    {
+        border-radius: 35px;
+        box-sizing: initial;
+        display: inline-block;
+        height: 24px;
+        margin: 0 3px;
+        opacity: 0.5;
+        transition: opacity .6s ease;
+        width: 24px;
+
+        &:hover, &:focus
+        {
+            outline: none;
+            opacity: 1;
+        }
+    }
+
+    .choose-dark
+    {
+        background: $app-dark;
+        border: 1px solid $app-light;
+    }
+
+    .choose-light
+    {
+        background: $app-light;
+        border: 1px solid $app-dark;
+    }
+}

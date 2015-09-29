@@ -24,7 +24,6 @@ elixir(function(mix)
         .scripts(['app.js'], 'public/js/app.js')
         .copy(paths.bower_components + 'bootstrap-sass-official/assets/fonts/bootstrap/**', 'public/fonts/bootstrap')
         .copy(paths.bower_components + 'open-sans-fontface/fonts/**', 'public/fonts/open-sans')
-        .copy(paths.resources_vendor + 'icomoon/fonts/**', 'public/fonts/icomoon')
-        .copy(paths.resources_vendor + 'icomoon/img/**', 'public/img')
+        .copy(paths.bower_components + 'font-awesome/fonts/**', 'public/fonts/fontawesome')
         .version(['css/app.css', 'js/vendor.js', 'js/app.js']);
 });

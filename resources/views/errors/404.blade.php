@@ -30,10 +30,10 @@
 
 @section('content')
     <div class="container default">
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-        <div class="buttons">
-            <a href="/" data-toggle="tooltip" data-placement="bottom" title="Home"><span class="icon-home"></span></a>
+        <div class="page-header">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
         </div>
+        <p><a class="btn btn-primary-outline" href="{{ route('home') }}">Return Home</a></p>
     </div>
 @stop
