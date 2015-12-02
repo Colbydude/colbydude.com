@@ -23,14 +23,14 @@
             </div>
         </div>
         @if (isset($music))
-            <h3 class="line-header"><span>Guitar Covers</span></h3>
+            <h3 class="line-header"><span>Video Game Metal</span></h3>
             <div class="row">
-                @if (!empty($music['guitar-covers']))
-                    @foreach ($music['guitar-covers'] as $song)
+                @if (!empty($music['vg-metal']))
+                    @foreach ($music['vg-metal'] as $song)
                         <div class="col-sm-6 col-md-4">
                             <div class="video-container"><iframe width="635" height="353" src="{{ $song['video'] }}?wmode=transparent"></iframe></div>
                             <h4>{{ $song['song'] }}</h4>
-                            <p>By: {{ $song['by'] }}</p>
+                            <p>From: {{ $song['from'] }}</p>
                         </div>
                     @endforeach
                 @else
@@ -47,6 +47,22 @@
                             <div class="video-container"><iframe width="635" height="353" src="{{ $song['video'] }}?wmode=transparent"></iframe></div>
                             <h4>{{ $song['song'] }}</h4>
                             <p>{{ $song['subtitle'] }}</p>
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-xs-12">
+                        <p class="lead">Nothing to see here yet!</p>
+                    </div>
+                @endif
+            </div>
+            <h3 class="line-header"><span>(Old) Guitar Covers</span></h3>
+            <div class="row">
+                @if (!empty($music['guitar-covers']))
+                    @foreach ($music['guitar-covers'] as $song)
+                        <div class="col-sm-6 col-md-4">
+                            <div class="video-container"><iframe width="635" height="353" src="{{ $song['video'] }}?wmode=transparent"></iframe></div>
+                            <h4>{{ $song['song'] }}</h4>
+                            <p>By: {{ $song['by'] }}</p>
                         </div>
                     @endforeach
                 @else
