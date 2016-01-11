@@ -88,9 +88,23 @@ footer
                     }
                 }
 
+                &.link-youtube
+                {
+                    &:hover,
+                    &:focus
+                    {
+                        color: $c-youtube;
+                    }
+                }
+
                 @media screen and (max-width: $screen-xs-max)
                 {
                     padding: 0 10px;
+                }
+
+                @media screen and (max-width: 374px)
+                {
+                    font-size: 18px;
                 }
             }
         }

@@ -9,6 +9,7 @@
                     <li><a class="link-steam" href="http://steamcommunity.com/id/colbydude/" target="_blank" title="Steam"><span class="fa fa-steam"></span></a></li>
                     <li><a class="link-twitch" href="http://twitch.tv/Colbydude" target="_blank" title="Twitch"><span class="fa fa-twitch"></span></a></li>
                     <li><a class="link-twitter" href="https://twitter.com/Colbydude" target="_blank" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+                    <li><a class="link-youtube" href="https://www.youtube.com/channel/UCW0IHL6zJWMVjv1ufZS1sCw" target="_blank" title="YouTube"><span class="fa fa-youtube-play"></span></a></li>
                 </ul>
             </div>
             <div class="col-sm-7 col-sm-pull-5">
