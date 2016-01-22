@@ -18,8 +18,14 @@
                 <h4>Ibanez S5EX1 Tiger Gray</h4>
             </div>
             <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-ec-1000-ob.jpg" alt="ESP LTD EC-1000 Ocean Blue" width="600" height="202">
-                <h4>ESP LTD EC-1000 Ocean Blue</h4>
+                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-ec-1000-stb.jpg" alt="ESP LTD EC-1000 See Thru Blue" width="600" height="202">
+                <h4>ESP LTD EC-1000 See Thru Blue</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-b-155dx-stb.jpg" alt="ESP LTD B-155DX See Thru Blue" width="600" height="202">
+                <h4>ESP LTD B-155DX See Thru Blue</h4>
             </div>
         </div>
         @if (isset($music))
