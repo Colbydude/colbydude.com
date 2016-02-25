@@ -3,7 +3,7 @@
 @section('meta_title', 'Web | Colby Terry')
 @section('meta_description', 'Websites, Web Apps, APIs, Content Management Systems? You dream it. I build it.')
 @section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, website, web, webapp, portfolio')
-@section('meta_canonical', 'http://colbydude.com/web')
+@section('meta_canonical', 'https://colbydude.com/web')
 
 @section('content')
     <div class="container">
