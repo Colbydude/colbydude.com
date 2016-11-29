@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+Route::post('contact', 'PagesController@postContact');
+Route::get('games', 'PagesController@games');
+Route::get('payment', 'PagesController@payment');
+Route::get('payment/success', 'PagesController@paymentSuccess');
+Route::get('music', 'PagesController@music');
+Route::post('update_style', 'PagesController@updateStyle');
+Route::get('web', 'PagesController@web');

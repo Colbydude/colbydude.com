@@ -1,4 +1,12 @@
 /node_modules
+/public/build
+/public/css
+/public/downloads
+/public/files
+/public/fonts
+/public/img/web
+/public/json
+/public/js
 /public/storage
 /storage/*.key
 /vendor
@@ -6,3 +14,5 @@
 Homestead.json
 Homestead.yaml
 .env
+.DS_Store
+Thumbs.db

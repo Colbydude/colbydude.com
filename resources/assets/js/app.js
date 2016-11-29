@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
@@ -7,14 +6,37 @@
 
 require('./bootstrap');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+$(document).ready(function()
+{
+    // Switch to dark color scheme.
+    $('.choose-dark').click(function (e)
+    {
+        e.preventDefault();
+        $.post('update_style', { style: 'dark' });
+        $('body').removeClass('light');
+        $('body').addClass('dark');
+        $('.lastname').fadeOut(300, function()
+        {
+            $('.username').fadeIn(300);
+        });
+    });
 
-Vue.component('example', require('./components/Example.vue'));
+    // Switch to light color scheme.
+    $('.choose-light').click(function (e)
+    {
+        e.preventDefault();
+        $.post('update_style', { style: 'light' });
+        $('body').removeClass('dark');
+        $('body').addClass('light');
+        $('.username').fadeOut(300, function()
+        {
+            $('.lastname').fadeIn(300);
+        });
+    });
+});
 
-const app = new Vue({
-    el: '#app'
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
 });

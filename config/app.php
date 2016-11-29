@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Colby Terry | Developer & Musician',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Los_Angeles',
 
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Collective\Html\HtmlServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
         //
 
         /*
@@ -226,6 +227,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

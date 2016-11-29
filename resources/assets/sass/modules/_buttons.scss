@@ -1,0 +1,19 @@
+.btn
+{
+    border-radius: 0;
+    transition: background-color .6s ease, border-color .6s ease, color .6s ease;
+}
+
+.btn-primary-outline
+{
+    background-color: transparent;
+    border-color: $app-primary;
+    color: $app-primary;
+
+    &:hover,
+    &:focus
+    {
+        background-color: $app-primary;
+        color: white;
+    }
+}
