@@ -72,6 +72,24 @@ body
             }
         }
 
+        .table
+        {
+            & > thead > tr > th
+            {
+                border-bottom: 2px solid $app-light;
+            }
+
+            & > thead > tr > th,
+            & > thead > tr > td,
+            & > tbody > tr > th,
+            & > tbody > tr > td,
+            & > tfoot > tr > th,
+            & > tfoot > tr > td
+            {
+                border-top: 1px solid $app-light;
+            }
+        }
+
         .social-list
         {
             & > li
@@ -151,6 +169,24 @@ body
             {
                 background-color: $app-primary;
                 border-color: $app-primary;
+            }
+        }
+
+        .table
+        {
+            & > thead > tr > th
+            {
+                border-bottom: 2px solid $app-dark;
+            }
+
+            & > thead > tr > th,
+            & > thead > tr > td,
+            & > tbody > tr > th,
+            & > tbody > tr > td,
+            & > tfoot > tr > th,
+            & > tfoot > tr > td
+            {
+                border-top: 1px solid $app-dark;
             }
         }
 
