@@ -19,6 +19,7 @@
             <div class="col-sm-8">
                 <h3 class="featured">VGM, Vol. 1: New Game - EP</h3>
                 <h4>Released January 2nd, 2017</h4>
+                <p>on <a href="https://voidte.am/VGMVol1-GP">Google Play</a>, <a href="https://voidte.am/VGMVol1-iT">iTunes</a>, <a href="https://voidte.am/VGMVol1-Sp">Spotify</a></p>
                 <table class="table table-condensed text-left">
                     <thead>
                         <tr>
