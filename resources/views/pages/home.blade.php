@@ -16,7 +16,7 @@
                     <div class="col-md-7">
                         <h3 class="featured">VGM, Vol. 1: New Game - EP</h3>
                         <h4>Available Now</h4>
-                        <p>on <a href="https://voidte.am/VGMVol1-GP">Google Play</a>, <a href="https://voidte.am/VGMVol1-iT">iTunes</a>, <a href="https://voidte.am/VGMVol1-Sp">Spotify</a></p>
+                        <p>on <a href="https://voidte.am/VGMVol1-GP">Google Play</a>, <a href="https://voidte.am/VGMVol1-iT">iTunes</a>, <a href="https://voidte.am/VGMVol1-Sp">Spotify</a>, and <a href="https://voidte.am/VGMVol1-YT">YouTube</a></p>
                         <table class="table table-condensed text-left">
                             <thead>
                                 <tr>
