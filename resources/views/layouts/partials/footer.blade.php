@@ -17,7 +17,7 @@
         </div>
     </div>
 </footer>
-<div class="modal fade" id="contact-modal">
+{{--<div class="modal fade" id="contact-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -64,4 +64,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-</div>
+</div>--}}
