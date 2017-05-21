@@ -86,6 +86,10 @@
         </div>
         <div class="row">
             <div class="col-sm-6">
+                <img class="img-responsive img-thumbnail" src="/img/guitars/prs-se-mhhb2.jpg" alt="PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)" width="600" height="202">
+                <h4>PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)</h4>
+            </div>
+            <div class="col-sm-6">
                 <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-b-155dx-stb.jpg" alt="ESP LTD B-155DX See Thru Blue" width="600" height="202">
                 <h4>ESP LTD B-155DX See Thru Blue</h4>
             </div>

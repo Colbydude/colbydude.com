@@ -43,6 +43,15 @@ footer
                     }
                 }
 
+                &.link-facebook
+                {
+                    &:hover,
+                    &:focus
+                    {
+                        color: $c-facebook;
+                    }
+                }
+
                 &.link-github
                 {
                     &:hover,

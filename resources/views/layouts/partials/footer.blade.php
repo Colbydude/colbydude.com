@@ -4,6 +4,7 @@
             <div class="col-sm-5 col-sm-push-7">
                 <ul class="social-list">
                     <li><a class="link-primary" href="#" data-target="#contact-modal" data-toggle="modal" title="Contact"><span class="fa fa-envelope"></span></a></li>
+                    <li><a class="link-facebook" href="https://facebook.com/ColbydudeMusic" target="_blank" title="Facebook"><span class="fa fa-facebook-square"></span></a></li>
                     <li><a class="link-github" href="https://github.com/Colbydude" target="_blank" title="GitHub"><span class="fa fa-github"></span></a></li>
                     <li><a class="link-twitch" href="http://twitch.tv/Colbydude" target="_blank" title="Twitch"><span class="fa fa-twitch"></span></a></li>
                     <li><a class="link-twitter" href="https://twitter.com/Colbydude" target="_blank" title="Twitter"><span class="fa fa-twitter"></span></a></li>
@@ -17,7 +18,7 @@
         </div>
     </div>
 </footer>
-{{--<div class="modal fade" id="contact-modal">
+<div class="modal fade" id="contact-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -64,4 +65,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-</div>--}}
+</div>
