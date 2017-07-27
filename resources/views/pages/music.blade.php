@@ -80,15 +80,21 @@
                 <h4>Chapman ML1-8RS (Rob Scallon 8-String Signature)</h4>
             </div>
             <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/guitars/gibson-2017-les-paul-standard-bb.jpg" alt="Gibson 2017 Les Paul Standard Blueberry Burst" width="600" height="202">
-                <h4>Gibson 2017 Les Paul Standard Blueberry Burst</h4>
+                <img class="img-responsive img-thumbnail" src="/img/guitars/prs-se-mhhb2.jpg" alt="PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)" width="600" height="202">
+                <h4>PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/guitars/prs-se-mhhb2.jpg" alt="PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)" width="600" height="202">
-                <h4>PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)</h4>
+                <img class="img-resonsive img-thumbnail" src="/img/guitars/esp-sn-25th.jpg" alt="ESP SN-25TH (Sonic the Hedgehog)">
+                <h4>ESP SN-25TH (Sonic the Hedgehog)</h4>
             </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-thumbnail" src="/img/guitars/esp-sd-15th.jpg" alt="ESP SD-15TH (Shadow the Hedgehog)">
+                <h4>ESP SD-15TH (Shadow the Hedgehog)</h4>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-6">
                 <img class="img-responsive img-thumbnail" src="/img/guitars/esp-ltd-b-155dx-stb.jpg" alt="ESP LTD B-155DX See Thru Blue" width="600" height="202">
                 <h4>ESP LTD B-155DX See Thru Blue</h4>
