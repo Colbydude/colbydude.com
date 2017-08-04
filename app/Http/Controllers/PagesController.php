@@ -89,11 +89,11 @@ class PagesController extends Controller
      */
     public function postContact(Request $request)
     {
-        /*Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {
+        Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {
             $message->to(env('MAIL_RECEIVE_ADDRESS'), 'Colby Terry');
             $message->from($request->input('email'), $request->input('name'));
             $message->subject($request->input('subject').' Message from '.$request->input('name'));
-        });*/
+        });
 
         Log::info($request->input('subject').' Message from '.$request->input('name').'. IP: '.$_SERVER['REMOTE_ADDR']);
 
