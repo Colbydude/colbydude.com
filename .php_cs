@@ -1,8 +1,33 @@
 <?php
 
+use Symfony\CS\Finder;
 use Symfony\CS\Config\Config;
 use Symfony\CS\FixerInterface;
-use Symfony\CS\Finder\DefaultFinder;
+
+// Fix from:
+// https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/1925#issuecomment-266323864
+if (class_exists('PhpCsFixer\Finder')) {    // PHP-CS-Fixer 2.x
+    $finder = PhpCsFixer\Finder::create()
+        ->in(__DIR__)
+    ;
+
+    return PhpCsFixer\Config::create()
+        ->setRules(array(
+            '@PSR2' => true,
+        ))
+        ->setFinder($finder)
+    ;
+} elseif (class_exists('Symfony\CS\Finder\DefaultFinder')) {  // PHP-CS-Fixer 1.x
+    $finder = Symfony\CS\Finder\DefaultFinder::create()
+        ->in(__DIR__)
+    ;
+
+    return Symfony\CS\Config\Config::create()
+        ->level(Symfony\CS\FixerInterface::PSR2_LEVEL)
+        ->fixers(['-psr0'])    // don't lowercase namespace (use "namespace App\.." instead of "namespace app\..") to be compatible with Laravel 5
+        ->finder($finder)
+    ;
+}
 
 $fixers = [
     'blankline_after_open_tag',
@@ -71,7 +96,7 @@ $fixers = [
 ];
 
 return Config::create()
-    ->finder(DefaultFinder::create()->in(__DIR__))
+    ->finder(Finder::create()->in(__DIR__))
     ->fixers($fixers)
     ->level(FixerInterface::NONE_LEVEL)
     ->setUsingCache(true);

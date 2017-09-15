@@ -6,8 +6,8 @@
             </div>
             <div class="col-xs-4">
                 <div class="style-chooser">
-                    <a class="choose-dark" href="#" title="Switch to Dark Theme" data-style="dark"></a>
-                    <a class="choose-light" href="#" title="Switch to Light Theme" data-style="light"></a>
+                    <a class="choose-style choose-dark" href="#" title="Switch to Dark Theme" data-style="dark"></a>
+                    <a class="choose-style choose-light" href="#" title="Switch to Light Theme" data-style="light"></a>
                 </div>
             </div>
         </div>

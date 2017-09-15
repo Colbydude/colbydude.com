@@ -2,9 +2,9 @@
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/font-awesome/scss/font-awesome";
-@import "node_modules/open-sans-fontface/open-sans.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~font-awesome/scss/font-awesome.scss";
+@import "~open-sans-fontface/open-sans.scss";
 
 @import "modules/base";
 @import "modules/typography";

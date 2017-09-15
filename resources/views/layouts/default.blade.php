@@ -34,7 +34,7 @@
 
         @yield('additional_meta')
 
-        <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
         @yield('additional_css')
 
@@ -58,7 +58,7 @@
 
         @include('layouts.partials.footer')
 
-        <script src="{{ elixir('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
         @yield('scripts')
 
         {{-- Google Analytics --}}

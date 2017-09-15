@@ -112,7 +112,7 @@ class PagesController extends Controller
     {
         session(['style' => $request->input('style')]);
 
-        return response()->json(['style' => $request->input('style')]);
+        return response()->json(['style' => $request->input('style')], 200);
     }
 
     /**

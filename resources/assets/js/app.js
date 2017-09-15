@@ -1,42 +1,39 @@
 /**
  * First we will load all of this project's JavaScript dependencies which
- * include Vue and Vue Resource. This gives a great starting point for
+ * includes a plethora of libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 
 require('./bootstrap');
 
-$(document).ready(function()
-{
-    // Switch to dark color scheme.
-    $('.choose-dark').click(function (e)
-    {
+$(document).ready(function() {
+    // Switch color scheme.
+    $('.choose-style').on('click', function (e) {
         e.preventDefault();
-        $.post('update_style', { style: 'dark' });
-        $('body').removeClass('light');
-        $('body').addClass('dark');
-        $('.lastname').fadeOut(300, function()
-        {
-            $('.username').fadeIn(300);
+        var style = $(this).data('style');
+
+        axios.post('/update_style', {
+            style: $(this).data('style')
+        }).then(function (response) {
+            if (style == 'dark') {
+                $('body').removeClass('light');
+                $('body').addClass('dark');
+                $('.lastname').fadeOut(300, function()
+                {
+                    $('.username').fadeIn(300);
+                });
+            }
+
+            if (style == 'light') {
+                $('body').removeClass('dark');
+                $('body').addClass('light');
+                $('.username').fadeOut(300, function()
+                {
+                    $('.lastname').fadeIn(300);
+                });
+            }
+        }).catch(function (error) {
+            console.log(error);
         });
     });
-
-    // Switch to light color scheme.
-    $('.choose-light').click(function (e)
-    {
-        e.preventDefault();
-        $.post('update_style', { style: 'light' });
-        $('body').removeClass('dark');
-        $('body').addClass('light');
-        $('.username').fadeOut(300, function()
-        {
-            $('.lastname').fadeIn(300);
-        });
-    });
-});
-
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
 });
