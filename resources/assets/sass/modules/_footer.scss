@@ -1,125 +1,100 @@
-footer
-{
+footer {
     margin-top: 10px;
 
-    .footer-content
-    {
+    .footer-content {
         border-top: 4px solid;
         font-size: 13px;
         padding: 10px 0;
 
-        @media screen and (max-width: $screen-xs-max)
-        {
+        @media screen and (max-width: $screen-xs-max) {
             text-align: center;
         }
     }
 
-    .social-list
-    {
+    .social-list {
         list-style: none;
         margin: 0;
         overflow: hidden;
         padding: 0;
         text-align: right;
 
-        & > li
-        {
+        & > li {
             display: inline-block;
 
-            & > a
-            {
+            & > a {
                 display: block;
                 font-size: 24px;
                 line-height: 1;
                 padding: 10px;
                 transition: color .6s ease;
 
-                &.link-primary
-                {
+                &.link-primary {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $app-primary;
                     }
                 }
 
-                &.link-facebook
-                {
+                &.link-facebook {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-facebook;
                     }
                 }
 
-                &.link-github
-                {
+                &.link-github {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-github;
                     }
                 }
 
-                &.link-skype
-                {
+                &.link-skype {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-skype;
                     }
                 }
 
-                &.link-steam
-                {
+                &.link-steam {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-steam;
                     }
                 }
 
-                &.link-twitch
-                {
+                &.link-twitch {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-twitch;
                     }
                 }
 
-                &.link-twitter
-                {
+                &.link-twitter {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-twitter;
                     }
                 }
 
-                &.link-youtube
-                {
+                &.link-youtube {
                     &:hover,
-                    &:focus
-                    {
+                    &:focus {
                         color: $c-youtube;
                     }
                 }
 
-                @media screen and (max-width: $screen-xs-max)
-                {
+                @media screen and (max-width: $screen-xs-max) {
                     padding: 0 10px;
                 }
 
-                @media screen and (max-width: 374px)
-                {
+                @media screen and (max-width: 374px) {
                     font-size: 18px;
                 }
             }
         }
 
-        @media screen and (max-width: $screen-xs-max)
-        {
+        @media screen and (max-width: $screen-xs-max) {
             margin-bottom: 10px;
             text-align: center;
         }

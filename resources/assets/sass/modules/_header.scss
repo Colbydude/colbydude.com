@@ -1,9 +1,7 @@
-header
-{
+header {
     padding: 12px 0;
 
-    .logo-sortof
-    {
+    .logo-sortof {
         display: block;
         font-size: 26px;
         line-height: 1;
@@ -12,63 +10,49 @@ header
     }
 }
 
-nav
-{
-    .header-nav
-    {
+nav {
+    .header-nav {
         list-style: none;
         margin: 0;
         overflow: hidden;
         padding: 0;
 
-        & > li
-        {
+        & > li {
             border-bottom: 4px solid;
             float: left;
             text-align: center;
             transition: border-color .6s ease;
             width: 33.33%;
 
-            & > a
-            {
+            & > a {
                 display: block;
                 font-size: 16px;
                 font-weight: bold;
                 line-height: 1;
                 padding: 14px 10px 11px 10px;
                 text-decoration: none;
+                transition: color .6s ease;
 
-                &:hover,
-                &:focus
-                {
-                    color: $app-primary;
-                }
-
-                .fa
-                {
+                .fa {
                     display: inline-block;
                     margin-right: 10px;
                     width: 16px;
 
-                    @media screen and (max-width: $screen-xs-max)
-                    {
+                    @media screen and (max-width: $screen-xs-max) {
                         display: inline;
                         margin: 0;
                     }
                 }
 
-                .nav-text
-                {
+                .nav-text {
                     display: inline-block;
 
-                    @media screen and (max-width: $screen-xs-max)
-                    {
+                    @media screen and (max-width: $screen-xs-max) {
                         display: none;
                     }
                 }
 
-                @media screen and (max-width: $screen-xs-max)
-                {
+                @media screen and (max-width: $screen-xs-max) {
                     font-size: 21px;
                 }
             }
@@ -76,13 +60,11 @@ nav
     }
 }
 
-.style-chooser
-{
+.style-chooser {
     height: 26px;
     text-align: right;
 
-    a
-    {
+    a {
         border-radius: 35px;
         box-sizing: initial;
         display: inline-block;
@@ -92,22 +74,19 @@ nav
         transition: opacity .6s ease;
         width: 24px;
 
-        &:hover, &:focus
-        {
+        &:hover, &:focus {
             outline: none;
             opacity: 1;
         }
     }
 
-    .choose-dark
-    {
-        background: $app-dark;
-        border: 1px solid $app-light;
+    .choose-dark {
+        background: $app-dark-bg;
+        border: 1px solid $app-dark-text-secondary;
     }
 
-    .choose-light
-    {
-        background: $app-light;
-        border: 1px solid $app-dark;
+    .choose-light {
+        background: $app-light-bg;
+        border: 1px solid $app-light-text-secondary;
     }
 }

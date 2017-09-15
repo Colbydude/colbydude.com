@@ -1,82 +1,97 @@
-body
-{
+body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: background-color .6s ease, color .6s ease;
 
     // Dark Color Scheme.
-    &.dark
-    {
-        background-color: $app-dark;
-        color: $app-light;
+    &.dark {
+        background-color: $app-dark-bg;
+        color: $app-dark-text;
 
-        header
-        {
-            .logo-sortof
-            {
-                color: $app-light;
+        header {
+            .logo-sortof {
+                color: $app-dark-text;
 
-                &:hover
-                {
+                &:hover {
                     color: $app-primary;
                 }
             }
         }
 
-        nav
-        {
-            border-color: $app-light;
+        nav {
+            border-color: $app-dark-text-secondary;
 
-            .header-nav
-            {
-                & > li
-                {
-                    border-color: $app-light;
+            .header-nav {
+                & > li {
+                    border-color: $app-dark-text-secondary;
 
-                    &:hover
-                    {
-                        border-color: $app-primary;
+                    & > a {
+                        color: $app-dark-text-secondary;
+
+                        &:hover,
+                        &:focus {
+                            color: $app-primary;
+                        }
                     }
 
-                    &.active
-                    {
+                    &:hover,
+                    &:focus {
                         border-color: $app-primary;
+
+                        & > a {
+                            &,
+                            &:hover,
+                            &:focus {
+                                color: $app-primary;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        border-color: $app-primary;
+
+                        & > a {
+                            &,
+                            &:hover,
+                            &:focus {
+                                color: $app-primary;
+                            }
+                        }
                     }
                 }
             }
         }
 
-        .line-header
-        {
-            &::before
-            {
-                background-color: $app-light;
-            }
-
-            span
-            {
-                background-color: $app-dark;
-                color: $app-light;
+        .page-header {
+            h2 {
+                color: $app-dark-text-secondary;
             }
         }
 
-        .img-thumbnail
-        {
-            background-color: $app-light;
-            border-color: $app-light;
+        .line-header {
+            &::before {
+                background-color: $app-dark-text-secondary;
+            }
+
+            span {
+                background-color: $app-dark-bg;
+                color: $app-dark-text;
+            }
+        }
+
+        .img-thumbnail {
+            background-color: $app-dark-highlight;
+            border-color: $app-dark-highlight;
 
             &:hover,
-            &:focus
-            {
+            &:focus {
                 background-color: $app-primary;
                 border-color: $app-primary;
             }
         }
 
-        .table
-        {
-            & > thead > tr > th
-            {
-                border-bottom: 2px solid $app-light;
+        .table {
+            & > thead > tr > th {
+                border-bottom: 2px solid $app-dark-text-secondary;
             }
 
             & > thead > tr > th,
@@ -84,99 +99,131 @@ body
             & > tbody > tr > th,
             & > tbody > tr > td,
             & > tfoot > tr > th,
-            & > tfoot > tr > td
-            {
-                border-top: 1px solid $app-light;
+            & > tfoot > tr > td {
+                border-top: 1px solid $app-dark-text-secondary
             }
         }
 
-        .social-list
-        {
-            & > li
-            {
-                & > a
-                {
-                    color: $app-light;
+        .game-project {
+            background-color: $app-dark-highlight;
+            color: $app-dark-text-secondary;
+
+            h4 {
+                color: $app-dark-text;
+            }
+
+            hr {
+                border-top: 1px solid $app-dark-text-secondary;
+            }
+        }
+
+        footer {
+            color: $app-dark-text-secondary;
+        }
+
+        .footer-content {
+            border-color: $app-dark-text-secondary;
+        }
+
+        .social-list {
+            & > li {
+                & > a {
+                    color: $app-dark-text-secondary;
                 }
             }
         }
     }
 
     // Light Color Scheme.
-    &.light
-    {
-        background-color: $app-light;
-        color: $app-dark;
+    &.light {
+        background-color: $app-light-bg;
+        color: $app-light-text;
 
-        header
-        {
-            .logo-sortof
-            {
-                color: $app-dark;
+        header {
+            .logo-sortof {
+                color: $app-light-text;
 
-                &:hover
-                {
+                &:hover {
                     color: $app-primary;
                 }
-
             }
         }
 
-        nav
-        {
-            border-color: $app-dark;
+        nav {
+            border-color: $app-light-text-secondary;
 
-            .header-nav
-            {
-                & > li
-                {
-                    border-color: $app-dark;
+            .header-nav {
+                & > li {
+                    border-color: $app-light-text-secondary;
 
-                    &:hover
-                    {
-                        border-color: $app-primary;
+                    & > a {
+                        color: $app-light-text-secondary;
+
+                        &:hover,
+                        &:focus {
+                            color: $app-primary;
+                        }
                     }
 
-                    &.active
-                    {
+                    &:hover,
+                    &:focus {
                         border-color: $app-primary;
+
+                        & > a {
+                            &,
+                            &:hover,
+                            &:focus {
+                                color: $app-primary;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        border-color: $app-primary;
+
+                        & > a {
+                            &,
+                            &:hover,
+                            &:focus {
+                                color: $app-primary;
+                            }
+                        }
                     }
                 }
             }
         }
 
-        .line-header
-        {
-            &::before
-            {
-                background-color: $app-dark;
-            }
-
-            span
-            {
-                background-color: $app-light;
-                color: $app-dark;
+        .page-header {
+            h2 {
+                color: $app-light-text-secondary;
             }
         }
 
-        .img-thumbnail
-        {
-            background-color: $app-dark;
-            border-color: $app-dark;
+        .line-header {
+            &::before {
+                background-color: $app-light-text-secondary;
+            }
+
+            span {
+                background-color: $app-light-bg;
+                color: $app-light-text;
+            }
+        }
+
+        .img-thumbnail {
+            background-color: $app-light-highlight;
+            border-color: $app-light-highlight;
 
             &:hover,
-            &:focus
-            {
+            &:focus {
                 background-color: $app-primary;
                 border-color: $app-primary;
             }
         }
 
-        .table
-        {
-            & > thead > tr > th
-            {
-                border-bottom: 2px solid $app-dark;
+        .table {
+            & > thead > tr > th {
+                border-bottom: 2px solid $app-light-text-secondary;
             }
 
             & > thead > tr > th,
@@ -184,33 +231,48 @@ body
             & > tbody > tr > th,
             & > tbody > tr > td,
             & > tfoot > tr > th,
-            & > tfoot > tr > td
-            {
-                border-top: 1px solid $app-dark;
+            & > tfoot > tr > td {
+                border-top: 1px solid $app-light-text-secondary;
             }
         }
 
-        .social-list
-        {
-            & > li
-            {
-                & > a
-                {
-                    color: $app-dark;
+        .game-project {
+            background-color: $app-light-highlight;
+            color: $app-light-text-secondary;
+
+            h4 {
+                color: $app-light-text;
+            }
+
+            hr {
+                border-top: 1px solid $app-light-text-secondary;
+            }
+        }
+
+        footer {
+            color: $app-light-text-secondary;
+        }
+
+        .footer-content {
+            border-color: $app-light-text-secondary;
+        }
+
+        .social-list {
+            & > li {
+                & > a {
+                    color: $app-light-text-secondary;
                 }
             }
         }
     }
 }
 
-::selection
-{
+::selection {
     background: $app-primary;
     color: white;
 }
 
-a
-{
+a {
     color: $app-primary;
 
     &:hover,
@@ -221,19 +283,16 @@ a
     }
 }
 
-.current-activities
-{
+.current-activities {
     list-style: none;
     margin: 0;
     overflow: hidden;
     padding: 0;
 
-    & > li
-    {
+    & > li {
         margin-bottom: 10px;
 
-        span
-        {
+        span {
             display: inline-block;
             font-size: 24px;
             padding: 7px 15px 7px 0;
@@ -241,27 +300,22 @@ a
             width: 40px;
         }
 
-        .activity
-        {
+        .activity {
             display: inline-block;
 
-            strong
-            {
+            strong {
                 display: block;
             }
 
-            em
-            {
+            em {
                 display: block;
             }
         }
     }
 }
 
-.flash-message
-{
-    .alert
-    {
+.flash-message {
+    .alert {
         border-left: none;
         border-radius: 0;
         border-right: none;
@@ -269,45 +323,36 @@ a
     }
 }
 
-.form-control
-{
+.form-control {
     border-radius: 0;
 }
 
-.game-project
-{
-    background-color: white;
-    color: $gray-darker;
+.game-project {
     display: block;
     font-size: 12px;
     margin-bottom: 10px;
     min-height: 248px;
     padding: 4px;
 
-    .btn
-    {
+    .btn {
         display: block;
     }
 }
 
-.img-thumbnail
-{
+.img-thumbnail {
     border-radius: 0;
     transition: background-color .6s ease, border-color .6s ease;
 }
 
-.label
-{
+.label {
     background-color: $app-primary;
     border-radius: 0;
 }
 
-.line-header
-{
+.line-header {
     position: relative;
 
-    &::before
-    {
+    &::before {
         content: '';
         display: block;
         height: 3px;
@@ -317,8 +362,7 @@ a
         width: 100%;
     }
 
-    span
-    {
+    span {
         font-size: 16px;
         font-weight: bold;
         line-height: 1;
@@ -329,48 +373,40 @@ a
     }
 }
 
-.modal
-{
+.modal {
     color: #333;
 }
 
-.page-header
-{
+.page-header {
     border: none;
     margin: 0;
     padding: 0;
 
-    h1
-    {
+    h1 {
         font-size: 36px;
 
-        @media screen and (min-width: $screen-sm-min)
-        {
+        @media screen and (min-width: $screen-sm-min) {
             font-size: 48px;
         }
     }
 
-    h2
-    {
+    h2 {
         font-size: 18px;
 
-        @media screen and (min-width: $screen-sm-min)
-        {
+        @media screen and (min-width: $screen-sm-min) {
             font-size: 30px;
         }
     }
 }
 
-.video-container
-{
+.video-container {
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
     padding-top: 30px;
     position: relative;
 
-    iframe, object, embed
-    {
+    iframe, object, embed {
         border: 0;
         height: 100%;
         left: 0;
@@ -381,10 +417,8 @@ a
     }
 }
 
-.web-project
-{
-    p
-    {
+.web-project {
+    p {
         font-size: 12px;
     }
 }

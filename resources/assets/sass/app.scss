@@ -1,11 +1,12 @@
-// Variables
+// Variables.
 @import "variables";
 
-// Bootstrap
+// Node Packages.
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~font-awesome/scss/font-awesome.scss";
 @import "~open-sans-fontface/open-sans.scss";
 
+// Modules.
 @import "modules/base";
 @import "modules/typography";
 @import "modules/buttons";
