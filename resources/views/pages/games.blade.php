@@ -9,7 +9,7 @@
     <div class="container">
         <div class="page-header">
             <h1>Games</h1>
-            <h2>Nintendo-inspired retro games enthusiast.<br>Mobile sellout.</h2>
+            <h2>Nintendo-inspired retro games enthusiast.</h2>
         </div>
         <h3 class="line-header"><span>HTML5 Games</span></h3>
         <div class="row">
