@@ -6,7 +6,7 @@
 
 require('./bootstrap');
 
-$(document).ready(function() {
+$(document).ready(() => {
     // Switch color scheme.
     $('.choose-style').on('click', function (e) {
         e.preventDefault();
@@ -14,12 +14,11 @@ $(document).ready(function() {
 
         axios.post('/update_style', {
             style: $(this).data('style')
-        }).then(function (response) {
+        }).then(response => {
             if (style == 'dark') {
                 $('body').removeClass('light');
                 $('body').addClass('dark');
-                $('.lastname').fadeOut(300, function()
-                {
+                $('.lastname').fadeOut(300, () => {
                     $('.username').fadeIn(300);
                 });
             }
@@ -27,12 +26,11 @@ $(document).ready(function() {
             if (style == 'light') {
                 $('body').removeClass('dark');
                 $('body').addClass('light');
-                $('.username').fadeOut(300, function()
-                {
+                $('.username').fadeOut(300, () => {
                     $('.lastname').fadeIn(300);
                 });
             }
-        }).catch(function (error) {
+        }).catch(error => {
             console.log(error);
         });
     });
