@@ -25,7 +25,7 @@
                         <tr>
                             <th>#</th>
                             <th>SONG</th>
-                            <th class="text-right"><span class="fa fa-clock-o"></span></th>
+                            <th class="text-right"><span class="far fa-clock"></span></th>
                         </tr>
                     </thead>
                     <tbody>
