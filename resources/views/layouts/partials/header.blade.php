@@ -16,7 +16,7 @@
 <nav class="container">
     <ul class="header-nav">
         <li {!! Request::is('web*') ? 'class="active"' : '' !!}><a href="{{ url('web') }}"><span class="fa fa-globe"></span><span class="nav-text">Web</span></a></li>
-        <li {!! Request::is('music*') ? 'class="active"' : '' !!}><a href="{{ url('music') }}"><span class="fa fa-music"></span><span class="nav-text">Music</span></a></li>
-        <li {!! Request::is('games*') ? 'class="active"' : '' !!}><a href="{{ url('games') }}"><span class="fa fa-gamepad"></span><span class="nav-text">Games</span></a></li>
+        <li {!! Request::is('music*') ? 'class="active"' : '' !!}><a href="{{ url('music') }}"><span class="fa fa-fw fa-music"></span><span class="nav-text">Music</span></a></li>
+        <li {!! Request::is('games*') ? 'class="active"' : '' !!}><a href="{{ url('games') }}"><span class="fa fa-fw fa-gamepad"></span><span class="nav-text">Games</span></a></li>
     </ul>
 </nav>

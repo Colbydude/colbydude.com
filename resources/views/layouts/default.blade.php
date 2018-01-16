@@ -35,6 +35,7 @@
         @yield('additional_meta')
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
         @yield('additional_css')
 

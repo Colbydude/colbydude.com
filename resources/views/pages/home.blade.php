@@ -67,7 +67,7 @@
                     <ul class="current-activities">
                         @foreach ($activities as $activity)
                             <li>
-                                <span class="fa fa-{{ $activity['icon'] }}"></span>
+                                <span class="{{ $activity['icon'] }}"></span>
                                 <div class="activity">
                                     <strong>{{ $activity['name'] }}</strong>
                                     <em>{{ $activity['content'] }}</em>

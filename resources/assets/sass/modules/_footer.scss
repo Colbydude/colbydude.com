@@ -35,6 +35,13 @@ footer {
                     }
                 }
 
+                &.link-discord {
+                    &:hover,
+                    &:focus {
+                        color: $c-discord;
+                    }
+                }
+
                 &.link-facebook {
                     &:hover,
                     &:focus {
