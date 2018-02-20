@@ -17,7 +17,7 @@
                 @foreach ($games['html5'] as $game)
                     <div class="col-sm-4 col-md-4 col-lg-3">
                         <div class="game-project">
-                            <img class="img-responsive" src="http://voidteam.net/img/game-thumbnails/{{ $game['url'] }}.png" alt="{{ $game['name'] }}" width="640" height="360">
+                            <img class="img-responsive" src="https://voidteam.net/img/game-thumbnails/{{ $game['url'] }}.png" alt="{{ $game['name'] }}" width="640" height="360">
                             <h4>{{ $game['name'] }}</h4>
                             <div class="description">
                                 {{ $game['headline'] }}
@@ -25,7 +25,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="http://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary-outline">Play</a>
+                                    <a href="https://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary-outline">Play</a>
                                 </div>
                             </div>
                         </div>
