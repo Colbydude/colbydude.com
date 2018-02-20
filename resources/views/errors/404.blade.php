@@ -19,6 +19,8 @@
         <![endif]-->
     </head>
     <body class="{{ session('style') }}">
+        @include('layouts.partials.header')
+
         <div class="container default">
             <div class="page-header">
                 <h1>404</h1>
@@ -26,6 +28,8 @@
             </div>
             <p><a class="btn btn-primary-outline" href="{{ url('/') }}">Return Home</a></p>
         </div>
+
+        @include('layouts.partials.footer')
 
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
