@@ -89,6 +89,13 @@ class PagesController extends Controller
      */
     public function postContact(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string',
+            'comments' => 'required|string'
+        ]);
+
         Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {
             $message->to(env('MAIL_RECEIVE_ADDRESS'), 'Colby Terry');
             $message->from($request->input('email'), $request->input('name'));
