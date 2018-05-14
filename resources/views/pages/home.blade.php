@@ -10,54 +10,15 @@
             <div class="col-sm-6 col-md-8">
                 <h3 class="line-header"><span>Featured Project</span></h3>
                 <div class="row">
-                    <div class="col-md-5">
-                        <p><img class="img-responsive img-thumbnail" src="/img/music/releases/vgm-vol-1.jpg" alt="VGM, Vol. 1: New Game - EP" width="1400" height="1400"></p>
+                    <div class="col-md-6">
+                        <p><img class="img-responsive img-thumbnail" src="https://uqbw5s35wg1ztqw1kmrf37swiwxmyi.ext-twitch.tv/uqbw5s35wg1ztqw1kmrf37swiwxmyi/1.0.2/ee596be6432088cdb42977185e692cdb/internal/screenshots/227/670/screenshot-1.jpg" alt="FishFriendos Twitch Extension" width="1024" height="768"></p>
                     </div>
-                    <div class="col-md-7">
-                        <h3 class="featured">VGM, Vol. 1: New Game - EP</h3>
-                        <h4>Available Now</h4>
-                        <p>on <a href="https://voidte.am/VGMVol1-Am">Amazon</a>, <a href="https://voidte.am/VGMVol1-GP">Google Play</a>, <a href="https://voidte.am/VGMVol1-iT">iTunes</a>, <a href="https://voidte.am/VGMVol1-Sp">Spotify</a>, and <a href="https://voidte.am/VGMVol1-YT">YouTube</a></p>
-                        <table class="table table-condensed text-left">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>SONG</th>
-                                    <th class="text-right"><span class="far fa-clock"></span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Final Rush (From "Sonic Adventure 2")</td>
-                                    <td class="text-right">2:45</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Stone Tower Temple (From "The Legend of Zelda: Majora's Mask")</td>
-                                    <td class="text-right">3:20</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>The Man With the Machine Gun (From "Final Fantasy VIII")</td>
-                                    <td class="text-right">2:59</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Bowser's Road (From "Super Mario 64")</td>
-                                    <td class="text-right">3:38</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Force Your Way (From "Final Fantasy VIII")</td>
-                                    <td class="text-right">4:16</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Mute City feat. SwigglesRP (From "F-Zero")</td>
-                                    <td class="text-right">2:43</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-md-6">
+                        <h3 class="featured">FishFriendos</h3>
+                        <p>Raise the biggest school of fish this side of the Twitch stream! You and your audience work together to explore the sea!</p>
+                        <div class="form-group">
+                            <a class="btn btn-primary-outline" href="https://www.twitch.tv/ext/uqbw5s35wg1ztqw1kmrf37swiwxmyi-1.0.2">Install on Twitch</a>
+                        </div>
                     </div>
                 </div>
             </div>
