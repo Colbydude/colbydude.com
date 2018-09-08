@@ -98,7 +98,7 @@ class PagesController extends Controller
         ]);
 
         Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {
-            $message->to(env('MAIL_RECEIVE_ADDRESS'), 'Colby Terry');
+            $message->to(env('MAIL_CONTACT_ADDRESS'), env('MAIL_CONTACT_NAME'));
             $message->from($request->input('email'), $request->input('name'));
             $message->subject($request->input('subject').' Message from '.$request->input('name'));
         });
