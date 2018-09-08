@@ -93,7 +93,8 @@ class PagesController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string',
-            'comments' => 'required|string'
+            'comments' => 'required|string',
+            'g-recaptcha-response' => 'required|recaptcha',
         ]);
 
         Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {

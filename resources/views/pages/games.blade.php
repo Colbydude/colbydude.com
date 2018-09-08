@@ -23,11 +23,18 @@
                                 {{ $game['headline'] }}
                             </div>
                             <hr>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <a href="https://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary-outline">Play</a>
+                            @if (!empty($game['source']))
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <a href="https://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary-outline">Play</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="{{ $game['source'] }}" class="btn btn-primary-outline" target="_blank"><span class="fab fa-fw fa-github"></span> Source</a>
+                                    </div>
                                 </div>
-                            </div>
+                            @else
+                                <a href="https://cdn.voidte.am/games/{{ $game['url'] }}?bm.source=colbydude.com/games" class="btn btn-primary-outline">Play</a>
+                            @endif
                         </div>
                     </div>
                 @endforeach

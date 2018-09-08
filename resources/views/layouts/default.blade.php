@@ -59,6 +59,8 @@
 
         @include('layouts.partials.footer')
 
+        @include('layouts.partials.contact-modal')
+
         <script src="{{ mix('js/app.js') }}"></script>
         @yield('scripts')
 
