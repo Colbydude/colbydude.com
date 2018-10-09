@@ -17,7 +17,7 @@
                         <h3 class="featured">FishFriendos</h3>
                         <p>Raise the biggest school of fish this side of the Twitch stream! You and your audience work together to explore the sea!</p>
                         <div class="form-group">
-                            <a class="btn btn-primary-outline" href="https://www.twitch.tv/ext/uqbw5s35wg1ztqw1kmrf37swiwxmyi-1.0.2">Install on Twitch</a>
+                            <a class="btn btn-primary-outline" href="https://www.twitch.tv/ext/uqbw5s35wg1ztqw1kmrf37swiwxmyi-1.0.3">Install on Twitch</a>
                         </div>
                     </div>
                 </div>
