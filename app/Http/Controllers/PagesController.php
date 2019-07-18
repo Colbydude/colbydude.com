@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Log;
 use Mail;
+use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
 {
@@ -52,13 +54,10 @@ class PagesController extends Controller
      */
     public function music()
     {
-        $music = null;
+        $albums = json_decode(Storage::get('music/albums.json'));
+        $topTracks = array_slice(json_decode(Storage::get('music/top-tracks.json')), 0, 5, true);
 
-        if (file_exists('json/music.json')) {
-            $music = json_decode(file_get_contents('json/music.json'), true);
-        }
-
-        return view('pages.music', compact('music'));
+        return view('pages.music', compact('albums', 'topTracks'));
     }
 
     /**

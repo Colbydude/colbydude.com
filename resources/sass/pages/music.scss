@@ -1,0 +1,96 @@
+.album-list {
+    .media-object {
+        max-width: 300px;
+        padding-bottom: 2.5em;
+        position: relative;
+    }
+
+    .mo-info {
+        display: block;
+        margin: 12px 0 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: .015em;
+            line-height: 20px;
+            text-transform: none;
+        }
+    }
+
+    // .mo-meta {
+
+    // }
+}
+
+.tracklist {
+    list-style: none;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+    width: 100%;
+
+    .album-art {
+        background-color: #282828;
+        border: 0;
+        display: block;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        position: relative;
+        width: 50px;
+
+        .album-art-image {
+            background-position: 50%;
+            background-size: cover!important;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .album-art--with-auto-height {
+        padding-top: 100%;
+    }
+
+    .tracklist-middle-align {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .tracklist-name {
+        font-size: 14px;
+        letter-spacing: .015em;
+        line-height: 20px;
+    }
+
+    .tracklist-row {
+        display: flex;
+        height: 4em;
+        list-style-type: none;
+        outline: none;
+        transition: background-color 0.2s linear;
+        user-select: none;
+
+        &.name {
+            flex: 1;
+            overflow: hidden;
+            margin-right: -1px;
+            padding-right: 1px;
+            width: 0;
+        }
+
+        .tracklist-col {
+            display: block;
+            height: 4em;
+        }
+
+        .tracklist-col-album-art {
+            margin-right: 1em;
+        }
+    }
+}
