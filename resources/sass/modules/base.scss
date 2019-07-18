@@ -323,6 +323,12 @@ a {
     }
 }
 
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
 .form-control {
     border-radius: 0;
 }
