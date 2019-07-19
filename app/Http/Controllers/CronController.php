@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,6 +16,11 @@ class CronController extends Controller
      */
     private $accessToken;
 
+    public function __construct()
+    {
+        $this->middleware(['cron.key']);
+    }
+
     /**
      * Fetches and stores relevant Spotify information.
      *
@@ -25,13 +31,27 @@ class CronController extends Controller
         // Get app access token.
         $this->fetchSpotifyAccessToken();
 
-        // Fetch album data and store it.
+        // Fetch album data from Colbydude.
         $albumsJson = $this->spotifyRequest('/v1/artists/' . config('services.spotify.artist_id') . '/albums', [
             'country' => 'US',
             'limit' => 50,
         ]);
 
-        Storage::put('music/albums.json', json_encode($albumsJson->items));
+        // Fetch additional albums.
+        foreach (config('music.albums') as $albumId) {
+            $albumJson = $this->spotifyRequest('/v1/albums/' . $albumId);
+
+            array_push($albumsJson->items, $albumJson);
+        }
+
+        // Sort by release date, then flip to have the newest release at the top.
+        $albumsJson = Arr::sort($albumsJson->items, function ($album) {
+            return $album->release_date;
+        });
+        $albumsJson = array_reverse($albumsJson);
+
+        // Store albums.
+        Storage::put('music/albums.json', json_encode($albumsJson));
 
         // Fetch top track data and store.
         $topTracksJson = $this->spotifyRequest('/v1/artists/' . config('services.spotify.artist_id') . '/top-tracks', [

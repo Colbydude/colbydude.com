@@ -14,6 +14,10 @@ return [
     |
     */
 
+    'cron' => [
+        'key' => env('CRON_KEY'),
+    ],
+
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
