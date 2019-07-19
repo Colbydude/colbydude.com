@@ -1,0 +1,194 @@
+.album-art {
+    background-color: #282828;
+    border: 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    position: relative;
+
+    .album-art-image {
+        background-position: 50%;
+        background-size: cover!important;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.album-art--with-auto-height {
+    padding-top: 100%;
+}
+
+.album-list {
+    a {
+        color: var(--app-text-color);
+    }
+
+    .media-object {
+        max-width: 300px;
+        padding-bottom: 2.5em;
+        position: relative;
+    }
+
+    .mo-info {
+        display: block;
+        margin: 12px 0 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: .015em;
+            line-height: 20px;
+            text-transform: none;
+        }
+    }
+}
+
+.guitar {
+    margin-bottom: 2.5em;
+
+    img {
+        margin-bottom: 1em;
+    }
+
+    .guitar-model {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: .015em;
+        line-height: 20px;
+    }
+}
+
+.latest-release {
+    color: var(--app-text-color);
+    display: flex;
+    height: 100px;
+    margin-bottom: 2em;
+    outline: none;
+    transition: background-color .6s ease;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+        background-color: var(--app-highlight-color);
+        color: var(--app-text-color);
+    }
+
+    .album-art {
+        width: 100px;
+    }
+
+    .latest-release-col {
+        display: block;
+
+        &.meta {
+            flex: 1;
+            overflow: hidden;
+            margin-right: -1px;
+            padding-right: 1px;
+            width: 0;
+        }
+    }
+
+    .latest-release-col-album-art {
+        margin-right: 1em;
+    }
+
+    .release-title {
+        font-size: 14px;
+        letter-spacing: .015em;
+        line-height: 20px;
+    }
+}
+
+.streaming-services {
+    .streaming-service {
+        display: block;
+        padding: .5em;
+        margin-bottom: 1em;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+            background-color: var(--app-highlight-color);
+        }
+
+        .service-logo {
+            display: block;
+            fill: var(--app-text-color);
+            height: 24px;
+            margin: 0 auto;
+            max-width: 100%;
+            transition: fill .6s ease;
+            width: auto;
+        }
+    }
+}
+
+.tracklist {
+    list-style: none;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+    width: 100%;
+
+    .album-art {
+        width: 50px;
+    }
+
+    .tracklist-middle-align {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .tracklist-name {
+        font-size: 14px;
+        letter-spacing: .015em;
+        line-height: 20px;
+    }
+
+    .tracklist-row {
+        color: var(--app-text-color);
+        display: flex;
+        height: 4em;
+        list-style-type: none;
+        outline: none;
+        transition: background-color .6s ease;
+        user-select: none;
+
+        &:hover,
+        &:focus {
+            background-color: var(--app-highlight-color);
+        }
+
+        .tracklist-col {
+            display: block;
+            height: 4em;
+
+            &.name {
+                flex: 1;
+                overflow: hidden;
+                margin-right: -1px;
+                padding-right: 1px;
+                width: 0;
+            }
+        }
+
+        .tracklist-col-album-art {
+            margin-right: 1em;
+        }
+
+        .tracklist-col-duration {
+            font-feature-settings: "tnum";
+            letter-spacing: 0;
+            padding-right: 1em;
+            text-align: right;
+            width: 3.9em;
+        }
+    }
+}

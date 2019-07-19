@@ -1,0 +1,21 @@
+h1, h2 {
+    font-weight: 300;
+}
+
+h3.featured {
+    @media (min-width: $screen-sm-min) {
+        margin-top: 0;
+    }
+}
+
+.ellipsis-one-line {
+    margin-right: -1px;
+    overflow: hidden;
+    padding-right: 1px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-muted {
+    color: var(--app-text-secondary-color);
+}
