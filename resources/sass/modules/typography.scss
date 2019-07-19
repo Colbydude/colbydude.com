@@ -15,3 +15,7 @@ h3.featured {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.text-muted {
+    color: var(--app-text-secondary-color);
+}

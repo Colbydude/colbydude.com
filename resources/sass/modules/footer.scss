@@ -1,8 +1,9 @@
 footer {
+    color: var(--app-text-secondary-color);
     margin-top: 10px;
 
     .footer-content {
-        border-top: 4px solid;
+        border-top: 4px solid var(--app-text-secondary-color);
         font-size: 13px;
         padding: 10px 0;
 
@@ -22,6 +23,7 @@ footer {
             display: inline-block;
 
             & > a {
+                color: var(--app-text-secondary-color);
                 display: block;
                 font-size: 24px;
                 line-height: 1;
