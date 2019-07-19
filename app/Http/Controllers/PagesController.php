@@ -59,10 +59,11 @@ class PagesController extends Controller
         $singles = array_filter($allAlbums, function ($album) { return $album->album_type == 'single'; });
         $latestRelease = Arr::first($allAlbums);
 
+        $guitars = config('music.guitars');
         $services = config('music.services');
         $topTracks = array_slice(json_decode(Storage::get('music/top-tracks.json')), 0, 5, true);
 
-        return view('pages.music', compact('albums', 'latestRelease', 'singles', 'services', 'topTracks'));
+        return view('pages.music', compact('albums', 'guitars', 'latestRelease', 'singles', 'services', 'topTracks'));
     }
 
     /**

@@ -74,30 +74,12 @@
 
         <h3 class="line-header"><span>Guitars</span></h3>
         <div class="row flex-row">
-            <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/music/guitars/prs-se-mhhb2.jpg" alt="PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)" width="600" height="202">
-                <h4>PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)</h4>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/music/guitars/ibanez-s61al-bm.jpg" alt="Ibanez S61AL Black Mirage" width="600" height="202">
-                <h4>Ibanez S61AL Black Mirage</h4>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-resonsive img-thumbnail" src="/img/music/guitars/esp-sn-25th.jpg" alt="ESP SN-25TH (Sonic the Hedgehog)">
-                <h4>ESP SN-25TH (Sonic the Hedgehog)</h4>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/music/guitars/esp-sd-15th.jpg" alt="ESP SD-15TH (Shadow the Hedgehog)">
-                <h4>ESP SD-15TH (Shadow the Hedgehog)</h4>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/music/guitars/chapman-ml1-8rs.jpg" alt="Chapman ML1-8RS (Rob Scallon 8-String Signature)" width="600" height="202">
-                <h4>Chapman ML1-8RS (Rob Scallon 8-String Signature)</h4>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-responsive img-thumbnail" src="/img/music/guitars/esp-ltd-b-155dx-stb.jpg" alt="ESP LTD B-155DX See Thru Blue" width="600" height="202">
-                <h4>ESP LTD B-155DX See Thru Blue</h4>
-            </div>
+            @foreach($guitars['current'] as $guitar)
+                <div class="col-sm-6 guitar">
+                    <img class="img-responsive img-thumbnail" src="/img/music/guitars/{{ $guitar['image'] }}" alt="{{ $guitar['model'] }}" width="600" height="202">
+                    <div class="guitar-model">{{ $guitar['model'] }}</div>
+                </div>
+            @endforeach
         </div>
     </div>
 @stop
