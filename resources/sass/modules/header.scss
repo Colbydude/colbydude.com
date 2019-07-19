@@ -2,15 +2,22 @@ header {
     padding: 12px 0;
 
     .logo-sortof {
+        color: var(--app-text-color);
         display: block;
         font-size: 26px;
         line-height: 1;
         text-decoration: none;
         transition: color .6s ease;
+
+        &:hover {
+            color: $app-primary;
+        }
     }
 }
 
 nav {
+    border-color: var(--app-text-secondary-color);
+
     .header-nav {
         list-style: none;
         margin: 0;
@@ -18,13 +25,39 @@ nav {
         padding: 0;
 
         & > li {
-            border-bottom: 4px solid;
+            border-bottom: 4px solid var(--app-text-secondary-color);
             float: left;
             text-align: center;
             transition: border-color .6s ease;
             width: 33.33%;
 
+            &:hover,
+            &:focus {
+                border-color: $app-primary;
+
+                & > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $app-primary;
+                    }
+                }
+            }
+
+            &.active {
+                border-color: $app-primary;
+
+                & > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $app-primary;
+                    }
+                }
+            }
+
             & > a {
+                color: var(--app-text-secondary-color);
                 display: block;
                 font-size: 16px;
                 font-weight: bold;
@@ -32,6 +65,11 @@ nav {
                 padding: 14px 10px 11px 10px;
                 text-decoration: none;
                 transition: color .6s ease;
+
+                &:hover,
+                &:focus {
+                    color: $app-primary;
+                }
 
                 .fa {
                     display: inline-block;

@@ -54,10 +54,15 @@ class PagesController extends Controller
      */
     public function music()
     {
-        $albums = json_decode(Storage::get('music/albums.json'));
+        $allAlbums = json_decode(Storage::get('music/albums.json'));
+        $albums = array_filter($allAlbums, function ($album) { return $album->album_type == 'album'; });
+        $singles = array_filter($allAlbums, function ($album) { return $album->album_type == 'single'; });
+        $latestRelease = Arr::first($allAlbums);
+
+        $services = config('music.services');
         $topTracks = array_slice(json_decode(Storage::get('music/top-tracks.json')), 0, 5, true);
 
-        return view('pages.music', compact('albums', 'topTracks'));
+        return view('pages.music', compact('albums', 'latestRelease', 'singles', 'services', 'topTracks'));
     }
 
     /**
