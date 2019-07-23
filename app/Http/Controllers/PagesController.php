@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Log;
-use Mail;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class PagesController extends Controller
@@ -55,8 +55,12 @@ class PagesController extends Controller
     public function music()
     {
         $allAlbums = json_decode(Storage::get('music/albums.json'));
-        $albums = array_filter($allAlbums, function ($album) { return $album->album_type == 'album'; });
-        $singles = array_filter($allAlbums, function ($album) { return $album->album_type == 'single'; });
+        $albums = array_filter($allAlbums, function ($album) {
+            return $album->album_type == 'album';
+        });
+        $singles = array_filter($allAlbums, function ($album) {
+            return $album->album_type == 'single';
+        });
         $latestRelease = Arr::first($allAlbums);
 
         $guitars = config('music.guitars');
@@ -94,7 +98,7 @@ class PagesController extends Controller
      */
     public function postContact(Request $request)
     {
-        $this->validate($request, [
+        request()->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'subject' => 'required|string',
@@ -103,12 +107,12 @@ class PagesController extends Controller
         ]);
 
         Mail::send('emails.contact', ['input' => $request->all()], function ($message) use ($request) {
-            $message->to(env('MAIL_CONTACT_ADDRESS'), env('MAIL_CONTACT_NAME'));
+            $message->to(config('mail.contact.address'), config('mail.contact.name'));
             $message->from($request->input('email'), $request->input('name'));
-            $message->subject($request->input('subject').' Message from '.$request->input('name'));
+            $message->subject($request->input('subject') . ' Message from ' . $request->input('name'));
         });
 
-        Log::info($request->input('subject').' Message from '.$request->input('name').'. IP: '.$_SERVER['REMOTE_ADDR']);
+        Log::info($request->input('subject') . ' Message from ' . $request->input('name') . '. IP: ' . $_SERVER['REMOTE_ADDR']);
 
         flash('Your message was sent. I\'ll get back to you as soon as possible!', 'info');
 

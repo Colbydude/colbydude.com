@@ -55,9 +55,14 @@ return [
     |
     */
 
+    'contact' => [
+        'address' => env('MAIL_CONTACT_ADDRESS'),
+        'name' => env('MAIL_CONTACT_NAME', 'Colby Terry'),
+    ],
+
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@voidteam.net'),
+        'name' => env('MAIL_FROM_NAME', 'Colbydude Website'),
     ],
 
     /*

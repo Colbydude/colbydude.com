@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class CronController extends Controller
@@ -52,7 +51,7 @@ class CronController extends Controller
     {
         $url = 'https://accounts.spotify.com/api/token';
 
-        $client = new Client();
+        $client = new Client;
         $response = $client->request('POST', $url, [
             'form_params' => [
                 'grant_type' => 'client_credentials',
@@ -60,7 +59,7 @@ class CronController extends Controller
             'headers' => [
                 'Authorization' => 'Basic ' . base64_encode(config('services.spotify.client_id') . ':' . config('services.spotify.client_secret')),
                 'Content-Type' => 'application/x-www-form-urlencoded',
-            ]
+            ],
         ]);
 
         $responseBody = json_decode((string) $response->getBody());
