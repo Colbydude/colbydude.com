@@ -1,0 +1,8 @@
+{
+    "preset": "laravel",
+    "disabled": [
+        "NoCompact",
+        "NoInlineVarDocs",
+        "NoMethodVisibilityInTests"
+    ]
+}

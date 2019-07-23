@@ -13,28 +13,28 @@ return [
         'current' => [
             [
                 'model' => 'PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)',
-                'image' => 'prs-se-mhhb2.jpg'
+                'image' => 'prs-se-mhhb2.jpg',
             ],
             [
                 'model' => 'Ibanez S61AL Black Mirage',
-                'image' => 'ibanez-s61al-bm.jpg'
+                'image' => 'ibanez-s61al-bm.jpg',
             ],
             [
                 'model' => 'ESP SN-25TH (Sonic the Hedgehog)',
-                'image' => 'esp-sn-25th.jpg'
+                'image' => 'esp-sn-25th.jpg',
             ],
             [
                 'model' => 'ESP SD-15TH (Shadow the Hedgehog)',
-                'image' => 'esp-sd-15th.jpg'
+                'image' => 'esp-sd-15th.jpg',
             ],
             [
                 'model' => 'Chapman ML1-8RS (Rob Scallon 8-String Signature)',
-                'image' => 'chapman-ml1-8rs.jpg'
+                'image' => 'chapman-ml1-8rs.jpg',
             ],
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',
-                'image' => 'esp-ltd-b-155dx-stb.jpg'
-            ]
+                'image' => 'esp-ltd-b-155dx-stb.jpg',
+            ],
         ],
 
         'previous' => [
