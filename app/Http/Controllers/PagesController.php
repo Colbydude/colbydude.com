@@ -32,19 +32,25 @@ class PagesController extends Controller
     }
 
     /**
+     * Display the code page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function code()
+    {
+        $showcase = config('code.showcase');
+
+        return view('pages.code', compact('showcase'));
+    }
+
+    /**
      * Display the games page.
      *
      * @return \Illuminate\Http\Response
      */
     public function games()
     {
-        $games = null;
-
-        if (file_exists('json/games.json')) {
-            $games = json_decode(file_get_contents('json/games.json'), true);
-        }
-
-        return view('pages.games', compact('games'));
+        return redirect('code');
     }
 
     /**
@@ -139,12 +145,6 @@ class PagesController extends Controller
      */
     public function web()
     {
-        $websites = null;
-
-        if (file_exists('json/websites.json')) {
-            $websites = json_decode(file_get_contents('json/websites.json'), true);
-        }
-
-        return view('pages.web', compact('websites'));
+        return redirect('code');
     }
 }

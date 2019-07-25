@@ -86,41 +86,6 @@ a {
     border-radius: 0;
 }
 
-.game-project {
-    background-color: var(--app-highlight-color);
-    color: var(--app-text-secondary-color);
-    display: block;
-    font-size: 12px;
-    margin-bottom: 10px;
-    min-height: 248px;
-    padding: 4px;
-
-    h4 {
-        color: var(--app-text-color);
-    }
-
-    hr {
-        border-top: 1px solid var(--app-text-secondary-color);
-    }
-
-    .btn {
-        display: block;
-    }
-}
-
-.img-thumbnail {
-    background-color: var(--app-highlight-color);
-    border-color: var(--app-highlight-color);
-    border-radius: 0;
-    transition: background-color .6s ease, border-color .6s ease;
-
-    &:hover,
-    &:focus {
-        background-color: $app-primary;
-        border-color: $app-primary;
-    }
-}
-
 .label {
     background-color: $app-primary;
     border-radius: 0;
@@ -212,29 +177,5 @@ select.form-control {
     & > tfoot > tr > th,
     & > tfoot > tr > td {
         border-top: 1px solid var(--app-text-secondary-color);
-    }
-}
-
-.video-container {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    position: relative;
-
-    iframe, object, embed {
-        border: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: 100%;
-    }
-}
-
-.web-project {
-    p {
-        font-size: 12px;
     }
 }
