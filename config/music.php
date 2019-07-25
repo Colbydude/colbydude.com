@@ -8,6 +8,12 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    // Additional albums I've played on.
+    'albums' => [
+                                    // TODO?: We'd Be - The Rum Gun Diaries (no longer on Spotify)
+        '0ZfKXucO0tzzAHz6JqoZn6',   // We'd Be - Beyond the Line of Sanity
+    ],
+
     'guitars' => [
 
         'current' => [

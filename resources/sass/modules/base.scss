@@ -86,6 +86,19 @@ a {
     border-radius: 0;
 }
 
+.img-thumbnail {
+    background-color: var(--app-highlight-color);
+    border-color: var(--app-highlight-color);
+    border-radius: 0;
+    transition: background-color .6s ease, border-color .6s ease;
+
+    &:hover,
+    &:focus {
+        background-color: $app-primary;
+        border-color: $app-primary;
+    }
+}
+
 .label {
     background-color: $app-primary;
     border-radius: 0;

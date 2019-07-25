@@ -15,7 +15,6 @@
             </div>
             <div class="col-sm-7 col-sm-pull-5">
                 <p><strong>Copyright &copy; {{ date('Y') }} Colby Terry.</strong></p>
-                <p>Proudly built with <a href="http://laravel.com" target="_blank">Laravel</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>.
             </div>
         </div>
     </div>

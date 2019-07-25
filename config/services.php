@@ -14,6 +14,10 @@ return [
     |
     */
 
+    'cron' => [
+        'key' => env('CRON_KEY'),
+    ],
+
     'github' => [
         'token' => env('GITHUB_TOKEN'),
     ],
