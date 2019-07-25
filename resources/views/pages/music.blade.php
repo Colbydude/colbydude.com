@@ -1,15 +1,15 @@
 @extends('layouts.default')
 
 @section('meta_title', 'Music | Colby Terry')
-@section('meta_description', 'Punk Rocker with a hint of metal tendencies.')
-@section('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, We\'d Be, Punk, Metal, Rock, Guitar, Cover')
+@section('meta_description', 'Rock-driven, metal-leaning, video game-lovin\', guitar player.')
+@section('meta_keywords', 'Colby Terry, Colbydude, Colbydude VGM, Metal, Rock, VGM, Guitar, Cover')
 @section('meta_canonical', 'https://colbydude.com/music')
 
 @section('content')
     <div class="container">
         <div class="page-header">
             <h1>Music</h1>
-            <h2>Punk Rocker with a hint of metal tendencies.</h2>
+            <h2>Rock-driven, metal-leaning, video game-lovin', guitar player.</h2>
         </div>
 
         <div class="row">
@@ -73,9 +73,9 @@
         @include('pages.music.album-list', ['albums' => $singles, 'sectionTitle' => 'Singles and EPs'])
 
         <h3 class="line-header"><span>Guitars</span></h3>
-        <div class="row flex-row">
-            @foreach ($guitars['current'] as $guitar)
-                <div class="col-sm-6 guitar">
+        <div class="row flex-row guitars">
+            @foreach($guitars['current'] as $guitar)
+                <div class="col-sm-6 col-md-4 guitar">
                     <img class="img-responsive img-thumbnail" src="/img/music/guitars/{{ $guitar['image'] }}" alt="{{ $guitar['model'] }}" width="600" height="202">
                     <div class="guitar-model">{{ $guitar['model'] }}</div>
                 </div>
