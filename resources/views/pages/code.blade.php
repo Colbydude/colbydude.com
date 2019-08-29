@@ -11,8 +11,22 @@
             <h1>Code</h1>
             <h2></h2>
         </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <h3 class="line-header"><span>Top Languages</span></h3>
+            </div>
+            <div class="col-lg-9">
+                <h3 class="line-header"><span>Pinned Repositories</span></h3>
+                <h3 class="line-header"><span>Contributions</span></h3>
+                <github-calendar
+                    user="Colbydude"
+                    :months="12"
+                />
+            </div>
+        </div>
         <h3 class="line-header"><span>Showcase</span></h3>
-        <ul class="story-grid">
+        <ul class="story-grid">y
             @foreach ($showcase as $story)
                 <li class="story">
                     <div class="story-image">
@@ -34,3 +48,7 @@
         </ul>
     </div>
 @stop
+
+@push('scripts')
+    <script src="{{ mix('js/code.js') }}"></script>
+@endpush
