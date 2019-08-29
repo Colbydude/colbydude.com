@@ -32,14 +32,8 @@
         <meta name="twitter:image" content="/img/cover.jpg">
         <meta name="twitter:url" content="@yield('meta_canonical', 'https://colbydude.com')">
 
-        @yield('additional_meta')
-
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-
-        @yield('additional_css')
-
-        @yield('header_scripts')
 
         {{-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --}}
         {{-- WARNING: Respond.js doesn't work if you view the page via file:// --}}
@@ -49,20 +43,22 @@
         <![endif]-->
     </head>
     <body class="{{ session('style') }}">
-        <div class="flash-message">
-            @include('flash::message')
-            @include('layouts.partials.errors')
+        <div id="app">
+            <div class="flash-message">
+                @include('flash::message')
+                @include('layouts.partials.errors')
+            </div>
+            @include('layouts.partials.header')
+
+            @yield('content')
+
+            @include('layouts.partials.footer')
+
+            @include('layouts.partials.contact-modal')
         </div>
-        @include('layouts.partials.header')
-
-        @yield('content')
-
-        @include('layouts.partials.footer')
-
-        @include('layouts.partials.contact-modal')
 
         <script src="{{ mix('js/app.js') }}"></script>
-        @yield('scripts')
+        @stack('scripts')
 
         {{-- Google Analytics --}}
         <script>
