@@ -18,6 +18,5 @@
         "laravel-mix": "^3.0",
         "open-sans-fontface": "^1.4.0",
         "vue": "^2.6.10"
-    },
-    "dependencies": {}
+    }
 }
