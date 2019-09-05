@@ -17,18 +17,7 @@ class PagesController extends Controller
      */
     public function home()
     {
-        $activities = null;
-        $featured = null;
-
-        if (file_exists('json/activities.json')) {
-            $activities = json_decode(file_get_contents('json/activities.json'), true);
-        }
-
-        if (file_exists('json/featured.json')) {
-            $featured = json_decode(file_get_contents('json/featured.json'), true);
-        }
-
-        return view('pages.home', compact('activities', 'featured'));
+        return view('pages.home');
     }
 
     /**
