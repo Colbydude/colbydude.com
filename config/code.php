@@ -8,6 +8,21 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'language_colors' => [
+        'C++' => '#fe4273',
+        'C#' => '#007b19',
+        'Game Maker Language' => '#5dab2b',
+        'HTML' => '#eb442c',
+        'Java' => '#ad6725',
+        'JavaScript' => '#f2dc5e',
+        'Lua' => '#000071',
+        'PHP' => '#435287',
+        'ShaderLab' => '#c5c5c5',   // Unity
+        'TypeScript' => '#12687c',
+        'Vue' => '#243645',
+        'Yacc' => '#3e6144',        // GameMaker
+    ],
+
     'showcase' => [
 
         [
@@ -28,7 +43,7 @@ return [
         [
             'name' => 'FishFriendos',
             'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://twitter.com/Piranhartist" target="_blank">@Piranhartist</a>.',
-            'image' => '',
+            'image' => 'fishfriendos.jpg',
             'links' => [
                 [
                     'text' => 'Install on Twitch',
@@ -50,7 +65,7 @@ return [
         [
             'name' => 'Music Requests',
             'description' => 'A way for your audience to request music for you to perform during your Twitch stream! Built on Vue.js.',
-            'image' => '',
+            'image' => 'music-requests.jpg',
             'links' => [
                 [
                     'text' => 'Install on Twitch',

@@ -11,4 +11,5 @@
 |
 */
 
+Route::get('cron/github', 'CronController@github');
 Route::get('cron/spotify', 'CronController@spotify');
