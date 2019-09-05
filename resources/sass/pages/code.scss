@@ -1,3 +1,22 @@
+.pinned-repo-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pinned-repo-desc {
+    flex: 1 0 auto;
+}
+
+.repo-language-color {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
 .story-grid {
     display: flex;
     list-style: none;

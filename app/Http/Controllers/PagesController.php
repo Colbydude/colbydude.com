@@ -38,9 +38,14 @@ class PagesController extends Controller
      */
     public function code()
     {
+        $languageColors = config('code.language_colors');
+        $pinnedRepos = json_decode(Storage::get('code/pinned.json'));
         $showcase = config('code.showcase');
+        $topLanguages = json_decode(Storage::get('code/top-languages.json'), true);
 
-        return view('pages.code', compact('showcase'));
+        // dd($pinnedRepos);
+
+        return view('pages.code', compact('languageColors', 'pinnedRepos', 'showcase', 'topLanguages'));
     }
 
     /**
