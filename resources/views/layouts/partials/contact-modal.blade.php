@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="form-group">
-                        {!! Recaptcha::render() !!}
+                        {!! ReCaptcha::htmlFormSnippet() !!}
                     </div>
                 </div>
                 <div class="modal-footer">

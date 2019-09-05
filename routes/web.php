@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@home');
+Route::get('code', 'PagesController@code');
 Route::post('contact', 'PagesController@postContact');
 Route::get('games', 'PagesController@games');
 Route::get('payment', 'PagesController@payment');

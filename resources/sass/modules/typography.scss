@@ -16,6 +16,18 @@ h3.featured {
     white-space: nowrap;
 }
 
+.text-bold {
+    font-weight: 600;
+}
+
 .text-muted {
     color: var(--app-text-secondary-color);
+}
+
+.text-muted-link {
+    color: var(--app-text-secondary-color);
+}
+
+.text-small {
+    font-size: 12px;
 }

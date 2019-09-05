@@ -22,6 +22,77 @@ class CronController extends Controller
     }
 
     /**
+     * Fetches and stores relevant GitHub information.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function github()
+    {
+        $pinnedQuery = <<<'GRAPHQL'
+            query {
+                repositoryOwner(login: "Colbydude") {
+                    ... on ProfileOwner {
+                        pinnedItemsRemaining
+                        itemShowcase {
+                            items(first: 6) {
+                                totalCount
+                                edges {
+                                    node {
+                                        ... on Repository {
+                                            name
+                                            description
+                                            primaryLanguage {
+                                                name
+                                            }
+                                            stargazers {
+                                                totalCount
+                                            }
+                                            forkCount
+                                            resourcePath
+                                            isTemplate
+                                        }
+                                    }
+                                }
+                            }
+                            hasPinnedItems
+                        }
+                    }
+                }
+            }
+        GRAPHQL;
+
+        $pinnedJson = $this->githubGraphQLRequest($pinnedQuery);
+        $pinnedJson = $pinnedJson->data->repositoryOwner->itemShowcase->items->edges;
+
+        // Store pinned repositories.
+        Storage::put('code/pinned.json', json_encode($pinnedJson));
+
+        // Fetch top languages from GitHub.
+        $languages = [];
+        $page = 1;
+
+        $repoJson = $this->githubRequest('/user/repos', ['page' => $page ], 'GET');
+
+        // Iterate through pages.
+        while (count($repoJson) >= 30) {
+            array_push($languages, Arr::pluck($repoJson, 'language'));
+            $page++;
+            $repoJson = $this->githubRequest('/user/repos', ['page' => $page ], 'GET');
+        }
+
+        $languages = Arr::flatten($languages);          // Combine response arrays.
+        $languages = array_diff($languages, [null]);    // Strip out null values.
+        $languages = array_count_values($languages);    // Count the repeating values and key them.
+        $languages = Arr::sort($languages);             // Sort (lowest to highest).
+        $languages = array_reverse($languages);         // Flip to arrange by highest to lowest.
+
+        // Store the top languages.
+        Storage::put('code/top-languages.json', json_encode($languages));
+
+        return response()->json(['message' => 'OK'], 200);
+    }
+
+    /**
      * Fetches and stores relevant Spotify information.
      *
      * @return \Illuminate\Http\Response
@@ -64,6 +135,46 @@ class CronController extends Controller
     }
 
     /**
+     * Fetches a response from the GitHub API.
+     *
+     * @return object
+     */
+    private function githubRequest($url, $params = [], $method = 'GET')
+    {
+        $baseUri = 'https://api.github.com';
+
+        $client = new Client(['base_uri' => $baseUri]);
+        $response = $client->request($method, $url, [
+            'headers' => [
+                'Authorization' => 'Bearer ' . config('services.github.token'),
+            ],
+            'query' => $params,
+        ]);
+
+        return json_decode((string) $response->getBody());
+    }
+
+    /**
+     * Fetches a response from the GitHub GraphQL API.
+     *
+     * @return object
+     */
+    private function githubGraphQLRequest($query)
+    {
+        $baseUri = 'https://api.github.com';
+
+        $client = new Client(['base_uri' => $baseUri]);
+        $response = $client->request('POST', '/graphql', [
+            'headers' => [
+                'Authorization' => 'Bearer ' . config('services.github.token'),
+            ],
+            'body' => json_encode([ 'query' => $query ]),
+        ]);
+
+        return json_decode((string) $response->getBody());
+    }
+
+    /**
      * Fetches the access token to use for Spotify API requests.
      *
      * @return string
@@ -72,7 +183,7 @@ class CronController extends Controller
     {
         $url = 'https://accounts.spotify.com/api/token';
 
-        $client = new Client();
+        $client = new Client;
         $response = $client->request('POST', $url, [
             'form_params' => [
                 'grant_type' => 'client_credentials',
@@ -80,7 +191,7 @@ class CronController extends Controller
             'headers' => [
                 'Authorization' => 'Basic ' . base64_encode(config('services.spotify.client_id') . ':' . config('services.spotify.client_secret')),
                 'Content-Type' => 'application/x-www-form-urlencoded',
-            ]
+            ],
         ]);
 
         $responseBody = json_decode((string) $response->getBody());

@@ -36,35 +36,20 @@ a {
     }
 }
 
-.current-activities {
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
+.box {
+    border: 1px solid var(--app-highlight-color);
+}
 
-    & > li {
-        margin-bottom: 10px;
+.d-block {
+    display: block;
+}
 
-        span {
-            display: inline-block;
-            font-size: 24px;
-            padding: 7px 15px 7px 0;
-            vertical-align: top;
-            width: 40px;
-        }
+.d-flex {
+    display: flex;
+}
 
-        .activity {
-            display: inline-block;
-
-            strong {
-                display: block;
-            }
-
-            em {
-                display: block;
-            }
-        }
-    }
+.d-inline-block {
+    display: inline-block;
 }
 
 .flash-message {
@@ -76,36 +61,34 @@ a {
     }
 }
 
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+.flex-content-stretch {
+    align-content: stretch;
+}
+
+.flex-items-center {
+    align-items: center;
+}
+
 .flex-row {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
 }
 
-.form-control {
-    border-radius: 0;
+.flex-shrink-0 {
+    flex-shrink: 0;
 }
 
-.game-project {
-    background-color: var(--app-highlight-color);
-    color: var(--app-text-secondary-color);
-    display: block;
-    font-size: 12px;
-    margin-bottom: 10px;
-    min-height: 248px;
-    padding: 4px;
+.flex-wrap {
+    flex-wrap: wrap;
+}
 
-    h4 {
-        color: var(--app-text-color);
-    }
-
-    hr {
-        border-top: 1px solid var(--app-text-secondary-color);
-    }
-
-    .btn {
-        display: block;
-    }
+.form-control {
+    border-radius: 0;
 }
 
 .img-thumbnail {
@@ -153,10 +136,26 @@ a {
     }
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-3 {
+    margin-bottom: 16px;
+}
+
+.mb-4 {
+    margin-bottom: 24px;
+}
+
 .middle-align {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.min-width-0 {
+    min-width: 0;
 }
 
 .modal {
@@ -167,6 +166,18 @@ a {
     }
 }
 
+.mr-2 {
+    margin-right: 8px;
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
 select.form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -175,6 +186,14 @@ select.form-control {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
     padding: .5em;
     padding-right: 1.5em
+}
+
+.p-2 {
+    padding: 8px;
+}
+
+.p-3 {
+    padding: 16px;
 }
 
 .page-header {
@@ -200,6 +219,10 @@ select.form-control {
     }
 }
 
+.position-relative {
+    position: relative;
+}
+
 .table {
     & > thead > tr > th {
         border-bottom: 2px solid var(--app-text-secondary-color);
@@ -215,26 +238,6 @@ select.form-control {
     }
 }
 
-.video-container {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    position: relative;
-
-    iframe, object, embed {
-        border: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: 100%;
-    }
-}
-
-.web-project {
-    p {
-        font-size: 12px;
-    }
+.width-full {
+    width: 100%;
 }
