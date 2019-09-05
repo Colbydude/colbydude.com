@@ -5,10 +5,10 @@
     "type": "project",
     "require": {
         "php": "^7.2",
+        "biscolab/laravel-recaptcha": "^3.6",
         "fideloper/proxy": "^4.0",
-        "greggilbert/recaptcha": "^2.2",
         "guzzlehttp/guzzle": "^6.2",
-        "laracasts/flash": "^3.0",
+        "laracasts/flash": "^3.0.3",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",

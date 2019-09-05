@@ -151,7 +151,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -216,7 +215,7 @@ return [
         /*
          * Package Aliases...
          */
-        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+
     ],
 
 ];
