@@ -40,37 +40,6 @@ a {
     border: 1px solid var(--app-highlight-color);
 }
 
-.current-activities {
-    list-style: none;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-
-    & > li {
-        margin-bottom: 10px;
-
-        span {
-            display: inline-block;
-            font-size: 24px;
-            padding: 7px 15px 7px 0;
-            vertical-align: top;
-            width: 40px;
-        }
-
-        .activity {
-            display: inline-block;
-
-            strong {
-                display: block;
-            }
-
-            em {
-                display: block;
-            }
-        }
-    }
-}
-
 .d-block {
     display: block;
 }
@@ -120,11 +89,6 @@ a {
 
 .form-control {
     border-radius: 0;
-}
-
-.gutter-condensed {
-    margin-left: -8px;
-    margin-right: -8px;
 }
 
 .img-thumbnail {
