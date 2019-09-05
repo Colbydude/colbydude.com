@@ -15,7 +15,7 @@
         <h3 class="line-header"><span>Pinned Repositories</span></h3>
         <ol class="d-flex flex-wrap list-unstyled row">
             @foreach ($pinnedRepos as $repo)
-                <li class="col-md-6 mb-3 d-flex flex-content-stretch">
+                <li class="col-xs-12 col-md-6 mb-3 d-flex flex-content-stretch">
                     <div class="d-flex p-3 width-full box">
                         <div class="pinned-repo-content">
                             <div class="d-flex width-full flex-items-center position-relative">
@@ -56,7 +56,7 @@
                 <h3 class="line-header"><span>Top Languages</span></h3>
                 <ol class="d-flex flex-wrap list-unstyled row">
                     @foreach (array_slice($topLanguages, 0, 6) as $language => $count)
-                        <li class="col-md-4 mb-3 d-flex flex-content-stretch">
+                        <li class="col-xs-6 col-md-4 mb-3 d-flex flex-content-stretch">
                             <div class="d-flex p-2 width-full box">
                                 <div class="pinned-repo-content">
                                     <div class="mb-0 text-small text-muted">
