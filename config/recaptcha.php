@@ -1,66 +1,82 @@
 <?php
+/**
+ * Copyright (c) 2017 - present
+ * LaravelGoogleRecaptcha - recaptcha.php
+ * author: Roberto Belotti - roby.belotti@gmail.com
+ * web : robertobelotti.com, github.com/biscolab
+ * Initial version created on: 12/9/2018
+ * MIT license: https://github.com/biscolab/laravel-recaptcha/blob/master/LICENSE
+ */
 
+/**
+ * To configure correctly please visit https://developers.google.com/recaptcha/docs/start
+ */
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | API Keys
-    |--------------------------------------------------------------------------
-    |
-    | Set the public and private API keys as provided by reCAPTCHA.
-    |
-    | In version 2 of reCAPTCHA, public_key is the Site key,
-    | and private_key is the Secret key.
-    |
-    */
-    'public_key'     => env('RECAPTCHA_PUBLIC_KEY', ''),
-    'private_key'    => env('RECAPTCHA_PRIVATE_KEY', ''),
+    /**
+     *
+     * The site key
+     * get site key @ www.google.com/recaptcha/admin
+     *
+     */
+    'api_site_key'                 => env('RECAPTCHA_SITE_KEY', ''),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Template
-    |--------------------------------------------------------------------------
-    |
-    | Set a template to use if you don't want to use the standard one.
-    |
-    */
-    'template'    => '',
+    /**
+     *
+     * The secret key
+     * get secret key @ www.google.com/recaptcha/admin
+     *
+     */
+    'api_secret_key'               => env('RECAPTCHA_SECRET_KEY', ''),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Driver
-    |--------------------------------------------------------------------------
-    |
-    | Determine how to call out to get response; values are 'curl' or 'native'.
-    | Only applies to v2.
-    |
-    */
-    'driver'      => 'curl',
+    /**
+     *
+     * ReCATCHA version
+     * Supported: "v2", "invisible", "v3",
+     *
+     * get more info @ https://developers.google.com/recaptcha/docs/versions
+     *
+     */
+    'version'                      => env('RECAPTCHA_DEFAULT_VERSION', 'v2'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Options
-    |--------------------------------------------------------------------------
-    |
-    | Various options for the driver
-    |
-    */
-    'options'     => [
+    /**
+     *
+     * The curl timout in seconds to validate a recaptcha token
+     * @since v3.5.0
+     *
+     */
+    'curl_timeout'                 => env('RECAPTCHA_CURL_TIMEOUT', 10),
 
-        'curl_timeout' => 1,
-        'curl_verify' => true,
+    /**
+     *
+     * IP addresses for which validation will be skipped
+     *
+     */
+    'skip_ip'                      => [],
 
-    ],
+    /**
+     *
+     * Default route called to check the Google reCAPTCHA token
+     * @since v3.2.0
+     *
+     */
+    'default_validation_route'     => env('RECAPTCHA_DEFAULT_VALIDATION_ROUTE', 'biscolab-recaptcha/validate'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Version
-    |--------------------------------------------------------------------------
-    |
-    | Set which version of ReCaptcha to use.
-    |
-    */
+    /**
+     *
+     * The name of the parameter used to send Google reCAPTCHA token to verify route
+     * @since v3.2.0
+     *
+     */
+    'default_token_parameter_name' => env('RECAPTCHA_DEFAULT_TOKEN_PARAMETER_NAME', 'token'),
 
-    'version'     => 2,
-
+    /**
+     *
+     * The default Google reCAPTCHA language code
+     * It has no effect with v3
+     * @see   https://developers.google.com/recaptcha/docs/language
+     * @since v3.6.0
+     *
+     */
+    'default_language'             => env('RECAPTCHA_DEFAULT_LANGUAGE', null)
 ];
