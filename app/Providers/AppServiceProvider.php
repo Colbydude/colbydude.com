@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!session()->has('style')) {
+        if (! session()->has('style')) {
             $rand = rand(0, 1);
 
             if ($rand == 0) {

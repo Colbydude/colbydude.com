@@ -3,12 +3,11 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ExampleTest extends TestCase
+class SiteTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Tests that the site builds and runs.
      *
      * @return void
      */
