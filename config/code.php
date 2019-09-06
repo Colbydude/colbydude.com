@@ -84,7 +84,7 @@ return [
             'links' => [
                 [
                     'text' => 'Play',
-                    'url' => '',
+                    'url' => 'https://cdn.voidte.am/games/pipedrain',
                 ],
                 [
                     'text' => 'Source',
