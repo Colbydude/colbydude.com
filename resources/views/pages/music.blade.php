@@ -51,7 +51,7 @@
                     <div class="latest-release-col meta">
                         <div class="middle-align">
                             <div class="release-title">{{ $latestRelease->name }}</div>
-                            <div class="release-date text-muted">{{ Carbon\Carbon::parse($latestRelease->release_date)->format('M d, Y') }}</div>
+                            <div class="release-date text-muted">{{ Carbon\Carbon::parse($latestRelease->release_date)->format('M. Y') }}</div>
                         </div>
                     </div>
                 </a>

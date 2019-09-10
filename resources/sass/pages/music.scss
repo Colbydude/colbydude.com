@@ -22,10 +22,6 @@
 }
 
 .album-list {
-    a {
-        color: var(--app-text-color);
-    }
-
     .media-object {
         max-width: 300px;
         padding-bottom: 2.5em;
@@ -65,18 +61,16 @@
 }
 
 .latest-release {
-    color: var(--app-text-color);
     display: flex;
     height: 100px;
     margin-bottom: 2em;
     outline: none;
-    transition: background-color .6s ease;
+    transition: background-color .6s ease, color .6s ease;
     user-select: none;
 
     &:hover,
     &:focus {
         background-color: var(--app-highlight-color);
-        color: var(--app-text-color);
     }
 
     .album-art {
@@ -153,12 +147,11 @@
     }
 
     .tracklist-row {
-        color: var(--app-text-color);
         display: flex;
         height: 4em;
         list-style-type: none;
         outline: none;
-        transition: background-color .6s ease;
+        transition: background-color .6s ease, color .6s ease;
         user-select: none;
 
         &:hover,

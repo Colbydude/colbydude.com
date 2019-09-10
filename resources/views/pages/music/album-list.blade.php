@@ -9,7 +9,7 @@
                         <a href="{{ $album->external_urls->spotify }}">{{ $album->name }}</a>
                     </div>
                     <div class="mo-meta ellipsis-one-line">
-                        <span class="text-muted">{{ $album->artists[0]->name }} &middot; {{ $album->release_date }}</span>
+                        {{ $album->artists[0]->name }} <span class="text-muted">&middot; {{ Carbon\Carbon::parse($album->release_date)->format('M. Y') }}</span>
                     </div>
                 </div>
             </div>
