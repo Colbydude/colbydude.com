@@ -22,10 +22,6 @@ return [
                 'image' => 'prs-se-mhhb2.jpg',
             ],
             [
-                'model' => 'Ibanez S61AL Black Mirage',
-                'image' => 'ibanez-s61al-bm.jpg',
-            ],
-            [
                 'model' => 'ESP SN-25TH (Sonic the Hedgehog)',
                 'image' => 'esp-sn-25th.jpg',
             ],
@@ -34,8 +30,12 @@ return [
                 'image' => 'esp-sd-15th.jpg',
             ],
             [
-                'model' => 'Chapman ML1-8RS (Rob Scallon 8-String Signature)',
-                'image' => 'chapman-ml1-8rs.jpg',
+                'model' => 'Ibanez S61AL Black Mirage',
+                'image' => 'ibanez-s61al-bm.jpg',
+            ],
+            [
+                'model' => 'Ormsby Goliath 7 2019 Maya Blue',
+                'image' => 'ormsby-goliath-7-mb.jpg',
             ],
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',
