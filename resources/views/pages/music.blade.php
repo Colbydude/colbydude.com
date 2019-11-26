@@ -74,7 +74,7 @@
 
         <h3 class="line-header"><span>Guitars</span></h3>
         <div class="row flex-row guitars">
-            @foreach($guitars['current'] as $guitar)
+            @foreach ($guitars['current'] as $guitar)
                 <div class="col-sm-6 col-md-4 guitar">
                     <img class="img-responsive img-thumbnail" src="/img/music/guitars/{{ $guitar['image'] }}" alt="{{ $guitar['model'] }}" width="600" height="202">
                     <div class="guitar-model">{{ $guitar['model'] }}</div>

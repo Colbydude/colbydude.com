@@ -40,7 +40,7 @@
                                     </a>
                                 @endif
                                 @if ($repo->node->forkCount > 0)
-                                    <a class="d-inline-block mr-3 text-muted-link" href="https://github.com{{ $repo->node->resourcePath}}/network/members" target="_blank">
+                                    <a class="d-inline-block mr-3 text-muted-link" href="https://github.com{{ $repo->node->resourcePath }}/network/members" target="_blank">
                                         <span class="fa fa-fw fa-code-branch"></span> {{ $repo->node->forkCount }}
                                     </a>
                                 @endif

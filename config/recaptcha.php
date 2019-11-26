@@ -78,5 +78,5 @@ return [
      * @since v3.6.0
      *
      */
-    'default_language'             => env('RECAPTCHA_DEFAULT_LANGUAGE', null)
+    'default_language'             => env('RECAPTCHA_DEFAULT_LANGUAGE', null),
 ];

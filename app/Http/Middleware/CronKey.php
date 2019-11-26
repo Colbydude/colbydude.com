@@ -15,7 +15,7 @@ class CronKey
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->has('cron_key') || $request->input('cron_key') != config('services.cron.key')) {
+        if (! $request->has('cron_key') || $request->input('cron_key') != config('services.cron.key')) {
             return response()->json(['message' => 'Invalid cron key.'], 401);
         }
 
