@@ -1,6 +1,7 @@
 {
     "preset": "laravel",
     "disabled": [
+        "ApplyMiddlewareInRoutes",
         "NoCompact",
         "NoInlineVarDocs",
         "NoMethodVisibilityInTests"

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class CronController extends Controller
@@ -71,13 +70,13 @@ class CronController extends Controller
         $languages = [];
         $page = 1;
 
-        $repoJson = $this->githubRequest('/user/repos', ['page' => $page ], 'GET');
+        $repoJson = $this->githubRequest('/user/repos', ['page' => $page], 'GET');
 
         // Iterate through pages.
         while (count($repoJson) >= 30) {
             array_push($languages, Arr::pluck($repoJson, 'language'));
             $page++;
-            $repoJson = $this->githubRequest('/user/repos', ['page' => $page ], 'GET');
+            $repoJson = $this->githubRequest('/user/repos', ['page' => $page], 'GET');
         }
 
         $languages = Arr::flatten($languages);          // Combine response arrays.
@@ -168,7 +167,7 @@ class CronController extends Controller
             'headers' => [
                 'Authorization' => 'Bearer ' . config('services.github.token'),
             ],
-            'body' => json_encode([ 'query' => $query ]),
+            'body' => json_encode(['query' => $query]),
         ]);
 
         return json_decode((string) $response->getBody());
