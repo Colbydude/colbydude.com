@@ -9,6 +9,8 @@
                 <h4 class="modal-title">Drop me a line</h4>
             </div>
             {!! Form::open(['url' => 'contact']) !!}
+                @honeypot
+
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
