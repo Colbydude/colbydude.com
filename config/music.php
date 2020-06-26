@@ -18,6 +18,10 @@ return [
 
         'current' => [
             [
+                'model' => 'Ibanez S5EX1 Transparent Gray',
+                'image' => 'ibanez-s5ex1-tg.jpg'
+            ],
+            [
                 'model' => 'PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)',
                 'image' => 'prs-se-mhhb2.jpg',
             ],
@@ -38,8 +42,8 @@ return [
                 'image' => 'ormsby-goliath-7-mb.jpg',
             ],
             [
-                'model' => 'ESP LTD B-155DX See Thru Blue',
-                'image' => 'esp-ltd-b-155dx-stb.jpg',
+                'model' => 'Ibanez EHB1505MS Tropical Seafloor Flat',
+                'image' => 'ibanez-ehb1505ms-tsf.jpg',
             ],
         ],
 
