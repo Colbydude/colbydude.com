@@ -5,9 +5,9 @@
                 <a class="logo-sortof" href="{{ url('/') }}">Colby<span class="lastname" {!! session('style') == 'dark' ? 'style="display: none;"' : ''!!}> Terry</span><span class="username" {!! session('style') == 'light' ? 'style="display: none;"' : ''!!}>dude</span></a>
             </div>
             <div class="col-xs-4">
-                <div class="style-chooser">
-                    <a class="choose-style choose-dark" href="#" title="Switch to Dark Theme" data-style="dark"></a>
-                    <a class="choose-style choose-light" href="#" title="Switch to Light Theme" data-style="light"></a>
+                <div x-data="ThemeChooser()" class="style-chooser">
+                    <button @click="changeTheme('dark')" class="choose-style choose-dark"></button>
+                    <button @click="changeTheme('light')" class="choose-style choose-light"></button>
                 </div>
             </div>
         </div>

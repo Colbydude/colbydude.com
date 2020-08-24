@@ -2,15 +2,13 @@ import axios from 'axios';
 
 const GITHUB_TOKEN = process.env.MIX_GITHUB_TOKEN;
 
-// Create a separate instance of axios to set the base URL and remove global headers.
+// Create an instance of axios to set the base URL and remove global headers.
 let instance = axios.create({
     baseURL: 'https://api.github.com',
     headers: {
         Authorization: `Bearer ${GITHUB_TOKEN}`
     }
 });
-
-delete instance.defaults.headers.common['X-CSRF-TOKEN'];
 
 /**
  * Fetches GitHub Contribution Information.

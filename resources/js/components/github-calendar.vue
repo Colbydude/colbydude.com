@@ -18,11 +18,11 @@
     import { contributions } from '../api/github';
 
     const DEFAULT_RANGE_COLOR = [
-        '#ebedf0', '#cce295', '#8dc679', '#4b9747', '#305f2e'
+        'var(--app-highlight-color)', '#cce295', '#8dc679', '#4b9747', '#305f2e'
     ];
 
     export default {
-        name: "GitHubCalendar",
+        name: 'GitHubCalendar',
 
         props: {
             user: {
@@ -106,7 +106,7 @@
                 contributions(this.user)
                 .then(res => {
                     this.values = res.data.data.user.contributionsCollection.contributionCalendar.weeks.slice(53 - (this.months * 4))
-                    this.squareSize = document.getElementById("github-stats").offsetWidth / this.values.length - 1
+                    this.squareSize = document.getElementById('github-stats').offsetWidth / this.values.length - 1
                 })
                 .catch(err => console.log);
             },
@@ -114,14 +114,14 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .cal-wrapper {
         width: 100%;
 
         .cal-day {
             &:hover {
                 stroke-width: 1;
-                stroke: black;
+                stroke: var(--app-primary-color);
             }
         }
     }

@@ -1,4 +1,3 @@
-import "./bootstrap";
 import GitHubCalendar from './components/github-calendar';
 import Vue from 'vue';
 

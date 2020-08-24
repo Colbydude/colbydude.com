@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('meta_title', 'Colby Terry | Developer & Musician')</title>
         <meta name="description" content="@yield('meta_description', 'Hey, I\'m Colby. I program websites and games.')">
@@ -44,7 +43,7 @@
             <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="{{ session('style') }}">
+    <body class="{{ $theme }}" x-data="App()">
         <div id="app">
             <div class="flash-message">
                 @include('flash::message')
@@ -58,6 +57,14 @@
 
             @include('layouts.partials.contact-modal')
         </div>
+
+        <template x-if="contactOpen">
+            <div
+                class="modal-backdrop fade"
+                :class="{ in: contactOpen }"
+            >
+            </div>
+        </template>
 
         <script src="{{ mix('js/app.js') }}"></script>
         @stack('scripts')

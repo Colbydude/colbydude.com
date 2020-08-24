@@ -120,19 +120,6 @@ class PagesController extends Controller
     }
 
     /**
-     * Store the newly selected style to the session.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function updateStyle(Request $request)
-    {
-        session(['style' => $request->input('style')]);
-
-        return response()->json(['style' => $request->input('style')], 200);
-    }
-
-    /**
      * Display the web page.
      *
      * @return \Illuminate\Http\Response
