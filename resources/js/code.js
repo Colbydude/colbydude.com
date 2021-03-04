@@ -1,5 +1,5 @@
 import "./bootstrap";
-import GitHubCalendar from './components/github-calendar';
+import GitHubCalendar from './components/GitHubCalendar.vue';
 import Vue from 'vue';
 
 Vue.component('github-calendar', GitHubCalendar);
