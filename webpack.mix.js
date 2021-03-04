@@ -14,7 +14,6 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/code.js', 'public/js').vue()
    .sass('resources/sass/app.scss', 'public/css')
-   .options({
-      processCssUrls: false
-   })
+   .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/vendor/bootstrap-sass')
+   .copy('node_modules/open-sans-fontface/fonts', 'public/fonts/vendor/open-sans-fontface')
    .version();
