@@ -5,12 +5,12 @@
 
 .btn-primary-outline {
     background-color: transparent;
-    border-color: $app-primary;
-    color: $app-primary;
+    border-color: var(--color-app-primary);
+    color: var(--color-app-primary);
 
     &:hover,
     &:focus {
         background-color: rgba(229, 76, 114, 0.15);
-        color: $app-primary;
+        color: var(--color-app-primary);
     }
 }

@@ -22,11 +22,11 @@
     list-style: none;
     padding: 0;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .story {
-    border: 2px solid var(--app-highlight-color);
+    border: 2px solid var(--color-border-primary);
     height: 340px;
     margin: 0 10px 60px 10px;
     width: 297px;
@@ -43,7 +43,7 @@
             margin-top: 0;
 
             a {
-                color: var(--app-text-color);
+                color: var(--color-text-primary);
             }
         }
 

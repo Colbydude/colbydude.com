@@ -8,6 +8,7 @@
                     :height="squareSize"
                     :x="i * (squareSize + 1)"
                     :y="j * (squareSize + 1)"
+                    rx="2" ry="2"
                 />
             </g>
         </svg>
@@ -18,11 +19,13 @@
     import { contributions } from '../api/github';
 
     const DEFAULT_RANGE_COLOR = [
-        '#ebedf0', '#cce295', '#8dc679', '#4b9747', '#305f2e'
+        'var(--color-calendar-graph-day-bg)', 'var(--color-calendar-graph-day-L1-bg)',
+        'var(--color-calendar-graph-day-L2-bg)', 'var(--color-calendar-graph-day-L3-bg)',
+        'var(--color-calendar-graph-day-L4-bg)'
     ];
 
     export default {
-        name: "GitHubCalendar",
+        name: 'GitHubCalendar',
 
         props: {
             user: {
@@ -86,11 +89,11 @@
                 const percentage = Math.round((count / this.highestContributionCount) * 100);
 
                 // @TODO: Use better maths for this probably. Hopefully these weights are consistent.
-                if (percentage < 21) {
+                if (percentage < 19) {
                     return 1;
-                } else if (percentage < 38) {
+                } else if (percentage < 35) {
                     return 2;
-                } else if (percentage < 54) {
+                } else if (percentage < 50) {
                     return 3;
                 } else {
                     return 4;
@@ -106,7 +109,7 @@
                 contributions(this.user)
                 .then(res => {
                     this.values = res.data.data.user.contributionsCollection.contributionCalendar.weeks.slice(53 - (this.months * 4))
-                    this.squareSize = document.getElementById("github-stats").offsetWidth / this.values.length - 1
+                    this.squareSize = document.getElementById('github-stats').offsetWidth / this.values.length - 1
                 })
                 .catch(err => console.log);
             },
@@ -114,14 +117,17 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .cal-wrapper {
         width: 100%;
 
         .cal-day {
+            stroke: var(--color-bg-primary);
+            stroke-width: 1;
+            shape-rendering: geometricPrecision;
+
             &:hover {
-                stroke-width: 1;
-                stroke: black;
+                stroke: var(--color-app-primary);
             }
         }
     }

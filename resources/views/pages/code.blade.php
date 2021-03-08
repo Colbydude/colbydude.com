@@ -12,6 +12,28 @@
             <h2>Software engineer, sometimes game-dev.</h2>
         </div>
 
+        <h3 class="line-header"><span>Showcase</span></h3>
+        <ul class="story-grid">
+            @foreach ($showcase as $story)
+                <li class="story">
+                    <div class="story-image">
+                        <a href="{{ $story['links'][0]['url'] }}" target="_blank">
+                            <img class="img-responsive" src="/img/code/showcase/{{ $story['image'] }}" alt="{{ $story['name'] }}">
+                        </a>
+                    </div>
+                    <div class="story-content">
+                        <h4><a href="{{ $story['links'][0]['url'] }}" target="_blank">{{ $story['name'] }}</a></h4>
+                        <p>{!! $story['description'] !!}</p>
+                        <div class="story-links">
+                            @foreach ($story['links'] as $link)
+                                <a href="{{ $link['url'] }}" target="_blank">{{ $link['text'] }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+
         <h3 class="line-header"><span>Pinned Repositories</span></h3>
         <ol class="d-flex flex-wrap list-unstyled row">
             @foreach ($pinnedRepos as $repo)
@@ -83,27 +105,6 @@
                 />
             </div>
         </div>
-        <h3 class="line-header"><span>Showcase</span></h3>
-        <ul class="story-grid">
-            @foreach ($showcase as $story)
-                <li class="story">
-                    <div class="story-image">
-                        <a href="{{ $story['links'][0]['url'] }}" target="_blank">
-                            <img class="img-responsive" src="/img/code/showcase/{{ $story['image'] }}" alt="{{ $story['name'] }}">
-                        </a>
-                    </div>
-                    <div class="story-content">
-                        <h4><a href="{{ $story['links'][0]['url'] }}" target="_blank">{{ $story['name'] }}</a></h4>
-                        <p>{!! $story['description'] !!}</p>
-                        <div class="story-links">
-                            @foreach ($story['links'] as $link)
-                                <a href="{{ $link['url'] }}" target="_blank">{{ $link['text'] }}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                </li>
-            @endforeach
-        </ul>
     </div>
 @stop
 

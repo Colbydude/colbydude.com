@@ -70,7 +70,7 @@
 
     &:hover,
     &:focus {
-        background-color: var(--app-highlight-color);
+        background-color: var(--color-border-primary);
     }
 
     .album-art {
@@ -105,16 +105,17 @@
         display: block;
         padding: .5em;
         margin-bottom: 1em;
+        transition: background-color .6s ease;
         width: 100%;
 
         &:hover,
         &:focus {
-            background-color: var(--app-highlight-color);
+            background-color: var(--color-border-primary);
         }
 
         .service-logo {
             display: block;
-            fill: var(--app-text-color);
+            fill: var(--color-text-primary);
             height: 24px;
             margin: 0 auto;
             max-width: 100%;
@@ -156,7 +157,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--app-highlight-color);
+            background-color: var(--color-border-primary);
         }
 
         .tracklist-col {
