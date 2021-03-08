@@ -28,7 +28,7 @@ return [
 
         [
             'name' => 'FishFriendos',
-            'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://twitter.com/Piranhartist" target="_blank">@Piranhartist</a>.',
+            'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://twitter.com/Piranhartist" rel="noopener" target="_blank">@Piranhartist</a>.',
             'image' => 'fishfriendos.jpg',
             'links' => [
                 [
@@ -54,7 +54,7 @@ return [
         ],
         [
             'name' => 'Pipe Drain',
-            'description' => 'Rework pipes to drain the toxic waste under the city! Built in GameMaker Studio 2. Art by <a href="https://twitter.com/Programancer" target="_blank">@Programancer</a>.',
+            'description' => 'Rework pipes to drain the toxic waste under the city! Built in GameMaker Studio 2. Art by <a href="https://twitter.com/Programancer" rel="noopener" target="_blank">@Programancer</a>.',
             'image' => 'pipedrain.png',
             'links' => [
                 [

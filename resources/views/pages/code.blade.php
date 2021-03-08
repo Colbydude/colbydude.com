@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('meta_title', 'Code | Colby Terry')
-@section('meta_description', '')
+@section('meta_description', 'Software engineer, sometimes game-dev.')
 @section('meta_keywords', 'Colby Terry, Colbydude, developer, code, gamedev, games, webdev, web, webapp, portfolio')
 @section('meta_canonical', 'https://colbydude.com/code')
 
