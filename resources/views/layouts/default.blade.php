@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>@yield('meta_title', 'Colby Terry | Developer & Musician')</title>
-        <meta name="description" content="@yield('meta_description', 'Hey, I\'m Colby. I program websites and games.')">
+        <meta name="description" content="@yield('meta_description', 'Hey, I\'m Colby. I like building web apps and games. I also like playing guitar.')">
         <meta name="keywords" content="@yield('meta_keywords', 'Colby Terry, Colbydude, VoidTeam, Punk Programmer, developer, web, games, music, portfolio')">
         <meta name="author" content="@yield('meta_author', 'Colby Terry')">
         <link href="@yield('meta_canonical', 'https://colbydude.com')" rel="canonical">
@@ -16,7 +16,7 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="@yield('meta_canonical', 'https://colbydude.com')">
         <meta property="og:image" content="/img/avatar.jpg">
-        <meta property="og:description" content="@yield('meta_description', 'Hey, I\'m Colby. I program websites and games.')">
+        <meta property="og:description" content="@yield('meta_description', 'Hey, I\'m Colby. I like building web apps and games. I also like playing guitar.')">
         <meta property="og:site_name" content="Colby Terry | Developer & Musician">
         <meta property="og:locale" content="en_US">
 
@@ -28,7 +28,7 @@
         <meta name="twitter:site" content="@Colbydude">
         <meta name="twitter:creator" content="@Colbydude">
         <meta name="twitter:title" content="@yield('meta_title', 'Colby Terry | Developer & Musician')">
-        <meta name="twitter:description" content="@yield('meta_description', 'Hey, I\'m Colby. I program websites and games.')">
+        <meta name="twitter:description" content="@yield('meta_description', 'Hey, I\'m Colby. I like building web apps and games. I also like playing guitar.')">
         <meta name="twitter:image" content="/img/cover.jpg">
         <meta name="twitter:url" content="@yield('meta_canonical', 'https://colbydude.com')">
 
@@ -36,13 +36,6 @@
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
         {!! ReCaptcha::htmlScriptTagJsApi() !!}
-
-        {{-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --}}
-        {{-- WARNING: Respond.js doesn't work if you view the page via file:// --}}
-        <!--[if lt IE 9]>
-            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body class="{{ session('style') }}">
         <div id="app">
