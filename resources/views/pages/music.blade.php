@@ -18,7 +18,7 @@
                 <ol class="tracklist">
                     @foreach ($topTracks as $track)
                         <li>
-                            <a class="tracklist-row" href="{{ $track->external_urls->spotify }}" target="_blank">
+                            <a class="tracklist-row" href="{{ $track->external_urls->spotify }}" rel="noopener" target="_blank">
                                 <div class="tracklist-col tracklist-col-album-art">
                                     <div class="album-art tracklist-middle-align album-art--with-auto-height">
                                         <div class="album-art-image" style="background-image: url('{{ $track->album->images[2]->url }}');"></div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-md-5">
                 <h3 class="line-header"><span>Latest Release</span></h3>
-                <a class="latest-release" href="{{ $latestRelease->external_urls->spotify }}" target="_blank">
+                <a class="latest-release" href="{{ $latestRelease->external_urls->spotify }}" rel="noopener" target="_blank">
                     <div class="latest-release-col latest-release-col-album-art">
                         <div class="album-art middle-align album-art--with-auto-height">
                             <div class="album-art-image" style="background-image: url('{{ $latestRelease->images[1]->url }}');"></div>
@@ -60,7 +60,8 @@
                 <div class="row flex-row streaming-services">
                     @foreach ($services as $name => $url)
                         <div class="col-xs-4">
-                            <a class="streaming-service" href="{{ $url }}" target="_blank">
+                            <a class="streaming-service" href="{{ $url }}" rel="noopener" target="_blank">
+                                <span class="sr-only">{{ $name }}</span>
                                 @svg($name, ['class' => 'service-logo'])
                             </a>
                         </div>
