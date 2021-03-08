@@ -114,14 +114,27 @@ class CronController extends Controller
             array_push($albumsJson->items, $albumJson);
         }
 
-        // Sort by release date, then flip to have the newest release at the top.
-        $albumsJson = Arr::sort($albumsJson->items, function ($album) {
+        $releases = [];
+
+        // De-depulicate releases.
+        foreach ($albumsJson->items as $album) {
+            $index = array_search($album->name, array_column($albumsJson->items, 'name'));
+
+            if ($index !== false) {
+                // Take oldest dated release.
+                $releases[$index] = $album;
+            } else {
+                array_push($album);
+            }
+        }
+
+        $releases = Arr::sort($releases, function ($album) {
             return $album->release_date;
         });
-        $albumsJson = array_reverse($albumsJson);
+        $releases = array_reverse($releases);
 
         // Store albums.
-        Storage::put('music/albums.json', json_encode($albumsJson));
+        Storage::put('music/albums.json', json_encode($releases));
 
         // Fetch top track data and store.
         $topTracksJson = $this->spotifyRequest('/v1/artists/' . config('services.spotify.artist_id') . '/top-tracks', [
