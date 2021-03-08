@@ -1,43 +1,72 @@
-// @NOTE: Can't seem to use SASS variables here.
 .dark {
-    --app-bg-color: #{$app-dark-bg};
-    --app-highlight-color: #{$app-dark-highlight};
-    --app-text-color: #{$app-dark-text};
-    --app-text-secondary-color: #{$app-dark-text-secondary};
+    --color-bg-primary: #0d1117;
+
+    --color-border-primary: #30363d;
+
+    --color-calendar-graph-day-bg: #161b22;
+    --color-calendar-graph-day-L1-bg: #003820;
+    --color-calendar-graph-day-L2-bg: #00602d;
+    --color-calendar-graph-day-L3-bg: #10983d;
+    --color-calendar-graph-day-L4-bg: #27d545;
+
+    --color-text-primary: #c9d1d9;
+    --color-text-secondary: #8b949e;
 }
 
 .light {
-    --app-bg-color: #{$app-light-bg};
-    --app-highlight-color: #{$app-light-highlight};
-    --app-text-color: #{$app-light-text};
-    --app-text-secondary-color: #{$app-light-text-secondary};
+    --color-bg-primary: #ffffff;
+
+    --color-border-primary: #e1e4e8;
+
+    --color-calendar-graph-day-bg: #ebedf0;
+    --color-calendar-graph-day-L1-bg: #9be9a8;
+    --color-calendar-graph-day-L2-bg: #40c463;
+    --color-calendar-graph-day-L3-bg: #30a14e;
+    --color-calendar-graph-day-L4-bg: #216e39;
+
+    --color-text-primary: #24292e;
+    --color-text-secondary: #586069;
+}
+
+:root {
+    --color-app-primary: #e54c72;
+
+    --color-social-discord: #7289da;
+    --color-social-facebook: #3b5998;
+    --color-social-github: #52386d;
+    --color-social-linkedin: #1b79b1;
+    --color-social-skype: #0078ca;
+    --color-social-steam: #3c6f98;
+    --color-social-twitch: #6441a5;
+    --color-social-twitter: #00aced;
+    --color-social-youtube: #cc181e;
 }
 
 body {
-    background-color: var(--app-bg-color);
-    color: var(--app-text-color);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: background-color .6s ease, color .6s ease;
 }
 
 ::selection {
-    background: $app-primary;
+    background: var(--color-app-primary);
     color: white;
 }
 
 a {
-    color: $app-primary;
+    color: var(--color-app-primary);
 
     &:hover,
     &:focus
     {
-        color: darken($app-primary, 15%);
+        color: darken(#e54c72, 15%);
         text-decoration: none;
     }
 }
 
 .box {
-    border: 1px solid var(--app-highlight-color);
+    border: 1px solid var(--color-border-primary);
 }
 
 .d-block {
@@ -92,20 +121,20 @@ a {
 }
 
 .img-thumbnail {
-    background-color: var(--app-highlight-color);
-    border-color: var(--app-highlight-color);
+    background-color: var(--color-border-primary);
+    border-color: var(--color-border-primary);
     border-radius: 0;
     transition: background-color .6s ease, border-color .6s ease;
 
     &:hover,
     &:focus {
-        background-color: $app-primary;
-        border-color: $app-primary;
+        background-color: var(--color-app-primary);
+        border-color: var(--color-app-primary);
     }
 }
 
 .label {
-    background-color: $app-primary;
+    background-color: var(--color-app-primary);
     border-radius: 0;
 }
 
@@ -113,7 +142,7 @@ a {
     position: relative;
 
     &::before {
-        background-color: var(--app-text-secondary-color);
+        background-color: var(--color-text-secondary);
         content: '';
         display: block;
         height: 3px;
@@ -124,8 +153,8 @@ a {
     }
 
     span {
-        background-color: var(--app-bg-color);
-        color: var(--app-text-color);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
         font-size: 16px;
         font-weight: bold;
         line-height: 1;
@@ -210,7 +239,7 @@ select.form-control {
     }
 
     h2 {
-        color: var(--app-text-secondary-color);
+        color: var(--color-text-secondary);
         font-size: 18px;
 
         @media screen and (min-width: $screen-sm-min) {
@@ -225,7 +254,7 @@ select.form-control {
 
 .table {
     & > thead > tr > th {
-        border-bottom: 2px solid var(--app-text-secondary-color);
+        border-bottom: 2px solid var(--color-text-secondary);
     }
 
     & > thead > tr > th,
@@ -234,7 +263,7 @@ select.form-control {
     & > tbody > tr > td,
     & > tfoot > tr > th,
     & > tfoot > tr > td {
-        border-top: 1px solid var(--app-text-secondary-color);
+        border-top: 1px solid var(--color-text-secondary);
     }
 }
 

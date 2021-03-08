@@ -2,7 +2,7 @@ header {
     padding: 12px 0;
 
     .logo-sortof {
-        color: var(--app-text-color);
+        color: var(--color-text-primary);
         display: block;
         font-size: 26px;
         line-height: 1;
@@ -10,13 +10,13 @@ header {
         transition: color .6s ease;
 
         &:hover {
-            color: $app-primary;
+            color: var(--color-app-primary);
         }
     }
 }
 
 nav {
-    border-color: var(--app-text-secondary-color);
+    border-color: var(--color-text-secondary);
 
     .header-nav {
         list-style: none;
@@ -25,7 +25,7 @@ nav {
         padding: 0;
 
         & > li {
-            border-bottom: 4px solid var(--app-text-secondary-color);
+            border-bottom: 4px solid var(--color-text-secondary);
             float: left;
             text-align: center;
             transition: border-color .6s ease;
@@ -33,31 +33,31 @@ nav {
 
             &:hover,
             &:focus {
-                border-color: $app-primary;
+                border-color: var(--color-app-primary);
 
                 & > a {
                     &,
                     &:hover,
                     &:focus {
-                        color: $app-primary;
+                        color: var(--color-app-primary);
                     }
                 }
             }
 
             &.active {
-                border-color: $app-primary;
+                border-color: var(--color-app-primary);
 
                 & > a {
                     &,
                     &:hover,
                     &:focus {
-                        color: $app-primary;
+                        color: var(--color-app-primary);
                     }
                 }
             }
 
             & > a {
-                color: var(--app-text-secondary-color);
+                color: var(--color-text-secondary);
                 display: block;
                 font-size: 16px;
                 font-weight: bold;
@@ -68,7 +68,7 @@ nav {
 
                 &:hover,
                 &:focus {
-                    color: $app-primary;
+                    color: var(--color-app-primary);
                 }
 
                 .fa {
@@ -119,12 +119,12 @@ nav {
     }
 
     .choose-dark {
-        background: $app-dark-bg;
-        border: 1px solid $app-dark-text-secondary;
+        background: #0d1117;
+        border: 1px solid #30363d;
     }
 
     .choose-light {
-        background: $app-light-bg;
-        border: 1px solid $app-light-text-secondary;
+        background: #ffffff;
+        border: 1px solid #e1e4e8;
     }
 }

@@ -1,32 +1,3 @@
-//
-// Variables
-// =============================
-
-// Colors
-// -----------------------------
-// App colors.
-$app-dark-bg:                   #161d26;
-$app-dark-highlight:            #1e2835;
-$app-dark-text:                 #ffffff;
-$app-dark-text-secondary:       #8899a6;
-$app-light-bg:                  #e7ecf0;
-$app-light-highlight:           #ffffff;
-$app-light-text:                #14171a;
-$app-light-text-secondary:      #657786;
-
-$app-primary:                   #e54c72;
-
-// Social Media colors.
-$c-discord:                     #7289da;
-$c-facebook:                    #3b5998;
-$c-github:                      #52386d;
-$c-linkedin:                    #1b79b1;
-$c-skype:                       #0078ca;
-$c-steam:                       #3c6f98;
-$c-twitch:                      #6441a5;
-$c-twitter:                     #00aced;
-$c-youtube:                     #cc181e;
-
 // Fonts.
 $icon-font-path: "/fonts/vendor/bootstrap-sass/bootstrap/";
 $OpenSansPath: "/fonts/vendor/open-sans-fontface/";

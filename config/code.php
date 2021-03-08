@@ -12,6 +12,7 @@ return [
         'C++' => '#fe4273',
         'C#' => '#007b19',
         'Game Maker Language' => '#5dab2b',
+        'Haxe' => '#df7900',
         'HTML' => '#eb442c',
         'Java' => '#ad6725',
         'JavaScript' => '#f2dc5e',
@@ -26,21 +27,6 @@ return [
     'showcase' => [
 
         [
-            'name' => 'FFXIV Progression Checker',
-            'description' => 'A simple tool for checking player raid progression in the popular MMORPG Final Fantasy XIV: Online.',
-            'image' => 'ffxiv-progression.jpg',
-            'links' => [
-                [
-                    'text' => 'Visit',
-                    'url' => 'https://ffxiv.voidteam.net/progression',
-                ],
-                [
-                    'text' => 'Source',
-                    'url' => 'https://github.com/Colbydude/FFXIVProgressionChecker',
-                ],
-            ],
-        ],
-        [
             'name' => 'FishFriendos',
             'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://twitter.com/Piranhartist" target="_blank">@Piranhartist</a>.',
             'image' => 'fishfriendos.jpg',
@@ -48,17 +34,6 @@ return [
                 [
                     'text' => 'Install on Twitch',
                     'url' => 'https://www.twitch.tv/ext/uqbw5s35wg1ztqw1kmrf37swiwxmyi',
-                ],
-            ],
-        ],
-        [
-            'name' => 'Long Center',
-            'description' => 'The Long Center for Performing Arts. Theater in Lafayette, Indiana. Event platform built on Laravel.',
-            'image' => 'longpac.jpg',
-            'links' => [
-                [
-                    'text' => 'Visit',
-                    'url' => 'https://longpac.org',
                 ],
             ],
         ],
@@ -89,17 +64,6 @@ return [
                 [
                     'text' => 'Source',
                     'url' => 'https://github.com/Colbydude/PipeDrainGMS2',
-                ],
-            ],
-        ],
-        [
-            'name' => 'VoidTeam Network',
-            'description' => 'Gaming community started in 2007 built on several different microservices leveraging the Laravel framework.',
-            'image' => 'voidteam.jpg',
-            'links' => [
-                [
-                    'text' => 'Visit',
-                    'url' => 'https://voidteam.net',
                 ],
             ],
         ],

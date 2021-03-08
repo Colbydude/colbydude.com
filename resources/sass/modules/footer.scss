@@ -1,9 +1,9 @@
 footer {
-    color: var(--app-text-secondary-color);
+    color: var(--color-text-secondary);
     margin-top: 10px;
 
     .footer-content {
-        border-top: 4px solid var(--app-text-secondary-color);
+        border-top: 4px solid var(--color-text-secondary);
         font-size: 13px;
         padding: 10px 0;
 
@@ -23,7 +23,7 @@ footer {
             display: inline-block;
 
             & > a {
-                color: var(--app-text-secondary-color);
+                color: var(--color-text-secondary);
                 display: block;
                 font-size: 24px;
                 line-height: 1;
@@ -33,70 +33,70 @@ footer {
                 &.link-primary {
                     &:hover,
                     &:focus {
-                        color: $app-primary;
+                        color: var(--color-app-primary);
                     }
                 }
 
                 &.link-discord {
                     &:hover,
                     &:focus {
-                        color: $c-discord;
+                        color: var(--color-social-discord);
                     }
                 }
 
                 &.link-facebook {
                     &:hover,
                     &:focus {
-                        color: $c-facebook;
+                        color: var(--color-social-facebook);
                     }
                 }
 
                 &.link-github {
                     &:hover,
                     &:focus {
-                        color: $c-github;
+                        color: var(--color-social-github);
                     }
                 }
 
                 &.link-linkedin {
                     &:hover,
                     &:focus {
-                        color: $c-linkedin;
+                        color: var(--color-social-linkedin);
                     }
                 }
 
                 &.link-skype {
                     &:hover,
                     &:focus {
-                        color: $c-skype;
+                        color: var(--color-social-skype);
                     }
                 }
 
                 &.link-steam {
                     &:hover,
                     &:focus {
-                        color: $c-steam;
+                        color: var(--color-social-steam);
                     }
                 }
 
                 &.link-twitch {
                     &:hover,
                     &:focus {
-                        color: $c-twitch;
+                        color: var(--color-social-twitch);
                     }
                 }
 
                 &.link-twitter {
                     &:hover,
                     &:focus {
-                        color: $c-twitter;
+                        color: var(--color-social-twitter);
                     }
                 }
 
                 &.link-youtube {
                     &:hover,
                     &:focus {
-                        color: $c-youtube;
+                        color: var(--color-social-youtube);
                     }
                 }
 
