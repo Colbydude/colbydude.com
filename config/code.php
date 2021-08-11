@@ -11,16 +11,16 @@ return [
     'language_colors' => [
         'C++' => '#fe4273',
         'C#' => '#007b19',
-        'Game Maker Language' => '#5dab2b',
+        'Game Maker Language' => '#73b22a',
         'Haxe' => '#df7900',
         'HTML' => '#eb442c',
         'Java' => '#ad6725',
         'JavaScript' => '#f2dc5e',
         'Lua' => '#000071',
-        'PHP' => '#435287',
+        'PHP' => '#505e93',
         'ShaderLab' => '#c5c5c5',   // Unity
         'TypeScript' => '#12687c',
-        'Vue' => '#243645',
+        'Vue' => '#47b784',
         'Yacc' => '#3e6144',        // GameMaker
     ],
 

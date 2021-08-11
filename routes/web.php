@@ -20,6 +20,8 @@ Route::post('contact', 'PagesController@postContact')->middleware(ProtectAgainst
 Route::get('games', 'PagesController@games');
 Route::get('payment', 'PagesController@payment');
 Route::get('payment/success', 'PagesController@paymentSuccess');
+Route::get('portfolio', 'PortfolioController@index');
+Route::get('portfolio/gamedev', 'PortfolioController@gamedev');
 Route::get('music', 'PagesController@music');
 Route::post('update_style', 'PagesController@updateStyle');
 Route::get('web', 'PagesController@web');
