@@ -14,7 +14,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
-        "spatie/laravel-honeypot": "^3.0"
+        "spatie/laravel-honeypot": "^3.0",
+        "spatie/laravel-markdown": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
