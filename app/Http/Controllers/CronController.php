@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\GitHubApiService;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
@@ -10,13 +11,14 @@ class CronController extends Controller
 {
     /**
      * The access token used for Spotify Requests.
-     *
-     * @var string
      */
-    private $accessToken;
+    private string $accessToken;
 
-    public function __construct()
+    protected GitHubApiService $githubApiService;
+
+    public function __construct(GitHubApiService $githubApiService)
     {
+        $this->githubApiService = $githubApiService;
         $this->middleware(['cron.key']);
     }
 
@@ -27,40 +29,7 @@ class CronController extends Controller
      */
     public function github()
     {
-        $pinnedQuery = <<<'GRAPHQL'
-            query {
-                repositoryOwner(login: "Colbydude") {
-                    ... on ProfileOwner {
-                        pinnedItemsRemaining
-                        itemShowcase {
-                            items(first: 6) {
-                                totalCount
-                                edges {
-                                    node {
-                                        ... on Repository {
-                                            name
-                                            description
-                                            primaryLanguage {
-                                                name
-                                            }
-                                            stargazers {
-                                                totalCount
-                                            }
-                                            forkCount
-                                            resourcePath
-                                            isTemplate
-                                        }
-                                    }
-                                }
-                            }
-                            hasPinnedItems
-                        }
-                    }
-                }
-            }
-        GRAPHQL;
-
-        $pinnedJson = $this->githubGraphQLRequest($pinnedQuery);
+        $pinnedJson = $this->githubApiService->getUserPinnedItems('Colbydude');
         $pinnedJson = $pinnedJson->data->repositoryOwner->itemShowcase->items->edges;
 
         // Store pinned repositories.
@@ -70,13 +39,13 @@ class CronController extends Controller
         $languages = [];
         $page = 1;
 
-        $repoJson = $this->githubRequest('/user/repos', ['page' => $page], 'GET');
+        $repoJson = $this->githubApiService->getUserRepos($page);
 
         // Iterate through pages.
         while (count($repoJson) >= 30) {
             array_push($languages, Arr::pluck($repoJson, 'language'));
             $page++;
-            $repoJson = $this->githubRequest('/user/repos', ['page' => $page], 'GET');
+            $repoJson = $this->githubApiService->getUserRepos($page);
         }
 
         $languages = Arr::flatten($languages);          // Combine response arrays.
@@ -144,46 +113,6 @@ class CronController extends Controller
         Storage::put('music/top-tracks.json', json_encode($topTracksJson->tracks));
 
         return response()->json(['message' => 'OK'], 200);
-    }
-
-    /**
-     * Fetches a response from the GitHub API.
-     *
-     * @return object
-     */
-    private function githubRequest($url, $params = [], $method = 'GET')
-    {
-        $baseUri = 'https://api.github.com';
-
-        $client = new Client(['base_uri' => $baseUri]);
-        $response = $client->request($method, $url, [
-            'headers' => [
-                'Authorization' => 'Bearer ' . config('services.github.token'),
-            ],
-            'query' => $params,
-        ]);
-
-        return json_decode((string) $response->getBody());
-    }
-
-    /**
-     * Fetches a response from the GitHub GraphQL API.
-     *
-     * @return object
-     */
-    private function githubGraphQLRequest($query)
-    {
-        $baseUri = 'https://api.github.com';
-
-        $client = new Client(['base_uri' => $baseUri]);
-        $response = $client->request('POST', '/graphql', [
-            'headers' => [
-                'Authorization' => 'Bearer ' . config('services.github.token'),
-            ],
-            'body' => json_encode(['query' => $query]),
-        ]);
-
-        return json_decode((string) $response->getBody());
     }
 
     /**

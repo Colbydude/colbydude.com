@@ -3,26 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Services\GitHubApiService;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ApiController extends Controller
 {
-    /**
-     * @var GitHubApiService
-     */
-    protected $githubApiService;
+    protected GitHubApiService $githubApiService;
 
     public function __construct(GitHubApiService $githubApiService)
     {
         $this->githubApiService = $githubApiService;
     }
 
-    public function githubContributions(Request $request)
+    /**
+     * Pass-through API endpoint to get my contributions on GitHub and cache the result for 1 day.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function githubContributions()
     {
-        $request->validate([
-            'user' => 'required|string'
-        ]);
-
-        return $this->githubApiService->getUserContributions($request->user);
+        return Cache::remember('github-contributions', 60 * 60 * 24, function () {
+            return $this->githubApiService->getUserContributions('Colbydude');
+        });
     }
 }

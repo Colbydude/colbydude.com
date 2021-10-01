@@ -16,8 +16,6 @@
 </template>
 
 <script>
-    import axios from 'axios';
-
     const DEFAULT_RANGE_COLOR = [
         'var(--color-calendar-graph-day-bg)', 'var(--color-calendar-graph-day-L1-bg)',
         'var(--color-calendar-graph-day-L2-bg)', 'var(--color-calendar-graph-day-L3-bg)',
@@ -28,10 +26,6 @@
         name: 'GitHubCalendar',
 
         props: {
-            user: {
-                required: true,
-                type: String
-            },
             months: {
                 type: Number,
                 default: 12
@@ -105,12 +99,12 @@
              * @return {Void}
              */
             fetchContribData() {
-                axios.get(`/api/github-contributions?user=${this.user}`)
+                window.axios.get(`/api/github-contributions`)
                 .then(res => {
                     this.values = res.data.data.user.contributionsCollection.contributionCalendar.weeks.slice(53 - (this.months * 4))
                     this.squareSize = document.getElementById('github-stats').offsetWidth / this.values.length - 1
                 })
-                .catch(err => console.log);
+                .catch(() => console.log);
             },
         },
     }

@@ -4,17 +4,17 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+import './bootstrap';
 
-$(document).ready(() => {
+$(() => {
     // Switch color scheme.
     $('.choose-style').on('click', function (e) {
         e.preventDefault();
         var style = $(this).data('style');
 
-        axios.post('/update_style', {
+        window.axios.post('/update_style', {
             style: $(this).data('style')
-        }).then(response => {
+        }).then(() => {
             if (style == 'dark') {
                 $('body').removeClass('light');
                 $('body').addClass('dark');
@@ -30,8 +30,6 @@ $(document).ready(() => {
                     $('.lastname').fadeIn(300);
                 });
             }
-        }).catch(error => {
-            console.log(error);
-        });
+        }).catch(() => console.log);
     });
 });

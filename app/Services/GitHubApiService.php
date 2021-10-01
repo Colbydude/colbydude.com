@@ -6,7 +6,14 @@ use GuzzleHttp\Client;
 
 class GitHubApiService
 {
+    /**
+     * The Base URI of the GitHub API.
+     */
     private string $baseUri = 'https://api.github.com';
+
+    /**
+     * The authentication token to be used for requests.
+     */
     private string $token;
 
     public function __construct()
@@ -18,9 +25,9 @@ class GitHubApiService
      * Gets the specified user's contribution activity.
      *
      * @param  string  $user
-     * @return
+     * @return mixed
      */
-    public function getUserContributions(string $user)
+    public function getUserContributions(string $user): mixed
     {
         $query = "query {
             user(login: \"${user}\") {
@@ -45,9 +52,9 @@ class GitHubApiService
      * Gets the specified user's pinned items/repositories.
      *
      * @param  string  $user
-     * @return
+     * @return mixed
      */
-    public function getUserPinnedItems(string $user)
+    public function getUserPinnedItems(string $user): mixed
     {
         $query = "query {
             repositoryOwner(login: \"${user}\") {
@@ -87,9 +94,9 @@ class GitHubApiService
      * Gets the (implied from the token) user's repositories, paginated.
      *
      * @param  int  $page
-     * @return
+     * @return mixed
      */
-    public function getUserRepos(int $page = 1)
+    public function getUserRepos(int $page = 1): mixed
     {
         return $this->request('/user/repos', ['page' => $page], 'GET');
     }
