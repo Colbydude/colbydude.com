@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\GitHubApiService;
+use App\Services\SpotifyApiService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->instance(GitHubApiService::class, new GitHubApiService());
+        $this->app->instance(SpotifyApiService::class, new SpotifyApiService());
 
         if (! session()->has('style')) {
             $rand = rand(0, 1);
