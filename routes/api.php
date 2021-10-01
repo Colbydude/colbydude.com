@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('cron/github', 'CronController@github');
 Route::get('cron/spotify', 'CronController@spotify');
+Route::get('github-contributions', 'ApiController@githubContributions');

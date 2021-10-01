@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\GitHubApiService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,6 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->app->instance(GitHubApiService::class, new GitHubApiService());
+
         if (! session()->has('style')) {
             $rand = rand(0, 1);
 

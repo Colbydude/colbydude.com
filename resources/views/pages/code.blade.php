@@ -99,10 +99,9 @@
             </div>
             <div class="col-md-6">
                 <h3 class="line-header"><span>Contributions</span></h3>
-                <github-calendar
-                    user="Colbydude"
-                    :months="12"
-                />
+                <div id="github-calendar">
+                    {{-- Inject github calendar vue component --}}
+                </div>
             </div>
         </div>
     </div>

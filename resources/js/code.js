@@ -1,9 +1,13 @@
-import "./bootstrap";
+import './bootstrap';
 import GitHubCalendar from './components/GitHubCalendar.vue';
 import Vue from 'vue';
 
-Vue.component('github-calendar', GitHubCalendar);
-
 new Vue({
-    el: '#app'
+    el: '#github-calendar',
+    render: createElement => createElement(GitHubCalendar, {
+        props: {
+            user: 'Colbydude',
+            months: 12
+        }
+    })
 });
