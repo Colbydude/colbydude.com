@@ -8,6 +8,10 @@ h3.featured {
     }
 }
 
+textarea {
+    font-family: $font-family-sans-serif;
+}
+
 .ellipsis-one-line {
     margin-right: -1px;
     overflow: hidden;

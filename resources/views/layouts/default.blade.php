@@ -34,8 +34,6 @@
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
-
-        {!! ReCaptcha::htmlScriptTagJsApi() !!}
     </head>
     <body class="{{ session('style') }}">
         <div id="app">

@@ -1,4 +1,4 @@
-.dark {
+@mixin dark {
     --color-bg-primary: #0d1117;
 
     --color-border-primary: #30363d;
@@ -13,7 +13,7 @@
     --color-text-secondary: #8b949e;
 }
 
-.light {
+@mixin light {
     --color-bg-primary: #ffffff;
 
     --color-border-primary: #e1e4e8;
@@ -45,7 +45,6 @@
 body {
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: background-color .6s ease, color .6s ease;
 }
 
@@ -67,6 +66,10 @@ a {
 
 .box {
     border: 1px solid var(--color-border-primary);
+}
+
+.dark {
+    @include dark;
 }
 
 .d-block {
@@ -136,6 +139,10 @@ a {
 .label {
     background-color: var(--color-app-primary);
     border-radius: 0;
+}
+
+.light {
+    @include light;
 }
 
 .line-header {
