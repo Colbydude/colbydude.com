@@ -13,7 +13,8 @@ require('laravel-mix-purgecss');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .js('resources/js/code.js', 'public/js').vue({ runtimeOnly: true })
+   .js('resources/js/code.js', 'public/js')
+   .vue({ runtimeOnly: true })
    .sass('resources/sass/app.scss', 'public/css')
    .purgeCss()
    .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/vendor/bootstrap-sass')

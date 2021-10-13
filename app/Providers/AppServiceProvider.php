@@ -18,14 +18,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->instance(GitHubApiService::class, new GitHubApiService());
         $this->app->instance(SpotifyApiService::class, new SpotifyApiService());
 
-        if (! session()->has('style')) {
-            $rand = rand(0, 1);
-
-            if ($rand == 0) {
-                session(['style' => 'dark']);
-            } else {
-                session(['style' => 'light']);
-            }
+        if (!session()->has('style')) {
+            session(['style' => 'dark']);
         }
     }
 
