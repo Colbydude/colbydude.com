@@ -24,6 +24,10 @@ export default {
                 const bodyElement = document.querySelector('body');
 
                 if (style == 'dark') {
+                    if (bodyElement.classList.contains('dark')) {
+                        return;
+                    }
+
                     bodyElement.classList.remove('light');
                     bodyElement.classList.add('dark');
 
@@ -33,6 +37,10 @@ export default {
                 }
 
                 if (style == 'light') {
+                    if (bodyElement.classList.contains('light')) {
+                        return;
+                    }
+
                     bodyElement.classList.remove('dark');
                     bodyElement.classList.add('light');
 
