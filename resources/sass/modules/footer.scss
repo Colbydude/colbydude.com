@@ -37,13 +37,6 @@ footer {
                     }
                 }
 
-                &.link-discord {
-                    &:hover,
-                    &:focus {
-                        color: var(--color-social-discord);
-                    }
-                }
-
                 &.link-facebook {
                     &:hover,
                     &:focus {
@@ -62,20 +55,6 @@ footer {
                     &:hover,
                     &:focus {
                         color: var(--color-social-linkedin);
-                    }
-                }
-
-                &.link-skype {
-                    &:hover,
-                    &:focus {
-                        color: var(--color-social-skype);
-                    }
-                }
-
-                &.link-steam {
-                    &:hover,
-                    &:focus {
-                        color: var(--color-social-steam);
                     }
                 }
 

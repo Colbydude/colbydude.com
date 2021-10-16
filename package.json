@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "@fortawesome/fontawesome": "^1.1.2",
+        "@fortawesome/fontawesome-free": "^5.15.4",
         "axios": "^0.21",
         "bootstrap-sass": "^3.4.1",
         "open-sans-fontface": "^1.4.0",

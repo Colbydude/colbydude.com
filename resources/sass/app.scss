@@ -2,8 +2,12 @@
 @import "variables";
 
 // Node Packages.
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~@fortawesome/fontawesome/styles.css";
+
 @import "~open-sans-fontface/open-sans.scss";
 
 // Modules.
