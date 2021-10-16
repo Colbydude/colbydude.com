@@ -1,4 +1,6 @@
-import './bootstrap';
+import './axios';
+import './modal';
+
 import StyleChooser from './components/StyleChooser.vue';
 import Vue from 'vue';
 

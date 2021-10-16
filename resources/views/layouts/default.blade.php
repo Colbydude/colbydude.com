@@ -36,20 +36,20 @@
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     </head>
     <body class="{{ session('style') }}">
-        <div id="app">
-            <div class="flash-message">
-                @include('flash::message')
-                @include('layouts.partials.errors')
-            </div>
-            @include('layouts.partials.header')
-
-            @yield('content')
-
-            @include('layouts.partials.footer')
-
-            @include('layouts.partials.contact-modal')
+        <div class="flash-message">
+            @include('flash::message')
+            @include('layouts.partials.errors')
         </div>
+        @include('layouts.partials.header')
 
+        @yield('content')
+
+        @include('layouts.partials.footer')
+
+        @include('layouts.partials.contact-modal')
+
+        <script src="{{ mix('js/manifest.js') }}"></script>
+        <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/app.js') }}"></script>
         @stack('scripts')
 

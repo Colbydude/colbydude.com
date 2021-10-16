@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe0b5bb74d1df2d3edf614c282347c1d",
+    "content-hash": "25fa20c5d13c9580344c55ac2736a260",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,76 +61,6 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
-        },
-        {
-            "name": "biscolab/laravel-recaptcha",
-            "version": "5.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/biscolab/laravel-recaptcha.git",
-                "reference": "21018b259827e1446ea9d829ae423022a0e1025e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/biscolab/laravel-recaptcha/zipball/21018b259827e1446ea9d829ae423022a0e1025e",
-                "reference": "21018b259827e1446ea9d829ae423022a0e1025e",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^7.0|^8.0",
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "5.*|6.*",
-                "phpunit/phpunit": "^9.1"
-            },
-            "suggest": {
-                "biscolab/laravel-authlog": "It allows to handle logged-in users and force log-out if needed"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Biscolab\\ReCaptcha\\ReCaptchaServiceProvider"
-                    ],
-                    "aliases": {
-                        "ReCaptcha": "Biscolab\\ReCaptcha\\Facades\\ReCaptcha"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Biscolab\\ReCaptcha\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roberto Belotti",
-                    "email": "roby.belotti@gmail.com",
-                    "homepage": "https://biscolab.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Simple and painless Google reCAPTCHA package for Laravel framework",
-            "homepage": "https://biscolab.com/laravel-recaptcha",
-            "keywords": [
-                "captcha",
-                "laravel",
-                "recaptcha",
-                "validation"
-            ],
-            "support": {
-                "issues": "https://github.com/biscolab/laravel-recaptcha/issues",
-                "source": "https://github.com/biscolab/laravel-recaptcha/tree/v5.0.1"
-            },
-            "time": "2021-02-03T16:26:03+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
@@ -1359,78 +1289,6 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.6.2"
             },
             "time": "2021-09-28T15:47:34+00:00"
-        },
-        {
-            "name": "laravelcollective/html",
-            "version": "v6.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/ae15b9c4bf918ec3a78f092b8555551dd693fde3",
-                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/http": "^6.0|^7.0|^8.0",
-                "illuminate/routing": "^6.0|^7.0|^8.0",
-                "illuminate/session": "^6.0|^7.0|^8.0",
-                "illuminate/support": "^6.0|^7.0|^8.0",
-                "illuminate/view": "^6.0|^7.0|^8.0",
-                "php": ">=7.2.5"
-            },
-            "require-dev": {
-                "illuminate/database": "^6.0|^7.0|^8.0",
-                "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~8.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Collective\\Html\\HtmlServiceProvider"
-                    ],
-                    "aliases": {
-                        "Form": "Collective\\Html\\FormFacade",
-                        "Html": "Collective\\Html\\HtmlFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Collective\\Html\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Adam Engebretson",
-                    "email": "adam@laravelcollective.com"
-                },
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "HTML and Form Builders for the Laravel Framework",
-            "homepage": "https://laravelcollective.com",
-            "support": {
-                "issues": "https://github.com/LaravelCollective/html/issues",
-                "source": "https://github.com/LaravelCollective/html"
-            },
-            "time": "2020-12-15T20:20:05+00:00"
         },
         {
             "name": "league/commonmark",

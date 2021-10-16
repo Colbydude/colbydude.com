@@ -15,8 +15,11 @@ require('laravel-mix-purgecss');
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/code.js', 'public/js')
    .vue({ runtimeOnly: true })
+   .extract()
    .sass('resources/sass/app.scss', 'public/css')
-   .purgeCss()
+   .purgeCss({
+      safelist: ['alert-info']
+   })
    .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/vendor/bootstrap-sass')
    .copy('node_modules/open-sans-fontface/fonts', 'public/fonts/vendor/open-sans-fontface')
    .version();

@@ -59,7 +59,7 @@ nav {
             & > a {
                 color: var(--color-text-secondary);
                 display: block;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: bold;
                 line-height: 1;
                 padding: 14px 10px 11px 10px;
@@ -78,20 +78,11 @@ nav {
 
                     @media screen and (max-width: $screen-xs-max) {
                         display: inline;
-                        margin: 0;
                     }
                 }
 
                 .nav-text {
                     display: inline-block;
-
-                    @media screen and (max-width: $screen-xs-max) {
-                        display: none;
-                    }
-                }
-
-                @media screen and (max-width: $screen-xs-max) {
-                    font-size: 21px;
                 }
             }
         }

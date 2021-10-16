@@ -16,6 +16,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', 'PagesController@home');
 Route::get('code', 'PagesController@code');
+Route::get('code/gamedev', 'PortfolioController@gamedev');
 Route::post('contact', 'PagesController@postContact')->middleware(ProtectAgainstSpam::class);
 Route::get('games', 'PagesController@games');
 Route::get('payment', 'PagesController@payment');

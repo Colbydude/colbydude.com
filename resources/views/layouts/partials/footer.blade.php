@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-5 col-sm-push-7">
                 <ul class="social-list">
-                    <li><a class="link-primary" href="#" data-target="#contact-modal" data-toggle="modal" title="Contact"><span class="fa fa-envelope"></span></a></li>
+                    <li><a class="link-primary" href="#" data-toggle="modal" title="Contact"><span class="fa fa-envelope"></span></a></li>
                     <li><a class="link-facebook" href="https://facebook.com/Colbydude" rel="noopener" target="_blank" title="Facebook"><span class="fab fa-facebook"></span></a></li>
                     <li><a class="link-github" href="https://github.com/Colbydude" rel="noopener" target="_blank" title="GitHub"><span class="fab fa-github"></span></a></li>
                     <li><a class="link-linkedin" href="https://www.linkedin.com/in/colbydude/" rel="noopener" target="_blank" title="LinkedIn"><span class="fab fa-linkedin"></span></a></li>
