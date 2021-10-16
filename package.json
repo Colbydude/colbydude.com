@@ -10,10 +10,10 @@
         "production": "mix --production"
     },
     "dependencies": {
+        "@fontsource/open-sans": "^4.5.1",
         "@fortawesome/fontawesome-free": "^5.15.4",
         "axios": "^0.21",
         "bootstrap-sass": "^3.4.1",
-        "open-sans-fontface": "^1.4.0",
         "vue": "^2.6.10"
     },
     "devDependencies": {

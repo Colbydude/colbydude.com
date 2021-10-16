@@ -20,6 +20,4 @@ mix.js('resources/js/app.js', 'public/js')
    .purgeCss({
       safelist: ['alert-info']
    })
-   .copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/vendor/bootstrap-sass')
-   .copy('node_modules/open-sans-fontface/fonts', 'public/fonts/vendor/open-sans-fontface')
    .version();
