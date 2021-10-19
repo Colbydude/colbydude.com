@@ -5,7 +5,7 @@
 /public/files
 /public/fonts
 /public/hot
-/public/img/web
+/public/img/web/*.jpg
 /public/json
 /public/js
 /public/mix-manifest.json

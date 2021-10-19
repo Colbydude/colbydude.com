@@ -9,7 +9,9 @@
         <div class="page-header">
             <h1>Thank You!</h1>
             <h2>Your payment/donation has been received.</h2>
-            <p><a class="btn btn-primary-outline" href="{{ url('/') }}">Return Home</a></p>
+            <div class="page-header-links">
+                <a class="btn btn-primary-outline" href="{{ url('/') }}">Return Home</a>
+            </div>
         </div>
     </div>
 @stop

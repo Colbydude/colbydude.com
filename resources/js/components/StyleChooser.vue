@@ -22,6 +22,7 @@ export default {
             window.axios.post('/update_style', { style })
             .then(() => {
                 const bodyElement = document.querySelector('body');
+                const siteImage = document.querySelector('[src*="colbydude-"]');
 
                 if (style == 'dark') {
                     if (bodyElement.classList.contains('dark')) {
@@ -34,6 +35,10 @@ export default {
                     fadeOut('.lastname', 30, () => {
                         fadeIn('.username', 30);
                     });
+
+                    if (siteImage) {
+                        siteImage.src = siteImage.src.replace('light', 'dark');
+                    }
                 }
 
                 if (style == 'light') {
@@ -47,6 +52,10 @@ export default {
                     fadeOut('.username', 30, () => {
                         fadeIn('.lastname', 30);
                     });
+
+                    if (siteImage) {
+                        siteImage.src = siteImage.src.replace('dark', 'light');
+                    }
                 }
             })
             .catch(() => console.log);

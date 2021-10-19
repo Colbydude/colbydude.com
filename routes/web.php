@@ -16,12 +16,14 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', 'PagesController@home');
 Route::get('code', 'PagesController@code');
+Route::get('code/webdev', 'PortfolioController@webdev');
 Route::get('code/gamedev', 'PortfolioController@gamedev');
 Route::post('contact', 'PagesController@postContact')->middleware(ProtectAgainstSpam::class);
 Route::get('games', 'PagesController@games');
 Route::get('payment', 'PagesController@payment');
 Route::get('payment/success', 'PagesController@paymentSuccess');
-Route::get('portfolio', 'PortfolioController@index');
+Route::get('portfolio', 'PagesController@code');
+Route::get('portfolio/webdev', 'PortfolioController@webdev');
 Route::get('portfolio/gamedev', 'PortfolioController@gamedev');
 Route::get('music', 'PagesController@music');
 Route::post('update_style', 'PagesController@updateStyle');

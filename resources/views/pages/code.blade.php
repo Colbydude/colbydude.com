@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('meta_title', 'Code | Colby Terry')
-@section('meta_description', 'Software engineer, sometimes game-dev.')
+@section('meta_description', 'Senior full-stack engineer, sometimes game dev.')
 @section('meta_keywords', 'Colby Terry, Colbydude, developer, code, gamedev, games, webdev, web, webapp, portfolio')
 @section('meta_canonical', 'https://colbydude.com/code')
 
@@ -9,7 +9,11 @@
     <div class="container">
         <div class="page-header">
             <h1>Code</h1>
-            <h2>Software engineer, sometimes game-dev.</h2>
+            <h2>Senior full-stack engineer, sometimes game dev.</h2>
+            <div class="page-header-links">
+                <a href="{{ url('/code/gamedev') }}" class="btn btn-primary-outline">Game Dev Portfolio</a>
+                <a href="{{ url('/code/webdev') }}" class="btn btn-primary-outline">Web Dev Portfolio</a>
+            </div>
         </div>
 
         <h3 class="line-header"><span>Showcase</span></h3>

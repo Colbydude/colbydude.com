@@ -70,7 +70,7 @@
 
     &:hover,
     &:focus {
-        background-color: var(--color-border-primary);
+        background-color: var(--color-app-primary-hover);
     }
 
     .album-art {
@@ -110,7 +110,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--color-border-primary);
+            background-color: var(--color-app-primary-hover);
         }
 
         .service-logo {
@@ -157,7 +157,7 @@
 
         &:hover,
         &:focus {
-            background-color: var(--color-border-primary);
+            background-color: var(--color-app-primary-hover);
         }
 
         .tracklist-col {

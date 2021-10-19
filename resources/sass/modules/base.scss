@@ -30,6 +30,7 @@
 
 :root {
     --color-app-primary: #e54c72;
+    --color-app-primary-hover: rgba(229, 76, 114, 0.15);
 
     --color-social-facebook: #1876f2;
     --color-social-github: #6e5494;
@@ -252,6 +253,20 @@ select.form-control {
 
         @media screen and (min-width: $screen-sm-min) {
             font-size: 30px;
+        }
+    }
+
+    .page-header-links {
+        margin: 20px 0 10px 0;
+
+        a {
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+        }
+
+        @media screen and (max-width: $screen-xs-max) {
+            text-align: center;
         }
     }
 }
