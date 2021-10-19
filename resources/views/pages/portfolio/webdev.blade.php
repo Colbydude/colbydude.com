@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('meta_title', 'Web Dev Portfolio | Colby Terry')
-@section('meta_canonical', 'https://colbydude.com/portfolio/webdev')
+@section('meta_canonical', 'https://colbydude.com/code/webdev')
 
 @section('content')
     <div class="container">
