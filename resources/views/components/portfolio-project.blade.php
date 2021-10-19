@@ -8,7 +8,7 @@
                     </video>
                 </div>
             @elseif ($image != null)
-                <img class="img-responsive" src="{{ $image }}" alt="{{ $name }}" />
+                <img class="img-responsive" src="{{ $image }}" alt="{{ $name }}" width="2560" height="1440" />
             @endif
         </div>
         <div class="col-lg-6">
