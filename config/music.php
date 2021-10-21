@@ -22,7 +22,7 @@ return [
                 'image' => 'ibanez-s5ex1-tg.jpg'
             ],
             [
-                'model' => 'ESP LTD EC-1000 See-Thru Blue',
+                'model' => 'ESP LTD EC-1000 See Thru Blue',
                 'image' => 'esp-ltd-ec-1000-stb.jpg',
             ],
             [
