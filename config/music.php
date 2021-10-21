@@ -22,6 +22,14 @@ return [
                 'image' => 'ibanez-s5ex1-tg.jpg'
             ],
             [
+                'model' => 'ESP LTD EC-1000 See-Thru Blue',
+                'image' => 'esp-ltd-ec-1000-stb.jpg',
+            ],
+            [
+                'model' => 'Chapman ML1-8 RS (Rob Scallon Signature)',
+                'image' => 'chapman-ml1-8rs.jpg',
+            ],
+            [
                 'model' => 'PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)',
                 'image' => 'prs-se-mhhb2.jpg',
             ],
@@ -38,8 +46,17 @@ return [
                 'image' => 'ibanez-s61al-bm.jpg',
             ],
             [
-                'model' => 'Ormsby Goliath 7 2019 Maya Blue',
+                'model' => 'Ormsby Goliath 7 (Run 9) Maya Blue',
                 'image' => 'ormsby-goliath-7-mb.jpg',
+            ],
+            [
+                'model' => 'Ormsby Goliath Shark 7 (Run 14) Deep Sea Fade',
+                'image' => 'ormsby-goliath-shark-7-dsf.jpg',
+            ],
+            // Basses.
+            [
+                'model' => 'ESP LTD B-155DX See Thru Blue',
+                'image' => 'esp-ltd-b-155dx-stb.jpg',
             ],
             [
                 'model' => 'Ibanez EHB1505MS Tropical Seafloor Flat',
