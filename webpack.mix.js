@@ -14,7 +14,7 @@ require('laravel-mix-purgecss');
 
 mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/code.js', 'public/js')
-   .vue({ runtimeOnly: true })
+   .vue({ runtimeOnly: true, version: 3 })
    .extract()
    .sass('resources/sass/app.scss', 'public/css')
    .purgeCss({

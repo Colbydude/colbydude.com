@@ -30,7 +30,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="https://dashboard.twitch.tv/extensions/yvi77da9edbnjuffpghz4uluzf021g" rel="noopener" target="_blank">Install on Twitch</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/Music-Requests-Twitch-Extension" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/Music-Requests-Twitch-Extension" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 
@@ -41,7 +41,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="https://ffxiv.voidteam.net/progression" rel="noopener" target="_blank">View the App</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/FFXIVProgressionChecker" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/FFXIVProgressionChecker" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 
@@ -84,7 +84,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="https://github.com/Colbydude/Discord-Tumblr-Photo-Bot" rel="noopener" target="_blank">Tumblr Bot Source Code</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/ClobberBot" rel="noopener" target="_blank">ClobberBot Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/ClobberBot" rel="noopener" target="_blank">ClobberBot Source Code</a>
             </div>
         </x-portfolio-project>
 
@@ -95,7 +95,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="https://karaoke.colbydude.com" rel="noopener" target="_blank">View the App</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/karaoke.colbydude.com" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/karaoke.colbydude.com" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 
@@ -106,7 +106,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="https://among-us-roulette.colbydude.com/" rel="noopener" target="_blank">View the App</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/among-us-roulette" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/among-us-roulette" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 
@@ -117,7 +117,7 @@
 
             <div class="project-links">
                 <a class="btn btn-primary-outline" href="{{ url('/') }}">Go Home</a>
-                <a class="btn btn-primary-outline" href="https://github.com/Colbydude/colbydude.com" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/colbydude.com" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 

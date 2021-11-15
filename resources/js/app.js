@@ -2,9 +2,6 @@ import './axios';
 import './modal';
 
 import StyleChooser from './components/StyleChooser.vue';
-import Vue from 'vue';
+import { createApp } from 'vue';
 
-new Vue({
-    el: '#style-chooser',
-    render: createElement => createElement(StyleChooser)
-});
+createApp(StyleChooser).mount('#style-chooser');
