@@ -34,14 +34,14 @@
             </div>
         </x-portfolio-project>
 
-        <x-portfolio-project :image="asset('img/web/ffxiv-progression.png')" name="FFXIV Progression">
+        <x-portfolio-project :image="asset('img/web/ffxiv-progression.png')" name="XIVProgression">
             <x-markdown>
                 @php include(public_path('markdown/ffxiv-progression.md')) @endphp
             </x-markdown>
 
             <div class="project-links">
-                <a class="btn btn-primary-outline" href="https://ffxiv.voidteam.net/progression" rel="noopener" target="_blank">View the App</a>
-                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/FFXIVProgressionChecker" rel="noopener" target="_blank">Source Code</a>
+                <a class="btn btn-primary-outline" href="https://xivprogression.com" rel="noopener" target="_blank">View the App</a>
+                <a class="btn btn-primary-outline ml-2" href="https://github.com/Colbydude/XIVProgression" rel="noopener" target="_blank">Source Code</a>
             </div>
         </x-portfolio-project>
 
