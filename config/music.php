@@ -53,6 +53,10 @@ return [
                 'model' => 'Ormsby Goliath Shark 7 (Run 14) Deep Sea Fade',
                 'image' => 'ormsby-goliath-shark-7-dsf.jpg',
             ],
+            // [
+            //     'model' => 'Fender FINAL FANTASY XIV Stratocaster',
+            //     'image' => 'final-fantasy-xiv-stratocaster.jpg',
+            // ],
             // Basses.
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',
@@ -76,6 +80,7 @@ return [
         'deezer' => 'https://www.deezer.com/us/artist/11584923',
         // 'google-play' => 'https://play.google.com/store/music/artist/Colbydude?id=Ayp44zbtetsqdf7c5pcd5spelou',
         'spotify' => 'https://open.spotify.com/artist/1PNy9QvmBSRK8sTdHj8eLL',
+        'tidal' => 'https://tidal.com/browse/artist/30876880',
         'youtube-music' => 'https://music.youtube.com/channel/UCzO5fgQuEWCoWyvVS7y0_Xg',
     ],
 
