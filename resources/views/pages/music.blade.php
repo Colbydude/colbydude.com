@@ -71,7 +71,8 @@
         </div>
 
         @include('pages.music.album-list', ['albums' => $albums, 'sectionTitle' => 'Albums'])
-        @include('pages.music.album-list', ['albums' => $singles, 'sectionTitle' => 'Singles and EPs'])
+        @include('pages.music.album-list', ['albums' => $singles, 'sectionTitle' => 'Singles'])
+        @include('pages.music.album-list', ['albums' => $appearsOn, 'sectionTitle' => 'Appears On'])
 
         <h3 class="line-header"><span>Guitars</span></h3>
         <div class="row flex-row guitars">

@@ -78,6 +78,7 @@ class CronController extends Controller
         // Fetch additional albums.
         foreach (config('music.albums') as $albumId) {
             $albumJson = $this->spotifyApiService->getAlbum($albumId);
+            $albumJson->album_group = 'albums';
 
             array_push($albumsJson->items, $albumJson);
         }
@@ -100,6 +101,16 @@ class CronController extends Controller
             return $album->release_date;
         });
         $releases = array_reverse($releases);
+
+        // Handle manual album info overrides.
+        foreach (config('music.album_overrides') as $albumId => $override) {
+            for ($i = 0; $i < count($releases); $i++) {
+                if ($releases[$i]->id === $albumId) {
+                    $releases[$i] = (object) [...((array) $releases[$i]), ...$override];
+                    break;
+                }
+            }
+        }
 
         // Store albums.
         Storage::put('music/albums.json', json_encode($releases));

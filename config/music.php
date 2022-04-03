@@ -10,8 +10,19 @@ return [
 
     // Additional albums I've played on.
     'albums' => [
-                                    // TODO?: We'd Be - The Rum Gun Diaries (no longer on Spotify)
-        '0ZfKXucO0tzzAHz6JqoZn6',   // We'd Be - Beyond the Line of Sanity
+                                            // TODO?: We'd Be - The Rum Gun Diaries (no longer on Spotify)
+        '0ZfKXucO0tzzAHz6JqoZn6',           // We'd Be - Beyond the Line of Sanity
+    ],
+
+    // Override album details (make an EP show up under albums).
+    'album_overrides' => [
+        '4F6FSGuF4HTXcb9UsWfCOc' => [       // VGM, Vol. 1
+            'album_group' => 'albums',
+            'album_type' => 'album',
+        ],
+        '1F2AFdVtoiTDo8HpYUMQh6' => [       // Toss A Coin To Your Witcher
+            'album_group' => 'appears_on',
+        ],
     ],
 
     'guitars' => [
