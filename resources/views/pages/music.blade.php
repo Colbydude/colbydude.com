@@ -62,7 +62,7 @@
                         <div class="col-xs-4">
                             <a class="streaming-service" href="{{ $url }}" rel="noopener" target="_blank">
                                 <span class="sr-only">{{ $name }}</span>
-                                @svg($name, ['class' => 'service-logo'])
+                                @svg("music-delivery/{$name}", ['class' => 'service-logo'])
                             </a>
                         </div>
                     @endforeach

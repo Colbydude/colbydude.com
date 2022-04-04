@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="{{ session('style') }}" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="{{ session('style') }}">
+    <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 transition duration-500 ease-in-out">
         <div class="flash-message">
             @include('flash::message')
             @include('layouts.partials.errors')
@@ -45,7 +45,7 @@
 
         @include('layouts.partials.footer')
 
-        @include('layouts.partials.contact-modal')
+        {{-- @include('layouts.partials.contact-modal') --}}
 
         <script src="{{ mix('js/manifest.js') }}"></script>
         <script src="{{ mix('js/vendor.js') }}"></script>

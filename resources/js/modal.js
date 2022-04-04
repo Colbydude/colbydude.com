@@ -16,7 +16,7 @@ const openModal = () => {
         backdrop.classList.add('in');
         modal.classList.add('in');
     }, 150);
-}
+};
 
 const closeModal = () => {
     const backdrop = document.getElementById('contact-backdrop');
@@ -29,7 +29,7 @@ const closeModal = () => {
         modal.style.display = 'none';
         backdrop.remove();
     }, 150);
-}
+};
 
 // Add event handlers.
 const contactModal = document.getElementById('contact-modal');
@@ -40,14 +40,14 @@ for (let i = 0; i < closeTriggers.length; i++) {
     closeTriggers[i].onclick = (event) => {
         event.preventDefault();
         closeModal();
-    }
+    };
 }
 
 for (let i = 0; i < openTriggers.length; i++) {
     openTriggers[i].onclick = (event) => {
         event.preventDefault();
         openModal();
-    }
+    };
 }
 
 window.onclick = (event) => {
