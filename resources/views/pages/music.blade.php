@@ -6,82 +6,85 @@
 @section('meta_canonical', 'https://colbydude.com/music')
 
 @section('content')
-    <div class="container">
-        <div class="page-header">
-            <h1>Music</h1>
-            <h2>Rock-driven, metal-leaning, video game-lovin', guitar player.</h2>
-        </div>
+    <main class="max-w-6xl mx-auto mt-5 mb-10 px-4 min-h-[300px]">
+        <x-page-header>Music</x-page-header>
+        <x-page-subheader>Rock-driven, metal-leanin', video game-lovin', guitar player.</x-page-subheader>
 
-        <div class="row">
-            <div class="col-md-7">
-                <h3 class="line-header"><span>Popular</span></h3>
-                <ol class="tracklist">
+        <section class="md:grid md:grid-cols-12 md:gap-8">
+            <div class="md:col-span-7">
+                <x-section-header>Popular</x-section-header>
+                <ol class="list-none mb-5">
                     @foreach ($topTracks as $track)
-                        <li>
-                            <a class="tracklist-row" href="{{ $track->external_urls->spotify }}" rel="noopener" target="_blank">
-                                <div class="tracklist-col tracklist-col-album-art">
-                                    <div class="album-art tracklist-middle-align album-art--with-auto-height">
-                                        <div class="album-art-image" style="background-image: url('{{ $track->album->images[2]->url }}');"></div>
-                                    </div>
-                                </div>
-                                <div class="tracklist-col name">
-                                    <div class="track-name-wrapper tracklist-middle-align">
-                                        <div class="tracklist-name ellipsis-one-line">{{ $track->name }}</div>
-                                    </div>
-                                </div>
-                                <div class="tracklist-col tracklist-col-duration">
-                                    <div class="text-muted tracklist-middle-align">
-                                        <span>{{ msToMinutes($track->duration_ms) }}</span>
-                                    </div>
-                                </div>
-                                {{-- $track->preview_url --}}
-                            </a>
-                        </li>
+                        <x-music.popular-song
+                            :name="$track->name"
+                            :link="$track->external_urls->spotify"
+                            :image="$track->album->images[2]->url"
+                            :duration="$track->duration_ms"
+                        />
                     @endforeach
                 </ol>
             </div>
-            <div class="col-md-5">
-                <h3 class="line-header"><span>Latest Release</span></h3>
-                <a class="latest-release" href="{{ $latestRelease->external_urls->spotify }}" rel="noopener" target="_blank">
-                    <div class="latest-release-col latest-release-col-album-art">
-                        <div class="album-art middle-align album-art--with-auto-height">
-                            <div class="album-art-image" style="background-image: url('{{ $latestRelease->images[1]->url }}');"></div>
+            <div class="md:col-span-5">
+                <x-section-header>Latest Release</x-section-header>
+                <a
+                    class="flex h-24 text-pink-500 hover:bg-pink-800/20 transition duration-500 ease-in-out"
+                    href="{{ $latestRelease->external_urls->spotify }}"
+                    rel="noopener"
+                    target="_blank"
+                >
+                    <div class="h-24 mr-4">
+                        <div class="relative w-24 pt-[100%] bg-gray-800 border-0 block h-auto m-0 top-1/2 -translate-y-1/2">
+                            <div class="bg-cover h-full absolute top-0 w-full bg-center" style="background-image: url('{{ $latestRelease->images[1]->url }}');"></div>
                         </div>
                     </div>
-                    <div class="latest-release-col meta">
-                        <div class="middle-align">
-                            <div class="release-title">{{ $latestRelease->name }}</div>
-                            <div class="release-date text-muted">{{ Carbon\Carbon::parse($latestRelease->release_date)->format('M. Y') }}</div>
+                    <div class="h-24 overflow-hidden flex-1 -mr-[1px] pr-[1px] w-0">
+                        <div class="relative top-1/2 -translate-y-1/2">
+                            <div class="-mr-[1px] overflow-hidden pr-[1px] overflow-ellipsis whitespace-nowrap">
+                                <div>{{ $latestRelease->name }}</div>
+                                <span class="text-slate-500 dark:text-slate-400">{{ Carbon\Carbon::parse($latestRelease->release_date)->format('M. Y') }}</span>
+                            </div>
                         </div>
                     </div>
                 </a>
 
-                <h3 class="line-header"><span>Available On</span></h3>
-                <div class="row flex-row streaming-services">
+                <x-section-header>Available On</x-section-header>
+                <div class="grid grid-cols-3 gap-6">
                     @foreach ($services as $name => $url)
-                        <div class="col-xs-4">
-                            <a class="streaming-service" href="{{ $url }}" rel="noopener" target="_blank">
+                        <div class="">
+                            <a
+                                class="block p-2 w-full hover:bg-pink-800/20 transition duration-500 ease-in-out"
+                                href="{{ $url }}"
+                                rel="noopener"
+                                target="_blank"
+                            >
                                 <span class="sr-only">{{ $name }}</span>
-                                @svg("music-delivery/{$name}", ['class' => 'service-logo'])
+                                @svg("music-delivery/{$name}", ['class' => 'block h-6 mx-auto max-w-full w-auto fill-black dark:fill-white transition duration-500 ease-in-out'])
                             </a>
                         </div>
                     @endforeach
                 </div>
             </div>
-        </div>
+        </section>
 
-        @include('pages.music.album-list', ['albums' => $albums, 'sectionTitle' => 'Albums'])
-        @include('pages.music.album-list', ['albums' => $singles, 'sectionTitle' => 'Singles'])
-        @include('pages.music.album-list', ['albums' => $appearsOn, 'sectionTitle' => 'Appears On'])
+        <x-music.album-list :albums="$albums" section-title="Albums" />
+        <x-music.album-list :albums="$singles" section-title="Singles" />
+        <x-music.album-list :albums="$appearsOn" section-title="Appears On" />
 
-        <h3 class="line-header"><span>Guitars</span></h3>
-        <div class="row flex-row guitars">
-            @foreach ($guitars['current'] as $guitar)
-                <div class="col-sm-6 col-md-4 guitar">
-                    <img class="img-responsive img-thumbnail" src="/img/music/guitars/{{ $guitar['image'] }}" alt="{{ $guitar['model'] }}" width="600" height="202">
-                    <div class="guitar-model">{{ $guitar['model'] }}</div>
-                </div>
-            @endforeach
-        </div>
-    </div>
+        <section>
+            <x-section-header>Guitars</x-section-header>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach ($guitars['current'] as $guitar)
+                    <div class="col-sm-6 col-md-4 guitar">
+                        <img
+                            class="p-1 bg-slate-200 hover:bg-pink-500 dark:bg-slate-700 dark:hover:bg-pink-500 transition duration-500 ease-in-out"
+                            src="/img/music/guitars/{{ $guitar['image'] }}"
+                            alt="{{ $guitar['model'] }}"
+                            width="600" height="202"
+                        >
+                        <div class="mt-2 text-[14px] font-bold leading-5 text-slate-800 dark:text-slate-300">{{ $guitar['model'] }}</div>
+                    </div>
+                @endforeach
+            </div>
+        </section>
+    </main>
 @stop
