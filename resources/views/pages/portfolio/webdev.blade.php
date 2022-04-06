@@ -126,7 +126,7 @@
 
         <section class="text-justify md:text-center text-xl leading-6 font-light">
             <p class="mb-5">Although there's a bit of stuff here, you can find even more projects over on my <x-link href="https://github.com/Colbydude">GitHub</x-link> page!</p>
-            <p class="text-center lead">You can also checkout my <x-link href="{{ url('/code/gamedev') }}" rel="prev" target="_self">Game Dev Portfolio</x-link>!</p>
+            <p class="text-center lead">You can also checkout my <a href="{{ url('/code/gamedev') }}">Game Dev Portfolio</a>!</p>
         </section>
     </main>
 @stop

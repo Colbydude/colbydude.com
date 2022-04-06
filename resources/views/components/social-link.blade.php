@@ -1,7 +1,7 @@
 @props(['svg'])
 
 <a
-    {{ $attributes->merge(['class' => 'transition duration-500 ease-in-out']) }}
+    {{ $attributes->merge(['class' => 'text-slate-600 dark:text-slate-400 transition duration-500 ease-in-out']) }}
     rel="noopener"
     target="_blank"
 >

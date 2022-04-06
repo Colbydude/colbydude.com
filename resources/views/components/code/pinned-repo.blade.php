@@ -28,12 +28,12 @@
                 @endif
             </span>
             @if ($repo->node->stargazers->totalCount > 0)
-                <a class="inline-block mr-4" href="https://github.com{{ $repo->node->resourcePath }}/stargazers" rel="noopener" target="_blank">
+                <a class="inline-block mr-4 text-slate-500 dark:text-slate-400" href="https://github.com{{ $repo->node->resourcePath }}/stargazers" rel="noopener" target="_blank">
                     @svg('fontawesome/star', 'inline-block -mt-[3px] w-[15px] h-[15px]') {{ $repo->node->stargazers->totalCount }}
                 </a>
             @endif
             @if ($repo->node->forkCount > 0)
-                <a class="inline-block mr-4" href="https://github.com{{ $repo->node->resourcePath }}/network/members" rel="noopener" target="_blank">
+                <a class="inline-block mr-4 text-slate-500 dark:text-slate-400" href="https://github.com{{ $repo->node->resourcePath }}/network/members" rel="noopener" target="_blank">
                     @svg('fontawesome/code-branch', 'inline-block -mt-[3px] w-[15px] h-[15px]') {{ $repo->node->forkCount }}
                 </a>
             @endif

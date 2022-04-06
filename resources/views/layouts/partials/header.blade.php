@@ -7,7 +7,7 @@
             Colby<span id="lastname" {!! session('style') == 'dark' ? 'style="display: none;"' : ''!!}> Terry</span><span id="username" {!! session('style') == 'light' ? 'style="display: none;"' : ''!!}>dude</span>
         </a>
         <div id="style-chooser">
-            {{-- Inject style chooser vue component --}}
+            {{-- StyleChooser.vue is injected here. --}}
         </div>
     </div>
 </header>

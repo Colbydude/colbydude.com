@@ -48,7 +48,7 @@
                 <div>
                     <x-section-header>Contributions</x-section-header>
                     <div id="github-calendar">
-                        {{-- Inject github calendar vue component --}}
+                        {{-- GitHubCalendar.vue is injected here. --}}
                     </div>
                 </div>
             </div>
