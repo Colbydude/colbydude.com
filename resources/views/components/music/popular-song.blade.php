@@ -1,8 +1,8 @@
 @props(['name', 'link', 'image', 'duration'])
 
 <li>
-    <a
-        class="flex h-14 text-[14px] md:text-base text-pink-500 hover:bg-pink-800/20 transition duration-500 ease-in-out"
+    <x-link
+        class="flex h-14 text-[14px] md:text-base hover:bg-pink-800/20 dark:hover:bg-pink-700/20"
         href="{{ $link }}"
         rel="noopener"
         target="_blank"
@@ -22,6 +22,5 @@
                 <span class="text-slate-500 dark:text-slate-400">{{ msToMinutes($duration) }}</span>
             </div>
         </div>
-        {{-- $track->preview_url --}}
-    </a>
+    </x-link>
 </li>
