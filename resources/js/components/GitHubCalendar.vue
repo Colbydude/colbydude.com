@@ -1,14 +1,17 @@
 <template>
-    <div id="github-stats">
-        <svg class="cal-wrapper" :height="8 * squareSize">
-            <g class="cal-week" v-for="(week, i) in values" :key="i">
+    <div ref="container">
+        <svg
+            class="w-full"
+            :height="8 * squareSize"
+            :viewBox="`-1 -1 ${width + 1} ${8 * squareSize + 1}`"
+        >
+            <g v-for="(week, i) in values" :key="i">
                 <rect
-                    class="cal-day"
+                    class="stroke-1 stroke-white dark:stroke-slate-900 transition duration-500 hover:duration-[0ms] ease-in-out hover:stroke-pink-500 dark:hover:stroke-pink-400"
+                    :class="rangeColors[contribCount(day.contributionCount)]"
+                    style="shape-rendering: geometricPrecision"
                     v-for="(day, j) in week.contributionDays"
                     :key="j"
-                    :style="{
-                        fill: rangeColors[contribCount(day.contributionCount)],
-                    }"
                     :width="squareSize"
                     :height="squareSize"
                     :x="i * (squareSize + 1)"
@@ -23,11 +26,11 @@
 
 <script>
 const DEFAULT_RANGE_COLOR = [
-    'var(--color-calendar-graph-day-bg)',
-    'var(--color-calendar-graph-day-L1-bg)',
-    'var(--color-calendar-graph-day-L2-bg)',
-    'var(--color-calendar-graph-day-L3-bg)',
-    'var(--color-calendar-graph-day-L4-bg)',
+    'fill-slate-200 dark:fill-slate-800',
+    'fill-green-200 dark:fill-green-900',
+    'fill-green-400 dark:fill-green-700',
+    'fill-green-600 dark:fill-green-500',
+    'fill-green-800 dark:fill-green-300',
 ];
 
 export default {
@@ -48,10 +51,17 @@ export default {
         return {
             values: [],
             squareSize: 0,
+            width: 0,
         };
     },
 
     computed: {
+        /**
+         * Calculate the highest contribution count number, so we can
+         * adjust the color based off of a relative percentage.
+         *
+         * @return {number}
+         */
         highestContributionCount() {
             if (this.values.length == 0) {
                 return 0;
@@ -75,12 +85,22 @@ export default {
         this.fetchContribData();
     },
 
+    created() {
+        this.resizeListener = window.addEventListener('resize', (e) => {
+            this.setSquareSize();
+        });
+    },
+
+    destroyed() {
+        window.removeEventListener('resize', this.resizeListener);
+    },
+
     methods: {
         /**
          * Determine color to use when filling in a contribution square.
          *
-         * @param  {Number}  count
-         * @return {Number}
+         * @param  {number}  count
+         * @return {number}
          */
         contribCount(count) {
             if (count === 0) {
@@ -103,8 +123,6 @@ export default {
 
         /**
          * Fetch contribution data form the GitHub API.
-         *
-         * @return {Void}
          */
         fetchContribData() {
             window.axios
@@ -114,28 +132,18 @@ export default {
                         res.data.data.user.contributionsCollection.contributionCalendar.weeks.slice(
                             53 - this.months * 4
                         );
-                    this.squareSize =
-                        document.getElementById('github-stats').offsetWidth / this.values.length -
-                        1;
+                    this.setSquareSize();
                 })
                 .catch(() => console.log);
+        },
+
+        /**
+         * Determine the size of each contribution square by the width of the container.
+         */
+        setSquareSize() {
+            this.width = this.$refs.container.offsetWidth;
+            this.squareSize = this.width / this.values.length - 1;
         },
     },
 };
 </script>
-
-<style scoped>
-.cal-wrapper {
-    width: 100%;
-}
-
-.cal-wrapper .cal-day {
-    stroke: var(--color-bg-primary);
-    stroke-width: 1;
-    shape-rendering: geometricPrecision;
-}
-
-.cal-wrapper .cal-day:hover {
-    stroke: var(--color-app-primary);
-}
-</style>
