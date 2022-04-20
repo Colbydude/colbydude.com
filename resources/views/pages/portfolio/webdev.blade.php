@@ -124,7 +124,7 @@
             </x-code.portfolio-project>
         </section>
 
-        <section class="text-justify md:text-center text-xl leading-6 font-light">
+        <section class="text-center md:text-center text-xl leading-6 font-light">
             <p class="mb-5">Although there's a bit of stuff here, you can find even more projects over on my <x-link href="https://github.com/Colbydude">GitHub</x-link> page!</p>
             <p class="text-center lead">You can also checkout my <a href="{{ url('/code/gamedev') }}">Game Dev Portfolio</a>!</p>
         </section>
