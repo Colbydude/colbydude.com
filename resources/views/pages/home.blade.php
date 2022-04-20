@@ -1,10 +1,8 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="container">
-        <div class="page-header" style="min-height: 300px;">
-            <h1>Hey, I'm Colby.</h1>
-            <h2>I like building web apps and games.<br>I also like playing guitar.</h2>
-        </div>
-    </div>
+    <main class="max-w-6xl mx-auto mt-5 px-4 min-h-[300px]">
+        <x-page-header>Hey, I'm Colby.</x-page-header>
+        <x-page-subheader>I like building web apps and games.<br>I also like playing guitar.</x-page-subheader>
+    </main>
 @stop

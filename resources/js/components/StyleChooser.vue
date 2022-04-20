@@ -1,7 +1,15 @@
 <template>
-    <div class="style-chooser">
-        <button @click.prevents="toggleStyle('dark')" class="choose-style choose-dark" title="Switch to Dark Theme"></button>
-        <button @click.prevents="toggleStyle('light')" class="choose-style choose-light" title="Switch to Light Theme"></button>
+    <div class="flex h-full items-center">
+        <button
+            @click.prevents="toggleStyle('dark')"
+            class="w-6 h-6 mr-2 bg-slate-900 border-[1px] border-slate-700 rounded-full opacity-50 hover:opacity-100 transition duration-500 ease-in-out"
+            title="Switch to Dark Theme"
+        />
+        <button
+            @click.prevents="toggleStyle('light')"
+            class="w-6 h-6 bg-white border-[1px] border-slate-200 rounded-full opacity-50 hover:opacity-100 transition duration-500 ease-in-out"
+            title="Switch to Light Theme"
+        />
     </div>
 </template>
 
@@ -21,19 +29,18 @@ export default {
         toggleStyle(style) {
             window.axios.post('/update_style', { style })
             .then(() => {
-                const bodyElement = document.querySelector('body');
+                const htmlElement = document.querySelector('html');
                 const siteImage = document.querySelector('[src*="colbydude-"]');
 
                 if (style == 'dark') {
-                    if (bodyElement.classList.contains('dark')) {
+                    if (htmlElement.classList.contains('dark')) {
                         return;
                     }
 
-                    bodyElement.classList.remove('light');
-                    bodyElement.classList.add('dark');
+                    htmlElement.classList.add('dark');
 
-                    fadeOut('.lastname', 30, () => {
-                        fadeIn('.username', 30);
+                    fadeOut('#lastname', 25, () => {
+                        fadeIn('#username', 25);
                     });
 
                     if (siteImage) {
@@ -42,15 +49,14 @@ export default {
                 }
 
                 if (style == 'light') {
-                    if (bodyElement.classList.contains('light')) {
+                    if (!htmlElement.classList.contains('dark')) {
                         return;
                     }
 
-                    bodyElement.classList.remove('dark');
-                    bodyElement.classList.add('light');
+                    htmlElement.classList.remove('dark');
 
-                    fadeOut('.username', 30, () => {
-                        fadeIn('.lastname', 30);
+                    fadeOut('#username', 25, () => {
+                        fadeIn('#lastname', 25);
                     });
 
                     if (siteImage) {

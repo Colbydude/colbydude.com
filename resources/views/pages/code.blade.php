@@ -6,109 +6,54 @@
 @section('meta_canonical', 'https://colbydude.com/code')
 
 @section('content')
-    <div class="container">
-        <div class="page-header">
-            <h1>Code</h1>
-            <h2>Senior full-stack engineer, sometimes game dev.</h2>
-            <div class="page-header-links">
-                <a href="{{ url('/code/gamedev') }}" class="btn btn-primary-outline">Game Dev Portfolio</a>
-                <a href="{{ url('/code/webdev') }}" class="btn btn-primary-outline">Web Dev Portfolio</a>
-            </div>
-        </div>
+    <main class="max-w-6xl mx-auto mt-5 mb-10 px-4 min-h-[300px]">
+        <x-page-header>Code</x-page-header>
+        <x-page-subheader>Senior full-stack engineer, sometimes game dev.</x-page-subheader>
 
-        <h3 class="line-header"><span>Showcase</span></h3>
-        <ul class="story-grid">
-            @foreach ($showcase as $story)
-                <li class="story">
-                    <div class="story-image">
-                        <a href="{{ $story['links'][0]['url'] }}" rel="noopener" target="_blank">
-                            <img class="img-responsive" src="/img/code/showcase/{{ $story['image'] }}" alt="{{ $story['name'] }}" width="304" height="171">
-                        </a>
-                    </div>
-                    <div class="story-content">
-                        <h4><a href="{{ $story['links'][0]['url'] }}" rel="noopener" target="_blank">{{ $story['name'] }}</a></h4>
-                        <p>{!! $story['description'] !!}</p>
-                        <div class="story-links">
-                            @foreach ($story['links'] as $link)
-                                <a href="{{ $link['url'] }}" rel="noopener" target="_blank">{{ $link['text'] }}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                </li>
-            @endforeach
-        </ul>
+        <x-btn-outline href="{{ url('/code/gamedev') }}">Game Dev Portfolio</x-btn-outline>
+        <x-btn-outline href="{{ url('/code/webdev') }}" class="ml-3">Web Dev Portfolio</x-btn-outline>
 
-        <h3 class="line-header"><span>Pinned Repositories</span></h3>
-        <ol class="d-flex flex-wrap list-unstyled row">
-            @foreach ($pinnedRepos as $repo)
-                <li class="col-xs-12 col-md-6 mb-3 d-flex flex-content-stretch">
-                    <div class="d-flex p-3 width-full box">
-                        <div class="pinned-repo-content">
-                            <div class="d-flex width-full flex-items-center position-relative">
-                                <span class="fab fa-github mr-2 flex-shrink-0"></span>
-                                <a class="text-bold flex-auto min-width-0 " href="https://github.com{{ $repo->node->resourcePath }}" rel="noopener" target="_blank">{{ $repo->node->name }}</a>
-                            </div>
-                            <p class="pinned-repo-desc text-muted text-small d-block mt-2 mb-3">
-                                {{ $repo->node->description }}
-                            </p>
-                            <div class="mb-0 text-small text-muted">
-                                <span class="d-inline-block mr-3">
-                                    <span class="repo-language-color" style="background-color: {{ $languageColors[$repo->node->primaryLanguage->name] }};"></span>
-                                    @if ($repo->node->primaryLanguage->name != "Yacc")
-                                        {{ $repo->node->primaryLanguage->name }}
-                                    @else
-                                        GameMaker
-                                    @endif
-                                </span>
-                                @if ($repo->node->stargazers->totalCount > 0)
-                                    <a class="d-inline-block mr-3 text-muted-link" href="https://github.com{{ $repo->node->resourcePath }}/stargazers" rel="noopener" target="_blank">
-                                        <span class="fa fa-fw fa-star"></span> {{ $repo->node->stargazers->totalCount }}
-                                    </a>
-                                @endif
-                                @if ($repo->node->forkCount > 0)
-                                    <a class="d-inline-block mr-3 text-muted-link" href="https://github.com{{ $repo->node->resourcePath }}/network/members" rel="noopener" target="_blank">
-                                        <span class="fa fa-fw fa-code-branch"></span> {{ $repo->node->forkCount }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
+        <section>
+            <x-section-header>Showcase</x-section-header>
+            <ul class="flex flex-wrap justify-evenly list-none p-0">
+                @foreach ($showcase as $story)
+                    <x-code.showcase-story :story="$story" />
+                @endforeach
+            </ul>
+        </section>
+        <section>
+            <x-section-header>Pinned Repositories</x-section-header>
+            <ol class="grid gap-4 md:grid-cols-2 md:gap-8">
+                @foreach ($pinnedRepos as $repo)
+                    <x-code.pinned-repo
+                        :repo="$repo"
+                        :language-colors="$languageColors"
+                    />
+                @endforeach
+            </ol>
+        </section>
+        <section>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                    <x-section-header>Top Languages</x-section-header>
+                    <ol class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        @foreach (array_slice($topLanguages, 0, 6) as $language => $count)
+                            <x-code.top-language
+                                :language="$language"
+                                :languageColors="$languageColors"
+                            />
+                        @endforeach
+                    </ol>
+                </div>
+                <div>
+                    <x-section-header>Contributions</x-section-header>
+                    <div id="github-calendar">
+                        {{-- GitHubCalendar.vue is injected here. --}}
                     </div>
-                </li>
-            @endforeach
-        </ol>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h3 class="line-header"><span>Top Languages</span></h3>
-                <ol class="d-flex flex-wrap list-unstyled row">
-                    @foreach (array_slice($topLanguages, 0, 6) as $language => $count)
-                        <li class="col-xs-6 col-md-4 mb-3 d-flex flex-content-stretch">
-                            <div class="d-flex p-2 width-full box">
-                                <div class="pinned-repo-content">
-                                    <div class="mb-0 text-small text-muted">
-                                        <span class="d-inline-block mr-3">
-                                            <span class="repo-language-color" style="background-color: {{ $languageColors[$language] }};"></span>
-                                            @if ($language != "Yacc")
-                                                {{ $language }}
-                                            @else
-                                                GameMaker
-                                            @endif
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    @endforeach
-                </ol>
-            </div>
-            <div class="col-md-6">
-                <h3 class="line-header"><span>Contributions</span></h3>
-                <div id="github-calendar">
-                    {{-- Inject github calendar vue component --}}
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 @stop
 
 @push('scripts')

@@ -34,5 +34,5 @@ export const fadeOut = (selector, time, callback = () => {}) => {
 
 export default {
     fadeIn,
-    fadeOut
-}
+    fadeOut,
+};

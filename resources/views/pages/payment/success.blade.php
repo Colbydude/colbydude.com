@@ -5,13 +5,10 @@
 @section('meta_keywords', '')
 
 @section('content')
-    <div class="container">
-        <div class="page-header">
-            <h1>Thank You!</h1>
-            <h2>Your payment/donation has been received.</h2>
-            <div class="page-header-links">
-                <a class="btn btn-primary-outline" href="{{ url('/') }}">Return Home</a>
-            </div>
-        </div>
-    </div>
+    <main class="max-w-6xl mx-auto mt-5 px-4 min-h-[300px]">
+        <x-page-header>Thank You!</x-page-header>
+        <x-page-subheader>Your payment/donation has been received.</x-page-subheader>
+
+        <x-btn-outline href="{{ url('/') }}">Return Home</x-btn-outline>
+    </main>
 @stop

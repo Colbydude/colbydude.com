@@ -10,20 +10,17 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "@fontsource/open-sans": "^4.5.1",
-        "@fortawesome/fontawesome-free": "^5.15.4",
-        "axios": "^0.21",
-        "bootstrap-sass": "^3.4.1",
-        "vue": "^3.2.21"
+        "axios": "^0.26.1",
+        "vue": "^3.2.31"
     },
     "devDependencies": {
-        "cross-env": "^5.1",
-        "laravel-mix": "^6.0.13",
-        "laravel-mix-purgecss": "^6.0.0",
-        "postcss": "^8.2",
-        "resolve-url-loader": "^3.1.2",
-        "sass": "^1.32.8",
-        "sass-loader": "10.*",
-        "vue-loader": "^16.8.3"
+        "@tailwindcss/aspect-ratio": "^0.4.0",
+        "@tailwindcss/forms": "^0.5.0",
+        "@tailwindcss/typography": "^0.5.2",
+        "autoprefixer": "^10.4.4",
+        "laravel-mix": "^6.0.43",
+        "postcss": "^8.4.12",
+        "tailwindcss": "^3.0.23",
+        "vue-loader": "^17.0.0"
     }
 }

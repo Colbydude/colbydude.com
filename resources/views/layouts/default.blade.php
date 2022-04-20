@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="{{ session('style') }}" lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,8 +34,8 @@
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="{{ session('style') }}">
-        <div class="flash-message">
+    <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 transition duration-500 ease-in-out">
+        <div class="w-full">
             @include('flash::message')
             @include('layouts.partials.errors')
         </div>
