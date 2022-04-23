@@ -56,7 +56,7 @@
                     <div class="flex flex-col">
                         <label for="comments" class="block text-sm font-medium text-slate-800 dark:text-slate-300">Comments</label>
                         <div class="grow mt-1">
-                            <textarea name="comments" id="comments" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" placeholder="Message..." required></textarea>
+                            <textarea name="comments" id="comments" class="h-full shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" rows="5" placeholder="Message..." required></textarea>
                         </div>
                     </div>
                 </div>
