@@ -37,21 +37,27 @@
                         </div>
                         <div class="mb-4">
                             <label for="email" class="block text-sm font-medium text-slate-800 dark:text-slate-300">Email Address</label>
-                            <input type="email" name="email" id="email" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" placeholder="john@example.com" required>
+                            <div class="mt-1">
+                                <input type="email" name="email" id="email" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" placeholder="john@example.com" required>
+                            </div>
                         </div>
-                        <div class="mb-4">
+                        <div>
                             <label for="subject" class="block text-sm font-medium text-slate-800 dark:text-slate-300">Subject</label>
-                            <select name="subject" id="subject" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" required>
-                                <option value="" selected="selected">Choose One:</option>
-                                <option value="General">General</option>
-                                <option value="Support">Support</option>
-                                <option value="HTML5 Licensing">HTML5 Licensing</option>
-                            </select>
+                            <div class="mt-1">
+                                <select name="subject" id="subject" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" required>
+                                    <option value="" selected="selected">Choose One:</option>
+                                    <option value="General">General</option>
+                                    <option value="Support">Support</option>
+                                    <option value="HTML5 Licensing">HTML5 Licensing</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <label for="comments" class="block text-sm font-medium text-slate-800 dark:text-slate-300">Comments</label>
-                        <textarea name="comments" id="comments" class="sm:h-[190px] shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" placeholder="Message..." required></textarea>
+                        <div class="grow mt-1">
+                            <textarea name="comments" id="comments" class="shadow-sm focus:ring-pink-500 focus:border-pink-500 block w-full sm:text-sm border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 transition duration-150 ease-in-out" placeholder="Message..." required></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
