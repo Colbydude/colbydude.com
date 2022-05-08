@@ -1,7 +1,7 @@
 <footer class="max-w-6xl mx-auto mt-3 px-4 text-slate-600 dark:text-slate-400">
     <div class="flex flex-col-reverse justify-between py-2 border-t-4 border-slate-600 dark:border-slate-400 sm:flex-row">
         <span class="block text-sm text-center sm:text-left"><strong>Copyright &copy; {{ date('Y') }} Colby Terry.</strong></span>
-        <ul class="flex justify-center items-center pt-1 pb-2 list-none sm:py-0">
+        <ul class="flex justify-center items-center pt-1 pb-2 list-none sm:py-0" role="navigation" aria-label="Social">
             <li class="pr-3"><a class="text-slate-600 dark:text-slate-400 hover:text-pink-500 dark:hover:text-pink-400" href="#" data-toggle="modal" title="Contact">@svg('fontawesome/envelope', 'w-5 h-5 sm:w-6 sm:h-6')</a></li>
             <li class="px-3"><x-social-link class="hover:text-[#1876f2] dark:hover:text-[#1876f2]" href="https://facebook.com/Colbydude" title="Facebook" svg="fontawesome/facebook" /></li>
             <li class="px-3"><x-social-link class="hover:text-[#6e5494] dark:hover:text-[#6e5494]" href="https://github.com/Colbydude" title="GitHub" svg="fontawesome/github" /></li>

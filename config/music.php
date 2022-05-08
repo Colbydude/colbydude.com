@@ -64,10 +64,10 @@ return [
                 'model' => 'Ormsby Goliath Shark 7 (Run 14) Deep Sea Fade',
                 'image' => 'ormsby-goliath-shark-7-dsf.jpg',
             ],
-            // [
-            //     'model' => 'Fender FINAL FANTASY XIV Stratocaster',
-            //     'image' => 'final-fantasy-xiv-stratocaster.jpg',
-            // ],
+            [
+                'model' => 'Fender FINAL FANTASY XIV Stratocaster',
+                'image' => 'final-fantasy-xiv-stratocaster.jpg',
+            ],
             // Basses.
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',
