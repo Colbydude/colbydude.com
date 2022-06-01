@@ -1,76 +1,62 @@
-const container = document.getElementById('contact');
-const backdrop = document.getElementById('contact-backdrop');
-const modal = document.getElementById('contact-modal');
+const contactModal = document.querySelector('dialog#contact');
+const nameInput = document.querySelector('#contact input#name');
 
-const openModal = () => {
+const showContactModal = () => {
     // Show container.
-    container.style.display = 'block';
+    contactModal.showModal();
+    // Focus on input.
+    nameInput.focus();
 
     setTimeout(() => {
         // Set entering "to" state.
-        backdrop.classList.replace('opacity-0', 'opacity-100');
-        modal.classList.replace('opacity-0', 'opacity-100');
-        modal.classList.replace('translate-y-4', 'translate-y-0');
-        modal.classList.replace('sm:scale-95', 'sm:scale-100');
+        contactModal.classList.replace('backdrop:bg-black/0', 'backdrop:bg-black/50');
+        contactModal.classList.replace('opacity-0', 'opacity-100');
+        contactModal.classList.replace('sm:scale-95', 'sm:scale-100');
 
         // Finished transition.
         setTimeout(() => {
             // Setup for leaving "from" state.
-            backdrop.classList.replace('ease-out', 'ease-in');
-            modal.classList.replace('ease-out', 'ease-in');
+            contactModal.classList.replace('backdrop:ease-out', 'backdrop:ease-in');
+            contactModal.classList.replace('ease-out', 'ease-in');
         }, 150);
     }, 5);
 };
 
-const closeModal = () => {
+const closeContactModal = () => {
     // Set leaving "to" state.
-    backdrop.classList.replace('opacity-100', 'opacity-0');
-    modal.classList.replace('opacity-100', 'opacity-0');
-    modal.classList.replace('translate-y-0', 'translate-y-4');
-    modal.classList.replace('sm:scale-100', 'sm:scale-95');
+    contactModal.classList.replace('backdrop:bg-black/50', 'backdrop:bg-black/0');
+    contactModal.classList.replace('opacity-100', 'opacity-0');
+    contactModal.classList.replace('sm:scale-100', 'sm:scale-95');
 
     // Finished transition.
     setTimeout(() => {
         // Hide container.
-        container.style.display = 'none';
+        contactModal.close();
+
         // Reset state to entering "from" state.
-        backdrop.classList.replace('ease-in', 'ease-out');
-        modal.classList.replace('ease-in', 'ease-out');
+        contactModal.classList.replace('backdrop:ease-in', 'backdrop:ease-out');
+        contactModal.classList.replace('ease-in', 'ease-out');
     }, 150);
 };
 
-// Add event handlers.
-const openTriggers = document.querySelectorAll(`[data-toggle*="modal"]`);
-const closeTriggers = document.querySelectorAll(`[data-dismiss*="modal"]`);
+// Open the contact modal when any element with data-dialog is set.
+document.querySelectorAll(`[data-dialog*="contact"]`).forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        showContactModal();
+    });
+});
 
-for (let i = 0; i < closeTriggers.length; i++) {
-    closeTriggers[i].onclick = (event) => {
-        event.preventDefault();
-        closeModal();
-    };
-}
+// Close the contact modal when any element with data-dismiss is set.
+document.querySelectorAll(`[data-dismiss*="contact"]`).forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeContactModal();
+    });
+});
 
-for (let i = 0; i < openTriggers.length; i++) {
-    openTriggers[i].onclick = (event) => {
-        event.preventDefault();
-        openModal();
-    };
-}
-
-/**
- * @param {MouseEvent} event
- */
-window.onclick = (event) => {
-    if (event.target == backdrop) {
-        closeModal();
-    }
-};
-
-/**
- * @param {KeyboardEvent} event
- */
-window.onkeyup = (event) => {
-    if (event.key === 'Escape' && container.style.display === 'block') {
-        closeModal();
-    }
-};
+// Handle closing the dialog with the escape key to allow transitions.
+contactModal.addEventListener('cancel', (e) => {
+    e.preventDefault();
+    closeContactModal();
+});
