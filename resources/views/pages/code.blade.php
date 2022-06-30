@@ -57,5 +57,5 @@
 @stop
 
 @push('scripts')
-    <script src="{{ mix('js/code.js') }}"></script>
+    @vite(['resources/js/code.js'])
 @endpush

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
@@ -14,17 +16,17 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 |
 */
 
-Route::get('/', 'PagesController@home');
-Route::get('code', 'PagesController@code');
-Route::get('code/webdev', 'PortfolioController@webdev');
-Route::get('code/gamedev', 'PortfolioController@gamedev');
-Route::post('contact', 'PagesController@postContact')->middleware(ProtectAgainstSpam::class);
-Route::get('games', 'PagesController@games');
-Route::get('payment', 'PagesController@payment');
-Route::get('payment/success', 'PagesController@paymentSuccess');
-Route::get('portfolio', 'PagesController@code');
-Route::get('portfolio/webdev', 'PortfolioController@webdev');
-Route::get('portfolio/gamedev', 'PortfolioController@gamedev');
-Route::get('music', 'PagesController@music');
-Route::post('update_style', 'PagesController@updateStyle');
-Route::get('web', 'PagesController@web');
+Route::get('/', [PagesController::class, 'home']);
+Route::get('code', [PagesController::class, 'code']);
+Route::get('code/webdev', [PortfolioController::class, 'webdev']);
+Route::get('code/gamedev', [PortfolioController::class, 'gamedev']);
+Route::post('contact', [PagesController::class, 'postContact'])->middleware(ProtectAgainstSpam::class);
+Route::get('games', [PagesController::class, 'games']);
+Route::get('payment', [PagesController::class, 'payment']);
+Route::get('payment/success', [PagesController::class, 'paymentSuccess']);
+Route::get('portfolio', [PagesController::class, 'code']);
+Route::get('portfolio/webdev', [PortfolioController::class, 'webdev']);
+Route::get('portfolio/gamedev', [PortfolioController::class, 'gamedev']);
+Route::get('music', [PagesController::class, 'music']);
+Route::post('update_style', [PagesController::class, 'updateStyle']);
+Route::get('web', [PagesController::class, 'web']);

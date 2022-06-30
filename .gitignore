@@ -2,15 +2,10 @@
 /.vscode
 /node_modules
 /public/build
-/public/css
 /public/downloads
 /public/files
-/public/fonts
-/public/hot
 /public/img/web/*.jpg
 /public/json
-/public/js
-/public/mix-manifest.json
 /public/storage
 /storage/*.key
 /vendor

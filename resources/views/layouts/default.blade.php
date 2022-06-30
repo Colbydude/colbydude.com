@@ -32,7 +32,7 @@
         <meta name="twitter:image" content="/img/cover.jpg">
         <meta name="twitter:url" content="@yield('meta_canonical', 'https://colbydude.com')">
 
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        @vite(['resources/css/app.css'])
     </head>
     <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 transition duration-500 ease-in-out">
         <div class="w-full">
@@ -47,9 +47,7 @@
 
         @include('layouts.partials.contact-modal')
 
-        <script src="{{ mix('js/manifest.js') }}"></script>
-        <script src="{{ mix('js/vendor.js') }}"></script>
-        <script src="{{ mix('js/app.js') }}"></script>
+        @vite(['resources/js/app.js'])
         @stack('scripts')
 
         {{-- Google Analytics --}}
