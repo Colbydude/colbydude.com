@@ -47,7 +47,7 @@
         </section>
 
         <section>
-            <x-section-header>(Some) Frelance Projects</x-section-header>
+            <x-section-header>(Some) Freelance Projects</x-section-header>
 
             <x-code.portfolio-project :image="asset('img/web/ericvancleave.png')" name="Eric Van Cleave">
                 <x-markdown class="md">
