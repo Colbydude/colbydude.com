@@ -30,52 +30,52 @@ return [
         'current' => [
             [
                 'model' => 'Ibanez S5EX1 Transparent Gray',
-                'image' => 'ibanez-s5ex1-tg.jpg'
+                'image' => 'ibanez-s5ex1-tg.png'
             ],
             [
                 'model' => 'ESP LTD EC-1000 See Thru Blue',
-                'image' => 'esp-ltd-ec-1000-stb.jpg',
+                'image' => 'esp-ltd-ec-1000-stb.png',
             ],
             [
                 'model' => 'Chapman ML1-8 RS (Rob Scallon Signature)',
-                'image' => 'chapman-ml1-8rs.jpg',
+                'image' => 'chapman-ml1-8rs.png',
             ],
             [
                 'model' => 'PRS SE MHHB2 Holcomb Burst (Mark Holcomb Signature)',
-                'image' => 'prs-se-mhhb2.jpg',
+                'image' => 'prs-se-mhhb2.png',
             ],
             [
                 'model' => 'ESP SN-25TH (Sonic the Hedgehog)',
-                'image' => 'esp-sn-25th.jpg',
+                'image' => 'esp-sn-25th.png',
             ],
             [
                 'model' => 'ESP SD-15TH (Shadow the Hedgehog)',
-                'image' => 'esp-sd-15th.jpg',
+                'image' => 'esp-sd-15th.png',
             ],
             [
                 'model' => 'Ibanez S61AL Black Mirage',
-                'image' => 'ibanez-s61al-bm.jpg',
+                'image' => 'ibanez-s61al-bm.png',
             ],
             [
                 'model' => 'Ormsby Goliath 7 (Run 9) Maya Blue',
-                'image' => 'ormsby-goliath-7-mb.jpg',
+                'image' => 'ormsby-goliath-7-mb.png',
             ],
             [
                 'model' => 'Ormsby Goliath Shark 7 (Run 14) Deep Sea Fade',
-                'image' => 'ormsby-goliath-shark-7-dsf.jpg',
+                'image' => 'ormsby-goliath-shark-7-dsf.png',
             ],
             [
                 'model' => 'Fender FINAL FANTASY XIV Stratocaster',
-                'image' => 'final-fantasy-xiv-stratocaster.jpg',
+                'image' => 'final-fantasy-xiv-stratocaster.png',
             ],
             // Basses.
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',
-                'image' => 'esp-ltd-b-155dx-stb.jpg',
+                'image' => 'esp-ltd-b-155dx-stb.png',
             ],
             [
                 'model' => 'Ibanez EHB1505MS Tropical Seafloor Flat',
-                'image' => 'ibanez-ehb1505ms-tsf.jpg',
+                'image' => 'ibanez-ehb1505ms-tsf.png',
             ],
         ],
 

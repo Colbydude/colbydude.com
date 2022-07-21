@@ -2,7 +2,7 @@
 
 <div class="col-sm-6 col-md-4 guitar">
     <img
-        class="p-1 bg-slate-200 hover:bg-pink-500 dark:bg-slate-700 dark:hover:bg-pink-400 transition duration-500 ease-in-out"
+        class="border-4 border-slate-200 hover:border-pink-500 dark:border-slate-700 dark:hover:border-pink-400 transition duration-500 ease-in-out"
         src="/img/music/guitars/{{ $image }}"
         alt="{{ $model }}"
         width="600" height="202"
