@@ -37,7 +37,7 @@
                 <div>
                     <x-section-header>Top Languages</x-section-header>
                     <ol class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        @foreach (array_slice($topLanguages, 0, 6) as $language => $count)
+                        @foreach (array_slice($topLanguages, 0, 6) as $language)
                             <x-code.top-language
                                 :language="$language"
                                 :languageColors="$languageColors"

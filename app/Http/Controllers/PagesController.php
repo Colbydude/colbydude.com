@@ -30,10 +30,7 @@ class PagesController extends Controller
         $languageColors = config('code.language_colors');
         $pinnedRepos = json_decode(Storage::get('code/pinned.json'));
         $showcase = config('code.showcase');
-        $topLanguages = json_decode(Storage::get('code/top-languages.json'), true);
-        $topLanguages = Arr::where($topLanguages, function ($count, $lang) {
-            return !in_array($lang, ['ActionScript', 'Java', 'HTML', 'MAXScript', 'Mathematica']);
-        });
+        $topLanguages = ['C#', 'TypeScript', 'JavaScript', 'PHP', 'GML', 'C++'];
 
         return view('pages.code', compact('languageColors', 'pinnedRepos', 'showcase', 'topLanguages'));
     }

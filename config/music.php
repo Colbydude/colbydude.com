@@ -68,6 +68,10 @@ return [
                 'model' => 'Fender FINAL FANTASY XIV Stratocaster',
                 'image' => 'final-fantasy-xiv-stratocaster.png',
             ],
+            [
+                'model' => 'Schecter AM-7 Cobalt Slate (Aaron Marshall Signature)',
+                'image' => 'schecter-am7-cs.png'
+            ],
             // Basses.
             [
                 'model' => 'ESP LTD B-155DX See Thru Blue',

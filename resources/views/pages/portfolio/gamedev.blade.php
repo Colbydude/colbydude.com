@@ -9,6 +9,18 @@
         <x-page-subheader>I make games sometimes.</x-page-subheader>
 
         <section>
+            <x-section-header>Active Projects</x-section-header>
+
+            <x-code.portfolio-project :video="asset('video/ProjectPraeliumTrailerNoSound.mp4')" name="Project Praelium">
+                <x-markdown class="md">
+                    @php include(public_path('markdown/project-praelium.md')) @endphp
+                </x-markdown>
+
+                <div class="mt-3">
+                    <x-btn-outline href="https://icecavern-games.itch.io/project-praelium" rel="noopener" target="_blank">Itch.io Page</x-btn-outline>
+                </div>
+            </x-code.portfolio-project>
+
             <x-section-header>Shipped Projects</x-section-header>
 
             <x-code.portfolio-project :video="asset('video/FishFriendosPreview.mp4')" name="FishFriendos">
