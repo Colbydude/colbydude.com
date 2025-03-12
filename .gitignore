@@ -1,5 +1,7 @@
 /.idea
+/.phpunit.cache
 /.vscode
+/bootstrap/ssr
 /node_modules
 /public/build
 /public/downloads
@@ -8,10 +10,13 @@
 /public/json
 /public/storage
 /storage/*.key
+/storage/pail
 /vendor
 .DS_Store
 .env
 .env.backup
+.env.production
+.phpactor.json
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

@@ -23,8 +23,6 @@ class CronController extends Controller
         $this->spotifyApiService = $spotifyApiService;
 
         $this->artistId = config('services.spotify.artist_id');
-
-        $this->middleware(['cron.key']);
     }
 
     /**
