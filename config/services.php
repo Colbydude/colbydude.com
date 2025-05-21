@@ -14,6 +14,24 @@ return [
     |
     */
 
+    'bandsintown' => [
+        'armature' => [
+            'id' => '15467404',
+            'name' => 'Armature (WA)',
+            'api_key' => env('BANDSINTOWN_ARMATURE_KEY')
+        ],
+        'colbydude' => [
+            'id' => '14591936',
+            'name' => 'Colbydude',
+            'api_key' => env('BANDSINTOWN_COLBYDUDE_KEY')
+        ],
+        'rppe' => [
+            'id' => '15397193',
+            'name' => 'Ro Panuganti Prog XP',
+            'api_key' => env('BANDSINTOWN_RPPE_KEY')
+        ]
+    ],
+
     'cron' => [
         'key' => env('CRON_KEY'),
     ],

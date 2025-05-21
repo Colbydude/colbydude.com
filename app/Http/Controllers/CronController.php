@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\BandsintownApiService;
 use App\Services\GitHubApiService;
 use App\Services\SpotifyApiService;
 use Illuminate\Support\Arr;
@@ -12,17 +13,48 @@ class CronController extends Controller
     /**
      * The artist ID from the config.
      */
-    private string $artistId;
+    private string $spotifyArtistId;
 
+    protected BandsintownApiService $bitApiService;
     protected GitHubApiService $githubApiService;
     protected SpotifyApiService $spotifyApiService;
 
-    public function __construct(GitHubApiService $githubApiService, SpotifyApiService $spotifyApiService)
+    public function __construct(BandsintownApiService $bitApiService, GitHubApiService $githubApiService, SpotifyApiService $spotifyApiService)
     {
+        $this->bitApiService = $bitApiService;
         $this->githubApiService = $githubApiService;
         $this->spotifyApiService = $spotifyApiService;
 
-        $this->artistId = config('services.spotify.artist_id');
+        $this->spotifyArtistId = config('services.spotify.artist_id');
+    }
+
+    /**
+     * Fetches and stores relevant Bandsintown information.
+     */
+    public function bandsintown()
+    {
+        $bands = config('services.bandsintown');
+        $allEvents = [];
+
+        foreach ($bands as $band) {
+            $events = $this->bitApiService->getEvents($band['name'], $band['api_key']);
+
+            if (is_array($events)) {
+                foreach ($events as $event) {
+                    $event->artist_name = $band['name'];
+                    array_push($allEvents, $event);
+                }
+            }
+        }
+
+        // Sort by the "starts_at" key
+        usort($allEvents, function ($a, $b) {
+            return strtotime($a->starts_at) <=> strtotime($b->starts_at);
+        });
+
+        Storage::put('music/events.json', json_encode($allEvents));
+
+        return response()->json(['message' => 'OK'], 200);
     }
 
     /**
@@ -71,7 +103,7 @@ class CronController extends Controller
     public function spotify()
     {
         // Fetch album data from Colbydude.
-        $albumsJson = $this->spotifyApiService->getArtistAlbums($this->artistId);
+        $albumsJson = $this->spotifyApiService->getArtistAlbums($this->spotifyArtistId);
 
         // Fetch additional albums.
         foreach (config('music.albums') as $albumId) {
@@ -114,7 +146,7 @@ class CronController extends Controller
         Storage::put('music/albums.json', json_encode($releases));
 
         // Fetch top track data and store.
-        $topTracksJson = $this->spotifyApiService->getArtistTopTracks($this->artistId);
+        $topTracksJson = $this->spotifyApiService->getArtistTopTracks($this->spotifyArtistId);
 
         Storage::put('music/top-tracks.json', json_encode($topTracksJson->tracks));
 

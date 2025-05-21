@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware([CronKey::class])->group(function () {
+    Route::get('cron/bandsintown', [CronController::class, 'bandsintown']);
     Route::get('cron/github', [CronController::class, 'github']);
     Route::get('cron/spotify', [CronController::class, 'spotify']);
 });
