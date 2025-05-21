@@ -1,17 +1,16 @@
 @extends('layouts.default')
 
 @section('meta_title', 'Code | Colby Terry')
-@section('meta_description', 'Senior full-stack engineer, sometimes game dev.')
+@section('meta_description', 'Senior full-stack engineer and game dev.')
 @section('meta_keywords', 'Colby Terry, Colbydude, developer, code, gamedev, games, webdev, web, webapp, portfolio')
 @section('meta_canonical', 'https://colbydude.com/code')
 
 @section('content')
     <main class="max-w-6xl mx-auto mt-5 mb-10 px-4 min-h-[300px]">
         <x-page-header>Code</x-page-header>
-        <x-page-subheader>Senior full-stack engineer, sometimes game dev.</x-page-subheader>
+        <x-page-subheader>Senior full-stack engineer and game dev.</x-page-subheader>
 
-        <x-btn-outline href="{{ url('/code/gamedev') }}">Game Dev Portfolio</x-btn-outline>
-        <x-btn-outline href="{{ url('/code/webdev') }}" class="ml-3">Web Dev Portfolio</x-btn-outline>
+        <x-btn-outline href="{{ url('/portfolio') }}">Full Portfolio</x-btn-outline>
 
         <section>
             <x-section-header>Showcase</x-section-header>

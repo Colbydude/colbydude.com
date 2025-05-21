@@ -25,7 +25,17 @@ return [
     ],
 
     'showcase' => [
-
+        [
+            'name' => 'First Day at Maze Corp.',
+            'description' => 'A first-person puzzle/exploration game built with <a href="https://bsky.app/profile/tlo.icecavern.games" rel="noopener" target="_blank">@tlo</a> in a week with for Brackeys Game Jam 2025.1.',
+            'image' => 'firstdayatmazecorp.jpg',
+            'links' => [
+                [
+                    'text' => 'Download on Itch.io',
+                    'url' => 'https://icecavern-games.itch.io/first-day-at-maze-corp'
+                ]
+            ]
+        ],
         [
             'name' => 'Project Praelium',
             'description' => 'Explore the forest, find new party members, and fight powerful foes. Make it through the forest alive!',
@@ -39,7 +49,7 @@ return [
         ],
         [
             'name' => 'FishFriendos',
-            'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://twitter.com/Piranhartist" rel="noopener" target="_blank">@Piranhartist</a>.',
+            'description' => 'Raise the biggest school of fish this side of the Twitch stream! Built with Phaser and serverless. Art by <a href="https://bsky.app/profile/piranhartist.bsky.social" rel="noopener" target="_blank">@Piranhartist</a>.',
             'image' => 'fishfriendos.jpg',
             'links' => [
                 [
@@ -63,21 +73,21 @@ return [
         //         ],
         //     ],
         // ],
-        [
-            'name' => 'Pipe Drain',
-            'description' => 'Rework pipes to drain the toxic waste under the city! Built in GameMaker Studio 2. Art by <a href="https://twitter.com/Programancer" rel="noopener" target="_blank">@Programancer</a>.',
-            'image' => 'pipedrain.png',
-            'links' => [
-                [
-                    'text' => 'Play',
-                    'url' => 'https://cdn.voidte.am/games/pipedrain',
-                ],
-                [
-                    'text' => 'Source',
-                    'url' => 'https://github.com/Colbydude/PipeDrainGMS2',
-                ],
-            ],
-        ],
+        // [
+        //     'name' => 'Pipe Drain',
+        //     'description' => 'Rework pipes to drain the toxic waste under the city! Built in GameMaker Studio 2. Art by <a href="https://bsky.app/profile/programancer.com" rel="noopener" target="_blank">@Programancer</a>.',
+        //     'image' => 'pipedrain.png',
+        //     'links' => [
+        //         [
+        //             'text' => 'Play',
+        //             'url' => 'https://cdn.voidte.am/games/pipedrain',
+        //         ],
+        //         [
+        //             'text' => 'Source',
+        //             'url' => 'https://github.com/Colbydude/PipeDrainGMS2',
+        //         ],
+        //     ],
+        // ],
     ],
 
 ];

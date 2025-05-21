@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
@@ -18,15 +17,23 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', [PagesController::class, 'home']);
 Route::get('code', [PagesController::class, 'code']);
-Route::get('code/webdev', [PortfolioController::class, 'webdev']);
-Route::get('code/gamedev', [PortfolioController::class, 'gamedev']);
+Route::get('code/webdev', function () {
+    return redirect('code');
+});
+Route::get('code/gamedev', function () {
+    return redirect('code');
+});
 Route::post('contact', [PagesController::class, 'postContact'])->middleware(ProtectAgainstSpam::class);
 Route::get('games', [PagesController::class, 'games']);
 Route::get('payment', [PagesController::class, 'payment']);
 Route::get('payment/success', [PagesController::class, 'paymentSuccess']);
-Route::get('portfolio', [PagesController::class, 'code']);
-Route::get('portfolio/webdev', [PortfolioController::class, 'webdev']);
-Route::get('portfolio/gamedev', [PortfolioController::class, 'gamedev']);
+Route::get('portfolio', [PagesController::class, 'portfolio']);
+Route::get('portfolio/webdev', function () {
+    return redirect('portfolio');
+});
+Route::get('portfolio/gamedev', function () {
+    return redirect('portfolio');
+});
 Route::get('music', [PagesController::class, 'music']);
 Route::post('update_style', [PagesController::class, 'updateStyle']);
 Route::get('web', [PagesController::class, 'web']);

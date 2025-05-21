@@ -92,6 +92,16 @@ class PagesController extends Controller
     }
 
     /**
+     * Display the portfolio page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function portfolio()
+    {
+        return view('pages.portfolio');
+    }
+
+    /**
      * Handle contact form submission. Send email with contents.
      *
      * @param  \Illuminate\Http\Request  $request

@@ -1,15 +1,26 @@
 @extends('layouts.default')
 
-@section('meta_title', 'Game Dev Portfolio | Colby Terry')
-@section('meta_canonical', 'https://colbydude.com/code/gamedev')
+@section('meta_title', 'Portfolio | Colby Terry')
+@section('meta_canonical', 'https://colbydude.com/portfolio')
 
 @section('content')
     <main class="max-w-6xl mx-auto mt-5 mb-10 px-4 min-h-[300px]">
-        <x-page-header>Game Dev Portfolio</x-page-header>
-        <x-page-subheader>I make games sometimes.</x-page-subheader>
+        <x-page-header>Portfolio</x-page-header>
+        <x-page-subheader>A brief look at things I like to make.</x-page-subheader>
 
         <section>
-            <x-section-header>Active Projects</x-section-header>
+            <x-section-header>Showcase Projects</x-section-header>
+
+            <x-code.portfolio-project :video="asset('video/FDaMCPreview.mp4')" name="First Day at Maze Corp.">
+                <x-markdown class="md">
+                    @php include(public_path('markdown/first-day-at-maze-corp.md')) @endphp
+                </x-markdown>
+
+                <div class="mt-3">
+                    <x-btn-outline href="https://icecavern-games.itch.io/first-day-at-maze-corp" rel="noopener" target="_blank">Itch.io Page</x-btn-outline>
+                    <x-btn-outline class="ml-2" href="https://github.com/IceCavern-Games/BrackeysGameJam2025.1" rel="noopener" target="_blank">Source Code</x-btn-outline>
+                </div>
+            </x-code.portfolio-project>
 
             <x-code.portfolio-project :video="asset('video/ProjectPraeliumTrailerNoSound.mp4')" name="Project Praelium">
                 <x-markdown class="md">
@@ -20,8 +31,6 @@
                     <x-btn-outline href="https://icecavern-games.itch.io/project-praelium" rel="noopener" target="_blank">Itch.io Page</x-btn-outline>
                 </div>
             </x-code.portfolio-project>
-
-            <x-section-header>Shipped Projects</x-section-header>
 
             <x-code.portfolio-project :video="asset('video/FishFriendosPreview.mp4')" name="FishFriendos">
                 <x-markdown class="md">
@@ -34,6 +43,8 @@
                 </div>
                 <p><small>*Requires being logged into Twitch.</small></p>
             </x-code.portfolio-project>
+
+            <x-section-header>Shipped Projects</x-section-header>
 
             <x-code.portfolio-project :video="asset('video/FlyBugPreview.mp4')" name="FlyBug">
                 <x-markdown class="md">
@@ -61,54 +72,39 @@
                 </x-markdown>
 
                 <div class="mt-3">
-                    <x-btn-outline href="https://github.com/Colbydude/PipeDrainGMS2" rel="noopener" target="_blank">Source Code</x-btn-outline>
-                    <x-btn-outline class="ml-2" href="https://cdn.voidte.am/games/pipedrain" rel="noopener" target="_blank">Play it in your browser</x-btn-outline>
+                    <x-btn-outline href="https://cdn.voidte.am/games/pipedrain" rel="noopener" target="_blank">Play it in your browser</x-btn-outline>
+                    <x-btn-outline class="ml-2" href="https://github.com/Colbydude/PipeDrainGMS2" rel="noopener" target="_blank">Source Code</x-btn-outline>
                 </div>
             </x-code.portfolio-project>
         </section>
 
         <section>
-            <x-section-header>Game Jam Projects</x-section-header>
+            <x-section-header>Some Web Stuff</x-section-header>
 
-            <x-code.portfolio-project :video="asset('video/GMTK2019Preview.mp4')" name="GMTK Game Jam 2019">
+            <x-code.portfolio-project :video="asset('video/MusicRequestsPreview.mp4')" name="Music Requests Twitch Extension">
                 <x-markdown class="md">
-                    @php include(public_path('markdown/gmtk2019.md')) @endphp
+                    @php include(public_path('markdown/music-requests.md')) @endphp
                 </x-markdown>
 
                 <div class="mt-3">
-                    <x-btn-outline href="https://github.com/Colbydude/GMTKGameJam2019" rel="noopener" target="_blank">Source Code</x-btn-outline>
-                    <x-btn-outline class="ml-2" href="https://colbydude.itch.io/gmtk-gamejam-2019" rel="noopener" target="_blank">Itch.io Page</x-btn-outline>
-                </div>
-            </x-code.portfolio-project>
-        </section>
-
-        <section>
-            <x-section-header>Other... stuff...?</x-section-header>
-
-            <x-code.portfolio-project :video="asset('video/FosterPlatformerPreview.mp4')" name="Foster Platformer">
-                <x-markdown class="md">
-                    @php include(public_path('markdown/fosterplatformer.md')) @endphp
-                </x-markdown>
-
-                <div class="mt-3">
-                    <x-btn-outline href="https://github.com/Colbydude/FosterPlatformer" rel="noopener" target="_blank">Source Code</x-btn-outline>
+                    <x-btn-outline href="https://github.com/Colbydude/Music-Requests-Twitch-Extension" rel="noopener" target="_blank">Frontend Source Code</x-btn-outline>
                 </div>
             </x-code.portfolio-project>
 
-            <x-code.portfolio-project :video="asset('video/OoT2DUnityPreview.mp4')" name="OoT2D Unity">
+            <x-code.portfolio-project :image="asset('img/web/colbydude-' . session('style') . '.png')" name="colbydude.com">
                 <x-markdown class="md">
-                    @php include(public_path('markdown/oot2dunity.md')) @endphp
+                    @php include(public_path('markdown/colbydude.md')) @endphp
                 </x-markdown>
 
                 <div class="mt-3">
-                    <x-btn-outline href="https://github.com/Colbydude/OoT2DUnity" rel="noopener" target="_blank">Source Code</x-btn-outline>
+                    <x-btn-outline href="{{ url('/') }}">Go Home</x-btn-outline>
+                    <x-btn-outline class="ml-2" href="https://github.com/Colbydude/colbydude.com" rel="noopener" target="_blank">Source Code</x-btn-outline>
                 </div>
             </x-code.portfolio-project>
         </section>
 
         <section class="text-center md:text-center text-xl leading-6 font-light">
             <p class="mb-5">Although there's a bit of stuff here, you can find even more projects over on my <x-link href="https://github.com/Colbydude">GitHub</x-link> page!</p>
-            <p>You can also checkout my <a href="{{ url('/code/webdev') }}">Web Dev Portfolio</a>!</p>
         </section>
     </main>
 @stop

@@ -21,5 +21,6 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+herd.yml
 npm-debug.log
 yarn-error.log

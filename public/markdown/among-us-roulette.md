@@ -1,1 +1,0 @@
-Among Us Roulette is a small [Vue.js](https://vuejs.org) app I put together to put a spin on the hit multiplayer game [Among Us](https://www.innersloth.com/games/among-us/). The idea is that during the interrogation phases of the round, only one person, chosen via roulette, can make the deciding vote. This app is a quick way to visualize and handle the roulette.
