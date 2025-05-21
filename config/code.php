@@ -27,7 +27,7 @@ return [
     'showcase' => [
         [
             'name' => 'First Day at Maze Corp.',
-            'description' => 'A first-person puzzle/exploration game built with <a href="https://bsky.app/profile/tlo.icecavern.games" rel="noopener" target="_blank">@tlo</a> in a week with for Brackeys Game Jam 2025.1.',
+            'description' => 'A first-person puzzle/exploration game built in a week with <a href="https://bsky.app/profile/tlo.icecavern.games" rel="noopener" target="_blank">@tlo</a> for Brackeys Game Jam 2025.1.',
             'image' => 'firstdayatmazecorp.jpg',
             'links' => [
                 [
