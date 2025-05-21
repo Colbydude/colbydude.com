@@ -10,6 +10,16 @@
         <x-page-header>Music</x-page-header>
         <x-page-subheader>Rock-driven, metal-leanin', video game-lovin', guitar player.</x-page-subheader>
 
+        @if (count($upcomingShows) > 0)
+            <section>
+                <x-section-header>Upcoming Shows</x-section-header>
+
+                @foreach ($upcomingShows as $show)
+                    <x-music.show :show="$show" />
+                @endforeach
+            </section>
+        @endif
+
         <section class="md:grid md:grid-cols-12 md:gap-8">
             <div class="md:col-span-7">
                 <x-section-header>Popular</x-section-header>
