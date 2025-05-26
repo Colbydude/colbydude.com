@@ -41,7 +41,7 @@ class CronController extends Controller
 
             if (is_array($events)) {
                 foreach ($events as $event) {
-                    $event->artist_name = $band['name'];
+                    $event->artist_name = str_replace(' (WA)', '', $band['name']);
                     array_push($allEvents, $event);
                 }
             }

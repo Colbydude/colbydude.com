@@ -1,6 +1,7 @@
 @php
-  $start = \Carbon\Carbon::parse($show->festival_start_date);
-  $end = \Carbon\Carbon::parse($show->festival_end_date);
+  $isFestival = $show->festival_start_date !== "";
+  $start = \Carbon\Carbon::parse($isFestival ? $show->festival_start_date : $show->starts_at);
+  $end = \Carbon\Carbon::parse($isFestival ? $show->festival_end_date : $show->ends_at);
   $isMultiDay = !$start->isSameDay($end);
   $showUrl = $show->url . '&mkt_source=colbydude.com';
   $ticketUrl = $show->offers[0]->url ?? null;
@@ -26,7 +27,7 @@
         </div>
 
         <div class="flex flex-col text-slate-800 dark:text-slate-300">
-            <x-link href="{{ $showUrl }}" class="font-semibold">{{ $show->title }}</x-link>
+            <x-link href="{{ $showUrl }}" class="font-semibold">{{ $show->title !== "" ? $show->title : $show->venue->name }}</x-link>
             <span class="text-sm text-slate-800 dark:text-slate-300 transition duration-500 ease-in-out">
                 {{ $show->artist_name }} <span class="text-slate-500 dark:text-slate-400">&middot; {{ $show->venue->location }}</span>
             </span>
