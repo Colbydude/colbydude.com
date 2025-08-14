@@ -9,3 +9,12 @@ function msToMinutes($ms)
 
     return "{$minutes}:{$seconds}";
 }
+
+function normalizeString(?string $s): string
+{
+    $s = $s ?? '';
+    $s = preg_replace('/\s+/', ' ', $s);
+    $s = trim($s);
+
+    return mb_strtolower($s);
+};

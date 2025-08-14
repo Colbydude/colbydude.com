@@ -47,6 +47,67 @@ class CronController extends Controller
             }
         }
 
+        // Group events that represent the same show.
+        $groups = [];
+
+        foreach ($allEvents as $event) {
+            // Prefer festival_start_date for festivals, otherwise starts_at.
+            $date = $event->festival_start_date ?: $event->starts_at;
+
+            $venueName = normalizeString($event->venue->name ?? '');
+            $venueLoc = normalizeString($event->venue->location ?? '');
+            $title = normalizeString($event->title ?? '');
+            $dateKey = normalizeString($date);
+
+            // Composite key: date + venue + title
+            $key = "{$dateKey}|{$venueName}|{$venueLoc}|{$title}";
+            $groups[$key] ??= [];
+            $groups[$key][] = $event;
+        }
+
+        // Merge grouped events.
+        $mergedEvents = [];
+
+        foreach ($groups as $sameEvents) {
+            if (count($sameEvents) === 1) {
+                $mergedEvents[] = $sameEvents[0];
+                continue;
+            }
+
+            // Start with the first and merge metadata in.
+            $base = $sameEvents[0];
+
+            // Collect artists and lineup uniquely.
+            $artists = [];
+            $lineup  = [];
+
+            $seenArtist = [];
+            $seenLineup = [];
+
+            foreach ($sameEvents as $e) {
+                if (!empty($e->artist_name) && !isset($seenArtist[$e->artist_name])) {
+                    $artists[] = $e->artist_name;
+                    $seenArtist[$e->artist_name] = true;
+                }
+
+                if (!empty($e->lineup) && is_array($e->lineup)) {
+                    foreach ($e->lineup as $name) {
+                        if (!isset($seenLineup[$name])) {
+                            $lineup[] = $name;
+                            $seenLineup[$name] = true;
+                        }
+                    }
+                }
+            }
+
+            $base->artist_name = implode(', ', $artists);
+            $base->lineup = $lineup;
+
+            $mergedEvents[] = $base;
+        }
+
+        $allEvents = $mergedEvents;
+
         // Sort by the "starts_at" key
         usort($allEvents, function ($a, $b) {
             return strtotime($a->starts_at) <=> strtotime($b->starts_at);
