@@ -17,7 +17,9 @@ class PagesController extends Controller
      */
     public function home()
     {
-        return view('pages.home');
+        $upcomingShows = json_decode(Storage::get('music/events.json'));
+
+        return view('pages.home', compact(['upcomingShows']));
     }
 
     /**
