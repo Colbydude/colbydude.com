@@ -10,7 +10,7 @@
         <x-page-header>Code</x-page-header>
         <x-page-subheader>Senior full-stack engineer and game dev.</x-page-subheader>
 
-        <x-btn-outline href="{{ url('/portfolio') }}">Full Portfolio</x-btn-outline>
+        <x-btn-outline href="{{ url('/portfolio') }}">Portfolio</x-btn-outline>
 
         <section>
             <x-section-header>Showcase</x-section-header>
