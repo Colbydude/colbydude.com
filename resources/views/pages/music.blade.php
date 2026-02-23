@@ -56,7 +56,7 @@
         <x-music.album-list :albums="$singles" section-title="Singles" />
         <x-music.album-list :albums="$appearsOn" section-title="Appears On" />
 
-        <section>
+        {{-- <section>
             <x-section-header>Guitars</x-section-header>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($guitars['current'] as $guitar)
@@ -66,6 +66,6 @@
                     />
                 @endforeach
             </div>
-        </section>
+        </section> --}}
     </main>
 @stop
