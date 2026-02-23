@@ -27,7 +27,7 @@ return [
         ],
         'rppe' => [
             'id' => '15397193',
-            'name' => 'Ro Panuganti Prog XP',
+            'name' => 'Prog XP',
             'api_key' => env('BANDSINTOWN_RPPE_KEY')
         ]
     ],

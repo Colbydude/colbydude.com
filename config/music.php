@@ -10,9 +10,10 @@ return [
 
     // Additional albums I've played on.
     'albums' => [
-                                            // TODO?: We'd Be - The Rum Gun Diaries (no longer on Spotify)
+        // TODO?: We'd Be - The Rum Gun Diaries (no longer on Spotify)
         '0ZfKXucO0tzzAHz6JqoZn6',           // We'd Be - Beyond the Line of Sanity
         '23Ki1XY4k37rM5wO9VXzLd',           // Armature - Armature
+        '0Po5W6vx0wmXdPs4NkoEnM',           // Prog XP - Save Your Progress
     ],
 
     // Override album details (make an EP show up under albums).
@@ -84,9 +85,7 @@ return [
             ],
         ],
 
-        'previous' => [
-
-        ],
+        'previous' => [],
 
     ],
 
