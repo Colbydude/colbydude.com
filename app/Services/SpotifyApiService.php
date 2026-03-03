@@ -61,19 +61,6 @@ class SpotifyApiService
     }
 
     /**
-     * Get the specified artist's top tracks.
-     *
-     * @param  string  $artistId
-     * @return mixed
-     */
-    public function getArtistTopTracks(string $artistId): mixed
-    {
-        return $this->request("/v1/artists/{$artistId}/top-tracks", [
-            'country' => 'US',
-        ]);
-    }
-
-    /**
      * Fetches the access token to use for Spotify API requests.
      *
      * @return string

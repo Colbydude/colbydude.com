@@ -22,19 +22,6 @@
 
         <section class="md:grid md:grid-cols-12 md:gap-8">
             <div class="md:col-span-7">
-                <x-section-header>Popular</x-section-header>
-                <ol class="list-none mb-5">
-                    @foreach ($topTracks as $track)
-                        <x-music.popular-song
-                            :name="$track->name"
-                            :link="$track->external_urls->spotify"
-                            :image="$track->album->images[2]->url"
-                            :duration="$track->duration_ms"
-                        />
-                    @endforeach
-                </ol>
-            </div>
-            <div class="md:col-span-5">
                 <x-section-header>Latest Release</x-section-header>
                 <x-music.latest-release
                     :name="$latestRelease->name"
@@ -42,7 +29,8 @@
                     :release-date="Carbon\Carbon::parse($latestRelease->release_date)->format('M. Y')"
                     :url="$latestRelease->external_urls->spotify"
                 />
-
+            </div>
+            <div class="md:col-span-5">
                 <x-section-header>Available On</x-section-header>
                 <div class="grid grid-cols-3 gap-6">
                     @foreach ($services as $name => $url)
@@ -55,17 +43,5 @@
         <x-music.album-list :albums="$albums" section-title="Albums" />
         <x-music.album-list :albums="$singles" section-title="Singles" />
         <x-music.album-list :albums="$appearsOn" section-title="Appears On" />
-
-        {{-- <section>
-            <x-section-header>Guitars</x-section-header>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                @foreach ($guitars['current'] as $guitar)
-                    <x-music.guitar
-                        :image="$guitar['image']"
-                        :model="$guitar['model']"
-                    />
-                @endforeach
-            </div>
-        </section> --}}
     </main>
 @stop

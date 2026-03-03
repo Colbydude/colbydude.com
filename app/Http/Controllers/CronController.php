@@ -206,11 +206,6 @@ class CronController extends Controller
         // Store albums.
         Storage::put('music/albums.json', json_encode($releases));
 
-        // Fetch top track data and store.
-        $topTracksJson = $this->spotifyApiService->getArtistTopTracks($this->spotifyArtistId);
-
-        Storage::put('music/top-tracks.json', json_encode($topTracksJson->tracks));
-
         return response()->json(['message' => 'OK'], 200);
     }
 }
